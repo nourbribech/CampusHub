@@ -27,6 +27,17 @@ export class MesReservations implements OnInit {
   nombreEnAttente = 0;
   nombreRejetees = 0;
 
+  triOrdre: 'DESC' | 'ASC' = 'DESC';
+
+  toggleTri(): void {
+    this.triOrdre = this.triOrdre === 'DESC' ? 'ASC' : 'DESC';
+    this.reservationsFiltrees.sort((a, b) => {
+      const dateA = new Date(a.dateDebut).getTime();
+      const dateB = new Date(b.dateDebut).getTime();
+      return this.triOrdre === 'DESC' ? dateB - dateA : dateA - dateB;
+    });
+  }
+
   constructor(private reservationService: ReservationService) { }
 
   ngOnInit(): void {
