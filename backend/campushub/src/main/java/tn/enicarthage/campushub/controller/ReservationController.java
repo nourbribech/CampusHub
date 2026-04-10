@@ -1,83 +1,137 @@
 package tn.enicarthage.campushub.controller;
 
 import org.springframework.web.bind.annotation.*;
-import tn.enicarthage.campushub.dto.CreateReservationDto;
-import tn.enicarthage.campushub.dto.ReservationDto;
 import tn.enicarthage.campushub.dto.SalleDto;
-import tn.enicarthage.campushub.dto.UserDto;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/v1/reservations")
+@RequestMapping("/api/v1/salles")
 @CrossOrigin(origins = "http://localhost:4200")
-public class ReservationController {
+public class SalleController {
 
-        private List<ReservationDto> reservations = new ArrayList<>(Arrays.asList(
-                        new ReservationDto(
-                                        "1", "1",
-                                        new SalleDto("1", "Amphithéâtre A", 200, Arrays.asList("Projecteur"),
-                                                        "Bâtiment A", 1, true, null),
-                                        "user1",
-                                        new UserDto("user1", "Dupont", "Jean", "jean.dupont@enicarthage.tn",
-                                                        "ENSEIGNANT", "Informatique", null),
-                                        LocalDateTime.now().plusDays(3),
-                                        LocalDateTime.now().plusDays(3).plusHours(2),
-                                        "Cours de Programmation Avancée",
-                                        30, "APPROUVEE", null, LocalDateTime.now().minusDays(5)),
-                        new ReservationDto(
-                                        "2", "2",
-                                        new SalleDto("2", "Salle B12", 30, Arrays.asList("Tableau"), "Bâtiment B", 1,
-                                                        true, null),
-                                        "user1",
-                                        new UserDto("user1", "Dupont", "Jean", "jean.dupont@enicarthage.tn",
-                                                        "ENSEIGNANT", "Informatique", null),
-                                        LocalDateTime.now().plusDays(7),
-                                        LocalDateTime.now().plusDays(7).plusHours(3),
-                                        "TP Base de Données",
-                                        25, "EN_ATTENTE", null, LocalDateTime.now().minusDays(2))));
+        @GetMapping
+        public List<SalleDto> getAllSalles() {
+                List<SalleDto> salles = new ArrayList<>();
 
-        @GetMapping("/me")
-        public List<ReservationDto> getMesReservations() {
-                return reservations;
+                // ==================== BÂTIMENT ANNEXE (Informatique) ====================
+
+                // RDC Annexe
+                salles.add(new SalleDto("annexe-mac", "Salle MAC", 30,
+                                Arrays.asList("Ordinateurs Mac", "Projecteur", "Tableau interactif", "Climatisation"),
+                                "Bâtiment Annexe", 0, true, null));
+
+                salles.add(new SalleDto("annexe-labo", "LABO Informatique", 25,
+                                Arrays.asList("Ordinateurs", "Serveurs", "Switch réseau", "Climatisation"),
+                                "Bâtiment Annexe", 0, true, null));
+
+                salles.add(new SalleDto("annexe-polyvalente", "Salle Polyvalente", 150,
+                                Arrays.asList("Projecteur", "Sono", "Scène", "Chaises mobiles", "Climatisation"),
+                                "Bâtiment Annexe", 0, true, null));
+
+                // 1er Étage Annexe (Salles 20-27)
+                for (int i = 0; i <= 7; i++) {
+                        int numSalle = 20 + i;
+                        salles.add(new SalleDto(
+                                        "annexe-" + numSalle,
+                                        "Salle " + numSalle,
+                                        35,
+                                        Arrays.asList("Projecteur", "Tableau blanc", "WiFi", "Climatisation"),
+                                        "Bâtiment Annexe",
+                                        1,
+                                        true,
+                                        null));
+                }
+
+                // 2ème Étage Annexe (Salles 30-37)
+                for (int i = 0; i <= 7; i++) {
+                        int numSalle = 30 + i;
+                        salles.add(new SalleDto(
+                                        "annexe-" + numSalle,
+                                        "Salle " + numSalle,
+                                        35,
+                                        Arrays.asList("Projecteur", "Tableau blanc", "WiFi", "Climatisation"),
+                                        "Bâtiment Annexe",
+                                        2,
+                                        true,
+                                        null));
+                }
+
+                // ==================== BÂTIMENT PRINCIPAL (Mécatronique & Industriel)
+                // ====================
+
+                // RDC Principal
+                salles.add(new SalleDto("principal-amphi", "Amphithéâtre Principal", 250,
+                                Arrays.asList("Projecteur", "Micro", "Système audio", "Écran géant", "Climatisation"),
+                                "Bâtiment Principal", 0, true, null));
+
+                // 1er Étage Principal (Salles 20-27)
+                for (int i = 0; i <= 7; i++) {
+                        int numSalle = 20 + i;
+                        salles.add(new SalleDto(
+                                        "principal-" + numSalle,
+                                        "Salle " + numSalle,
+                                        40,
+                                        Arrays.asList("Projecteur", "Tableau blanc", "WiFi", "Climatisation"),
+                                        "Bâtiment Principal",
+                                        1,
+                                        true,
+                                        null));
+                }
+
+                // 2ème Étage Principal (Salles 30-37)
+                for (int i = 0; i <= 7; i++) {
+                        int numSalle = 30 + i;
+                        salles.add(new SalleDto(
+                                        "principal-" + numSalle,
+                                        "Salle " + numSalle,
+                                        40,
+                                        Arrays.asList("Projecteur", "Tableau blanc", "WiFi", "Climatisation"),
+                                        "Bâtiment Principal",
+                                        2,
+                                        true,
+                                        null));
+                }
+
+                // 3ème Étage Principal (Salles 40-47)
+                for (int i = 0; i <= 7; i++) {
+                        int numSalle = 40 + i;
+                        salles.add(new SalleDto(
+                                        "principal-" + numSalle,
+                                        "Salle " + numSalle,
+                                        40,
+                                        Arrays.asList("Projecteur", "Tableau blanc", "WiFi"),
+                                        "Bâtiment Principal",
+                                        3,
+                                        true,
+                                        null));
+                }
+
+                return salles;
         }
 
         @GetMapping("/{id}")
-        public ReservationDto getReservationById(@PathVariable String id) {
-                return reservations.stream()
-                                .filter(r -> r.getId().equals(id))
+        public SalleDto getSalleById(@PathVariable String id) {
+                return getAllSalles().stream()
+                                .filter(s -> s.getId().equals(id))
                                 .findFirst()
                                 .orElse(null);
         }
 
-        @PostMapping
-        public ReservationDto creerReservation(@RequestBody CreateReservationDto dto) {
-                System.out.println("POST /api/v1/reservations - 200 OK");
-                ReservationDto nouvelle = new ReservationDto();
-                nouvelle.setId(UUID.randomUUID().toString());
-                nouvelle.setSalleId(dto.getSalleId());
-                nouvelle.setSalle(new SalleDto(dto.getSalleId(), "Salle " + dto.getSalleId(),
-                                30, Arrays.asList("Equipements"), "Bâtiment", 1, true, null));
-                nouvelle.setEnseignantId("user1");
-                nouvelle.setEnseignant(new UserDto("user1", "Dupont", "Jean",
-                                "jean.dupont@enicarthage.tn", "ENSEIGNANT", "Informatique", null));
-                nouvelle.setDateDebut(dto.getDateDebut());
-                nouvelle.setDateFin(dto.getDateFin());
-                nouvelle.setMotif(dto.getMotif());
-                nouvelle.setNombreParticipants(dto.getNombreParticipants());
-                nouvelle.setStatut("EN_ATTENTE");
-                nouvelle.setCreatedAt(LocalDateTime.now());
+        @GetMapping("/disponibles")
+        public List<SalleDto> getSallesDisponibles(
+                        @RequestParam(required = false) String dateDebut,
+                        @RequestParam(required = false) String dateFin) {
 
-                reservations.add(nouvelle);
-                return nouvelle;
+                return getAllSalles().stream()
+                                .filter(SalleDto::getDisponible)
+                                .toList();
         }
 
-        @DeleteMapping("/{id}")
-        public void annulerReservation(@PathVariable String id) {
-                reservations.removeIf(r -> r.getId().equals(id));
+        @GetMapping("/batiments")
+        public List<String> getBatiments() {
+                return Arrays.asList("Bâtiment Annexe", "Bâtiment Principal");
         }
 }
