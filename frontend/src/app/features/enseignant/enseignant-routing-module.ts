@@ -21,6 +21,11 @@ const routes: Routes = [
     path: 'mes-reservations',
     loadComponent: () => import('./pages/mes-reservations/mes-reservations')
       .then(m => m.MesReservations)
+  },
+  {
+    path: 'calendrier',
+    loadComponent: () => import('./pages/calendrier/calendrier')
+      .then(m => m.Calendrier)
   }
 ];
 

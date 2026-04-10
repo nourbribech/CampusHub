@@ -1,0 +1,289 @@
+<div class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <app-header titre="Calendrier Intelligent 📅" sousTitre="Visualisez et gérez vos réservations"
+        [retourRoute]="'/enseignant/dashboard'">
+        <div class="flex gap-3">
+            <button (click)="exporterCalendrier()"
+                class="px-4 py-2 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition">
+                📤 Exporter (.ics)
+            </button>
+            <button routerLink="/enseignant/reservation-salle"
+                class="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold hover:shadow-lg transition">
+                ➕ Nouvelle Réservation
+            </button>
+        </div>
+    </app-header>
+
+    <!-- Contenu -->
+    <div class="p-8">
+        <!-- Statistiques rapides -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+            <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-600 mb-1">Aujourd'hui</p>
+                        <p class="text-3xl font-bold text-primary">{{ nombreReservationsAujourdhui }}</p>
+                    </div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
+                        📅
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-600 mb-1">Salles disponibles</p>
+                        <p class="text-3xl font-bold text-success">{{ sallesDisponibles }}</p>
+                    </div>
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-2xl">
+                        ✅
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-600 mb-1">Conflits détectés</p>
+                        <p class="text-3xl font-bold" [ngClass]="nombreConflits > 0 ? 'text-danger' : 'text-gray-400'">
+                            {{ nombreConflits }}
+                        </p>
+                    </div>
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                        [ngClass]="nombreConflits > 0 ? 'bg-red-100' : 'bg-gray-100'">
+                        {{ nombreConflits > 0 ? '⚠️' : '✓' }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-5">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-600 mb-1">Total réservations</p>
+                        <p class="text-3xl font-bold text-gray-900">{{ reservations.length }}</p>
+                    </div>
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
+                        📊
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filtres -->
+        <div class="bg-white rounded-lg border border-gray-200 p-5 mb-6">
+            <h3 class="font-semibold text-gray-900 mb-4">Filtres</h3>
+            <div class="flex flex-wrap gap-3">
+                <!-- Filtre Bâtiment -->
+                <button (click)="appliquerFiltreBatiment('TOUS')" class="px-4 py-2 rounded-lg font-medium transition"
+                    [ngClass]="filtreBatiment === 'TOUS' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'">
+                    🏫 Tous
+                </button>
+                <button (click)="appliquerFiltreBatiment('Bâtiment Annexe')"
+                    class="px-4 py-2 rounded-lg font-medium transition"
+                    [ngClass]="filtreBatiment === 'Bâtiment Annexe' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'">
+                    💻 Annexe
+                </button>
+                <button (click)="appliquerFiltreBatiment('Bâtiment Principal')"
+                    class="px-4 py-2 rounded-lg font-medium transition"
+                    [ngClass]="filtreBatiment === 'Bâtiment Principal' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'">
+                    🏭 Principal
+                </button>
+
+                <div class="border-l border-gray-300 mx-2"></div>
+
+                <!-- Filtre Statut -->
+                <button (click)="appliquerFiltreStatut('TOUS')" class="px-4 py-2 rounded-lg font-medium transition"
+                    [ngClass]="filtreStatut === 'TOUS' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'">
+                    Tous
+                </button>
+                <button (click)="appliquerFiltreStatut('APPROUVEE')" class="px-4 py-2 rounded-lg font-medium transition"
+                    [ngClass]="filtreStatut === 'APPROUVEE' ? 'bg-success text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'">
+                    ✅ Approuvées
+                </button>
+                <button (click)="appliquerFiltreStatut('EN_ATTENTE')"
+                    class="px-4 py-2 rounded-lg font-medium transition"
+                    [ngClass]="filtreStatut === 'EN_ATTENTE' ? 'bg-warning text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'">
+                    ⏳ En attente
+                </button>
+                <button (click)="appliquerFiltreStatut('REJETEE')" class="px-4 py-2 rounded-lg font-medium transition"
+                    [ngClass]="filtreStatut === 'REJETEE' ? 'bg-danger text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'">
+                    ❌ Rejetées
+                </button>
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div *ngIf="loading" class="flex justify-center items-center h-96">
+            <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-primary"></div>
+        </div>
+
+        <!-- Calendrier -->
+        <div *ngIf="!loading" class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+            <full-calendar [options]="calendarOptions"></full-calendar>
+        </div>
+
+        <!-- Légende -->
+        <div class="mt-6 bg-white rounded-lg border border-gray-200 p-5">
+            <h3 class="font-semibold text-gray-900 mb-3">Légende</h3>
+            <div class="flex flex-wrap gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-4 h-4 bg-success rounded"></div>
+                    <span class="text-sm text-gray-700">Approuvée</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-4 h-4 bg-warning rounded"></div>
+                    <span class="text-sm text-gray-700">En attente</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-4 h-4 bg-danger rounded"></div>
+                    <span class="text-sm text-gray-700">Rejetée</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Détails Réservation -->
+<div *ngIf="showDetails && reservationSelectionnee"
+    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" (click)="fermerDetails()">
+    <div class="bg-white rounded-xl max-w-2xl w-full p-8 max-h-[90vh] overflow-y-auto"
+        (click)="$event.stopPropagation()">
+
+        <div class="flex items-start justify-between mb-6">
+            <h2 class="text-2xl font-bold text-gray-900">Détails de la réservation</h2>
+            <button (click)="fermerDetails()" class="text-gray-400 hover:text-gray-600 text-2xl">
+                ✕
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">{{ reservationSelectionnee?.salle?.batiment === 'Bâtiment Annexe' ? '💻' : '🏭'
+                    }}</span>
+                <div>
+                    <h3 class="text-xl font-bold">{{ reservationSelectionnee?.salle?.nom }}</h3>
+                    <p class="text-gray-600">{{ reservationSelectionnee?.salle?.batiment }} - Étage {{
+                        reservationSelectionnee?.salle?.etage }}</p>
+                </div>
+                <span class="ml-auto px-4 py-2 rounded-full text-sm font-semibold" [ngClass]="{
+            'bg-green-100 text-green-700': reservationSelectionnee?.statut === 'APPROUVEE',
+            'bg-yellow-100 text-yellow-700': reservationSelectionnee?.statut === 'EN_ATTENTE',
+            'bg-red-100 text-red-700': reservationSelectionnee?.statut === 'REJETEE'
+          }">
+                    {{ reservationSelectionnee?.statut }}
+                </span>
+            </div>
+
+            <div class="border-t pt-4">
+                <p class="text-gray-700 text-lg mb-4">{{ reservationSelectionnee?.motif }}</p>
+
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                        <p class="text-gray-500">Date</p>
+                        <p class="font-semibold">{{ reservationSelectionnee?.dateDebut | date:'dd/MM/yyyy' }}</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Horaire</p>
+                        <p class="font-semibold">
+                            {{ reservationSelectionnee?.dateDebut | date:'HH:mm' }} - {{ reservationSelectionnee?.dateFin
+                            | date:'HH:mm' }}
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Capacité salle</p>
+                        <p class="font-semibold">{{ reservationSelectionnee?.salle?.capacite }} personnes</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Participants prévus</p>
+                        <p class="font-semibold">{{ reservationSelectionnee?.nombreParticipants || 'Non spécifié' }}</p>
+                    </div>
+                </div>
+
+                <div *ngIf="reservationSelectionnee?.salle?.equipements?.length" class="mt-4">
+                    <p class="text-gray-500 text-sm mb-2">Équipements disponibles</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span *ngFor="let equipement of reservationSelectionnee?.salle?.equipements || []"
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">
+                            {{ equipement }}
+                        </span>
+                    </div>
+                </div>
+
+                <div *ngIf="reservationSelectionnee?.commentaireAdmin"
+                    class="mt-4 bg-red-50 border border-red-200 rounded-lg p-4">
+                    <p class="text-sm font-semibold text-red-900 mb-1">Commentaire de l'administration :</p>
+                    <p class="text-sm text-red-700">{{ reservationSelectionnee?.commentaireAdmin }}</p>
+                </div>
+            </div>
+
+            <div class="border-t pt-4 flex gap-3">
+                <button *ngIf="reservationSelectionnee?.statut !== 'REJETEE'"
+                    (click)="annulerReservation(reservationSelectionnee?.id!)"
+                    class="flex-1 px-6 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition">
+                    🗑️ Annuler la réservation
+                </button>
+                <button (click)="fermerDetails()"
+                    class="flex-1 px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Suggestions de Créneaux -->
+<div *ngIf="showSuggestions" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+    (click)="fermerSuggestions()">
+    <div class="bg-white rounded-xl max-w-3xl w-full p-8 max-h-[90vh] overflow-y-auto"
+        (click)="$event.stopPropagation()">
+
+        <div class="flex items-start justify-between mb-6">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Créneaux disponibles 💡</h2>
+                <p class="text-gray-600">Suggestions intelligentes pour cette date</p>
+            </div>
+            <button (click)="fermerSuggestions()" class="text-gray-400 hover:text-gray-600 text-2xl">
+                ✕
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div *ngFor="let suggestion of suggestions"
+                class="border-2 border-gray-200 rounded-lg p-5 hover:border-primary transition cursor-pointer"
+                (click)="reserverCreneau(suggestion)">
+
+                <div class="flex items-center justify-between mb-3">
+                    <div>
+                        <p class="text-lg font-bold text-gray-900">
+                            {{ suggestion.dateDebut | date:'HH:mm' }} - {{ suggestion.dateFin | date:'HH:mm' }}
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            {{ suggestion.sallesDisponibles }} salle(s) disponible(s)
+                        </p>
+                    </div>
+                    <span class="px-4 py-2 bg-green-100 text-green-700 rounded-lg font-semibold text-sm">
+                        Recommandé ⭐
+                    </span>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl">{{ suggestion.salleSuggestion.batiment === 'Bâtiment Annexe' ? '💻' : '🏭'
+                        }}</span>
+                    <div>
+                        <p class="font-semibold">{{ suggestion.salleSuggestion.nom }}</p>
+                        <p class="text-sm text-gray-600">
+                            {{ suggestion.salleSuggestion.batiment }} - Capacité {{ suggestion.salleSuggestion.capacite
+                            }}
+                        </p>
+                    </div>
+                </div>
+
+                <button
+                    class="mt-4 w-full bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">
+                    Réserver ce créneau →
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
