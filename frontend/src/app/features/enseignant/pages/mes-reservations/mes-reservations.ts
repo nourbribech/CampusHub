@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReservationService, Reservation } from '../../services/reservation';
+import { Header } from '../../../../shared/components/header/header';
 
 @Component({
   selector: 'app-mes-reservations',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, RouterModule, Header],
   templateUrl: './mes-reservations.html',
   styleUrls: ['./mes-reservations.scss']
 })

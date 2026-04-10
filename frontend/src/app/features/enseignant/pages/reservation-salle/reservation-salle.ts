@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ReservationService, Salle, CreateReservationDto } from '../../services/reservation';
+import { Header } from '../../../../shared/components/header/header';
 
 @Component({
   selector: 'app-reservation-salle',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, Header],
   templateUrl: './reservation-salle.html',
   styleUrls: ['./reservation-salle.scss']
 })
@@ -17,6 +18,10 @@ export class ReservationSalle implements OnInit {
 
   // Données du formulaire
   salles: Salle[] = [];
+  sallesFiltrees: Salle[] = [];
+  etagesDisponibles: number[] = [];
+  filtreBatiment: string = 'TOUS';
+  filtreEtage: string | number = 'TOUS';
   salleSelectionnee?: Salle;
   dateDebut = '';
   heureDebut = '';
@@ -50,14 +55,34 @@ export class ReservationSalle implements OnInit {
     this.reservationService.getSalles().subscribe({
       next: (salles) => {
         this.salles = salles;
+        this.sallesFiltrees = salles;
+        this.etagesDisponibles = [...new Set(salles.map(s => s.etage))].sort((a, b) => a - b);
         this.loadingSalles = false;
-        console.log('✅ Salles chargées:', salles);
+        console.log('✅ Salles chargées:', salles.length, 'salles');
       },
       error: (error) => {
         console.error('❌ Erreur chargement salles:', error);
         this.loadingSalles = false;
         this.error = 'Erreur lors du chargement des salles';
       }
+    });
+  }
+
+  filtrerParBatiment(batiment: string): void {
+    this.filtreBatiment = batiment;
+    this.appliquerFiltres();
+  }
+
+  filtrerParEtage(etage: string | number): void {
+    this.filtreEtage = etage;
+    this.appliquerFiltres();
+  }
+
+  appliquerFiltres(): void {
+    this.sallesFiltrees = this.salles.filter(s => {
+      const matchBatiment = this.filtreBatiment === 'TOUS' || s.batiment === this.filtreBatiment;
+      const matchEtage = this.filtreEtage === 'TOUS' || s.etage === this.filtreEtage;
+      return matchBatiment && matchEtage;
     });
   }
 

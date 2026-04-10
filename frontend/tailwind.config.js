@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
@@ -6,8 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#6366f1',
-        secondary: '#a855f7',
+        // Couleurs ENICarthage (à adapter selon la charte officielle)
+        primary: '#003B7D',      // Bleu ENICarthage
+        secondary: '#00A0DC',     // Bleu clair
+        accent: '#FFB81C',        // Jaune/Orange
         success: '#10b981',
         warning: '#f59e0b',
         danger: '#ef4444',

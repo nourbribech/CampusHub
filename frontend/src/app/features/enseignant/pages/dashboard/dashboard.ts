@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReservationService, Reservation } from '../../services/reservation';
+import { Header } from '../../../../shared/components/header/header';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, Header],
   templateUrl: './dashboard.html',
   styleUrls: ['./dashboard.scss']
 })

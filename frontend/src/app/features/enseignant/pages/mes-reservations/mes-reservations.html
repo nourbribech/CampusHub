@@ -1,25 +1,11 @@
 <div class="min-h-screen bg-gray-50">
-    <!-- En-tête -->
-    <div class="bg-white border-b border-gray-200 px-8 py-6">
-        <div class="flex items-center justify-between">
-            <div>
-                <h1 class="text-3xl font-bold text-gray-900 mb-2">
-                    Mes Réservations 📋
-                </h1>
-                <p class="text-gray-600">Gérez toutes vos réservations de salles</p>
-            </div>
-            <div class="flex gap-3">
-                <button routerLink="/enseignant/dashboard"
-                    class="px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition">
-                    ← Dashboard
-                </button>
-                <button routerLink="/enseignant/reservation-salle"
-                    class="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold hover:shadow-lg transition">
-                    ➕ Nouvelle Réservation
-                </button>
-            </div>
-        </div>
-    </div>
+    <app-header titre="Mes Réservations 📋" sousTitre="Gérez toutes vos réservations de salles"
+        [retourRoute]="'/enseignant/dashboard'">
+        <button routerLink="/enseignant/reservation-salle"
+            class="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold hover:shadow-lg transition">
+            ➕ Nouvelle Réservation
+        </button>
+    </app-header>
 
     <!-- Contenu -->
     <div class="p-8">
@@ -209,7 +195,8 @@
                                 <div class="flex items-center gap-2 text-sm text-gray-600">
                                     <span class="text-lg">🕐</span>
                                     <div>
-                                        <p class="font-semibold text-gray-900">{{ reservation.dateDebut | date:'HH:mm'
+                                        <p class="font-semibold text-gray-900">{{ reservation.dateDebut |
+                                            date:'HH:mm'
                                             }} - {{ reservation.dateFin | date:'HH:mm' }}</p>
                                         <p>Horaire</p>
                                     </div>
@@ -218,7 +205,8 @@
                                 <div class="flex items-center gap-2 text-sm text-gray-600">
                                     <span class="text-lg">👥</span>
                                     <div>
-                                        <p class="font-semibold text-gray-900">{{ reservation.nombreParticipants || '-'
+                                        <p class="font-semibold text-gray-900">{{ reservation.nombreParticipants ||
+                                            '-'
                                             }}</p>
                                         <p>Participants</p>
                                     </div>
