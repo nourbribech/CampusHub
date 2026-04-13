@@ -10,7 +10,7 @@ describe('ChatbotWidget', () => {
     await TestBed.configureTestingModule({
       imports: [ChatbotWidget]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ChatbotWidget);
     component = fixture.componentInstance;

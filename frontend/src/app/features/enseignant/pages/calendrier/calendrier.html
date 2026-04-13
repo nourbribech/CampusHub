@@ -186,7 +186,8 @@
                     <div>
                         <p class="text-gray-500">Horaire</p>
                         <p class="font-semibold">
-                            {{ reservationSelectionnee?.dateDebut | date:'HH:mm' }} - {{ reservationSelectionnee?.dateFin
+                            {{ reservationSelectionnee?.dateDebut | date:'HH:mm' }} - {{
+                            reservationSelectionnee?.dateFin
                             | date:'HH:mm' }}
                         </p>
                     </div>
@@ -219,7 +220,7 @@
 
             <div class="border-t pt-4 flex gap-3">
                 <button *ngIf="reservationSelectionnee?.statut !== 'REJETEE'"
-                    (click)="annulerReservation(reservationSelectionnee?.id!)"
+                    (click)="annulerReservation(reservationSelectionnee.id!)"
                     class="flex-1 px-6 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition">
                     🗑️ Annuler la réservation
                 </button>

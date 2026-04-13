@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ReservationService, Salle } from './reservation';
 
@@ -30,7 +31,10 @@ export class Chatbot {
 
   private salles: Salle[] = [];
 
-  constructor(private reservationService: ReservationService) {
+  constructor(
+    private reservationService: ReservationService,
+    private router: Router
+  ) {
     this.chargerSalles();
     this.envoyerMessageBot(
       "👋 Bonjour ! Je suis **Claude**, votre assistant virtuel ENICarthage.\n\n" +
@@ -85,6 +89,11 @@ export class Chatbot {
 
     if (this.conversationState.etape === 'reservation_salle') {
       this.traiterChoixSalle(texte);
+      return;
+    }
+
+    if (this.conversationState.etape === 'reservation_motif') {
+      this.traiterChoixMotif(texte);
       return;
     }
 
@@ -252,20 +261,13 @@ export class Chatbot {
     }
 
     if (salle) {
-      this.conversationState.etape = 'accueil';
+      this.conversationState.data.salleSelectionnee = salle;
+      this.conversationState.etape = 'reservation_motif';
 
       this.envoyerMessageBot(
-        `✅ Parfait ! Récapitulatif de votre réservation :\n\n` +
-        `🏢 **Salle :** ${salle.nom}\n` +
-        `📍 **Lieu :** ${salle.batiment} - Étage ${salle.etage}\n` +
-        `📅 **Date :** ${this.conversationState.data.date?.toLocaleDateString('fr-FR') || 'Non précisée'}\n` +
-        `🕐 **Horaire :** ${this.conversationState.data.heureDebut || '--'}h - ${this.conversationState.data.heureFin || '--'}h\n` +
-        `👥 **Capacité :** ${salle.capacite} personnes\n\n` +
-        "Pour finaliser la réservation, cliquez ci-dessous :",
-        [
-          { label: '✅ Finaliser la réservation', type: 'link', data: '/enseignant/reservation-salle' },
-          { label: '🔄 Recommencer', type: 'function', data: 'reserver' }
-        ]
+        `📍 Vous avez choisi la salle **${salle.nom}**.\n\n` +
+        "Dernière étape : quel est le **motif** de votre réservation ?\n" +
+        "💡 *Ex: CM de Développement Web, TP Algorithmique, Réunion...*"
       );
     } else {
       this.envoyerMessageBot(
@@ -273,6 +275,80 @@ export class Chatbot {
         "💡 *Tapez le numéro (1, 2, 3...) ou le nom de la salle*"
       );
     }
+  }
+
+  private traiterChoixMotif(texte: string): void {
+    if (texte.length < 3) {
+      this.envoyerMessageBot("Veuillez donner un motif un peu plus explicite pour votre réservation.");
+      return;
+    }
+
+    this.conversationState.data.motif = texte;
+    const data = this.conversationState.data;
+    const salle = data.salleSelectionnee!;
+
+    this.conversationState.etape = 'accueil'; // On revient à l'accueil pour finir
+
+    this.envoyerMessageBot(
+      `✅ **Récapitulatif de votre réservation :**\n\n` +
+      `🏢 **Salle :** ${salle.nom} (${salle.batiment})\n` +
+      `📅 **Date :** ${data.date?.toLocaleDateString('fr-FR')}\n` +
+      `🕐 **Horaire :** ${data.heureDebut}h - ${data.heureFin}h\n` +
+      `📝 **Motif :** ${texte}\n\n` +
+      "Voulez-vous confirmer cette réservation ?",
+      [
+        { label: '✅ Confirmer et enregistrer', type: 'function', data: 'finaliser' },
+        { label: '🔄 Recommencer', type: 'function', data: 'reserver' }
+      ]
+    );
+  }
+
+  private finaliserReservation(): void {
+    const data = this.conversationState.data;
+    if (!data.salleSelectionnee || !data.date || !data.heureDebut || !data.heureFin || !data.motif) {
+      this.envoyerMessageBot("⚠️ Désolé, il manque des informations pour finaliser la réservation.");
+      return;
+    }
+
+    // Préparation des dates ISO
+    const date = data.date;
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const dd = String(date.getDate()).padStart(2, '0');
+    const dateStr = `${yyyy}-${mm}-${dd}`;
+
+    const hDebut = String(data.heureDebut).padStart(2, '0');
+    const hFin = String(data.heureFin).padStart(2, '0');
+
+    const reservationDto = {
+      salleId: data.salleSelectionnee.id,
+      dateDebut: `${dateStr}T${hDebut}:00:00`,
+      dateFin: `${dateStr}T${hFin}:00:00`,
+      motif: data.motif,
+      nombreParticipants: data.salleSelectionnee.capacite
+    };
+
+    console.log('🚀 Envoi de la réservation via Chatbot:', reservationDto);
+
+    this.reservationService.creerReservation(reservationDto).subscribe({
+      next: (result) => {
+        this.envoyerMessageBot(
+          `🎉 **Félicitations !** Votre réservation a été enregistrée avec succès.\n\n` +
+          `L'administration l'examinera prochainement. Vous allez être redirigé vers vos réservations.`
+        );
+        setTimeout(() => {
+          this.router.navigate(['/enseignant/mes-reservations']);
+        }, 2000);
+      },
+      error: (error) => {
+        console.error('❌ Erreur Chatbot Reservation:', error);
+        this.envoyerMessageBot(
+          "❌ Désolé, une erreur est survenue lors de l'enregistrement.\n" +
+          "Veuillez réessayer ou utiliser le formulaire manuel.",
+          [{ label: '📝 Formulaire manuel', type: 'link', data: '/enseignant/reservation-salle' }]
+        );
+      }
+    });
   }
 
   private afficherAide(): void {
@@ -514,6 +590,9 @@ export class Chatbot {
         case 'lundi':
           this.traiterChoixDate(action.data);
           break;
+        case 'finaliser':
+          this.finaliserReservation();
+          break;
         default:
           if (action.data.includes('-')) {
             this.traiterChoixHeure(action.data);
@@ -529,6 +608,8 @@ interface ConversationData {
   heureDebut?: number;
   heureFin?: number;
   sallesDisponibles?: Salle[];
+  salleSelectionnee?: Salle;
+  motif?: string;
 }
 
 interface ConversationState {
