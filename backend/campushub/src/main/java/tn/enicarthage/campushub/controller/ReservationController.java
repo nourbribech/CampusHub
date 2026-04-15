@@ -76,8 +76,8 @@ public class ReservationController {
         Reservation reservation = new Reservation();
         reservation.setEnseignant(enseignant);
         reservation.setSalle(salle);
-        reservation.setDateDebut(LocalDateTime.parse(dto.getDateDebut()));
-        reservation.setDateFin(LocalDateTime.(dto.getDateFin()));
+        reservation.setDateDebut(dto.getDateDebut());
+        reservation.setDateFin(dto.getDateFin());
         reservation.setMotif(dto.getMotif());
         reservation.setNombreParticipants(dto.getNombreParticipants());
         reservation.setStatut(Reservation.Statut.EN_ATTENTE);
@@ -104,8 +104,8 @@ public class ReservationController {
         Reservation reservation = reservationService.getReservationById(id)
                 .orElseThrow(() -> new RuntimeException("Réservation non trouvée"));
 
-        reservation.setDateDebut(LocalDateTime.parse(dto.getDateDebut()));
-        reservation.setDateFin(LocalDateTime.parse(dto.getDateFin()));
+        reservation.setDateDebut(dto.getDateDebut());
+        reservation.setDateFin(dto.getDateFin());
         reservation.setMotif(dto.getMotif());
         reservation.setNombreParticipants(dto.getNombreParticipants());
 

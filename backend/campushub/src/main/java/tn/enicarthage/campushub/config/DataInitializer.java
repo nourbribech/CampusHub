@@ -4,9 +4,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import tn.enicarthage.campushub.model.DemandeDocument;
+import tn.enicarthage.campushub.model.Evenement;
 import tn.enicarthage.campushub.model.Reservation;
 import tn.enicarthage.campushub.model.Salle;
 import tn.enicarthage.campushub.model.User;
+import tn.enicarthage.campushub.service.DemandeDocumentService;
+import tn.enicarthage.campushub.service.EvenementService;
 import tn.enicarthage.campushub.service.ReservationService;
 import tn.enicarthage.campushub.service.SalleService;
 import tn.enicarthage.campushub.service.UserService;
@@ -22,6 +26,8 @@ public class DataInitializer implements CommandLineRunner {
     private final UserService userService;
     private final SalleService salleService;
     private final ReservationService reservationService;
+    private final EvenementService evenementService;
+    private final DemandeDocumentService demandeDocumentService;
 
     @Override
     public void run(String... args) {
@@ -41,6 +47,12 @@ public class DataInitializer implements CommandLineRunner {
 
             // Créer des réservations
             createReservations();
+
+            // Créer des événements
+            createEvents();
+
+            // Créer des demandes de documents
+            createDemandes();
 
             log.info("✅ Initialisation des données terminée avec succès !");
 
@@ -172,5 +184,62 @@ public class DataInitializer implements CommandLineRunner {
         reservationService.createReservation(reservation2);
 
         log.info("✅ {} réservations créées", reservationService.countReservations());
+    }
+
+    private void createEvents() {
+        log.info("📝 Création des événements...");
+
+        User admin = userService.getUserByEmail("admin@enicarthage.tn")
+                .orElseThrow(() -> new RuntimeException("Admin non trouvé"));
+
+        // Événement 1
+        Evenement event1 = new Evenement();
+        event1.setTitre("Welcome Day ENICarthage");
+        event1.setDescription("Journée d'accueil pour les nouveaux étudiants.");
+        event1.setDateDebut(LocalDateTime.now().plusDays(10).withHour(9).withMinute(0));
+        event1.setDateFin(LocalDateTime.now().plusDays(10).withHour(17).withMinute(0));
+        event1.setLieu("Amphithéâtre Principal");
+        event1.setNbParticipantsMax(200);
+        event1.setOrganisateur(admin);
+        event1.setStatut(Evenement.Statut.OUVERT);
+        evenementService.createEvenement(event1);
+
+        // Événement 2
+        Evenement event2 = new Evenement();
+        event2.setTitre("Hackathon CampusHub");
+        event2.setDescription("Compétition de développement pour améliorer la vie étudiante.");
+        event2.setDateDebut(LocalDateTime.now().plusWeeks(2).withHour(18).withMinute(0));
+        event2.setDateFin(LocalDateTime.now().plusWeeks(2).plusDays(2).withHour(12).withMinute(0));
+        event2.setLieu("Salle MAC");
+        event2.setNbParticipantsMax(50);
+        event2.setOrganisateur(admin);
+        event2.setStatut(Evenement.Statut.OUVERT);
+        evenementService.createEvenement(event2);
+
+        log.info("✅ {} événements créés", evenementService.countEvenements());
+    }
+
+    private void createDemandes() {
+        log.info("📝 Création des demandes de documents...");
+
+        User etudiant = userService.getUserByEmail("ahmed.benali@enicarthage.tn")
+                .orElseThrow(() -> new RuntimeException("Étudiant non trouvé"));
+
+        // Demande 1
+        DemandeDocument demande1 = new DemandeDocument();
+        demande1.setTypeDocument(DemandeDocument.TypeDocument.CERTIFICAT_SCOLARITE);
+        demande1.setDemandeur(etudiant);
+        demande1.setStatut(DemandeDocument.Statut.PRET);
+        demande1.setCommentaireAdmin("Votre certificat est prêt à être récupéré au bureau d'ordre.");
+        demandeDocumentService.createDemande(demande1);
+
+        // Demande 2
+        DemandeDocument demande2 = new DemandeDocument();
+        demande2.setTypeDocument(DemandeDocument.TypeDocument.RELEVE_NOTES);
+        demande2.setDemandeur(etudiant);
+        demande2.setStatut(DemandeDocument.Statut.EN_ATTENTE);
+        demandeDocumentService.createDemande(demande2);
+
+        log.info("✅ {} demandes de documents créées", demandeDocumentService.countDemandes());
     }
 }

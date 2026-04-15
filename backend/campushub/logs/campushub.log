@@ -1,0 +1,2440 @@
+2026-04-15 17:39:57 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 5076 (C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub)
+2026-04-15 17:39:57 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-15 17:39:57 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-15 17:39:57 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-15 17:39:57 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-15 17:39:57 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-15 17:39:57 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 5 JPA repository interfaces.
+2026-04-15 17:39:58 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-15 17:39:58 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-15 17:39:58 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-15 17:39:58 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-15 17:39:58 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1603 ms
+2026-04-15 17:39:58 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-15 17:39:58 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-04-15 17:39:58 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-15 17:39:59 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-15 17:39:59 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 17:40:00 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tn.enicarthage.campushub.CampushubApplication.main(CampushubApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 55 common frames omitted
+2026-04-15 17:40:00 [restartedMain] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tn.enicarthage.campushub.CampushubApplication.main(CampushubApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-04-15 17:40:00 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-15 17:40:01 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-15 17:40:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 17:40:02 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:98)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tn.enicarthage.campushub.CampushubApplication.main(CampushubApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 59 common frames omitted
+2026-04-15 17:40:02 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2026-04-15 17:40:02 [restartedMain] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2026-04-15 17:40:02 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+2026-04-15 17:40:02 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+2026-04-15 17:40:02 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-04-15 17:40:02 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-15 17:40:02 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tn.enicarthage.campushub.CampushubApplication.main(CampushubApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 21 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:98)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 25 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 45 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 59 common frames omitted
+2026-04-15 17:45:26 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 16140 (C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub)
+2026-04-15 17:45:26 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-15 17:45:26 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-15 17:45:26 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-15 17:45:26 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-15 17:45:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-15 17:45:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 5 JPA repository interfaces.
+2026-04-15 17:45:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-15 17:45:28 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-15 17:45:28 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-15 17:45:28 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-15 17:45:28 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1327 ms
+2026-04-15 17:45:28 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-15 17:45:28 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-04-15 17:45:28 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-15 17:45:28 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-15 17:45:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 17:45:28 [restartedMain] WARN  org.postgresql.util.PGPropertyUtil - JDBC URL invalid port number: npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech
+2026-04-15 17:45:28 [restartedMain] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:326)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:112)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:93)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tn.enicarthage.campushub.CampushubApplication.main(CampushubApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-04-15 17:45:28 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-15 17:45:29 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-15 17:45:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 17:45:29 [restartedMain] WARN  org.postgresql.util.PGPropertyUtil - JDBC URL invalid port number: npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech
+2026-04-15 17:45:29 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+2026-04-15 17:45:29 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+2026-04-15 17:45:29 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-04-15 17:45:29 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-15 17:45:29 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tn.enicarthage.campushub.CampushubApplication.main(CampushubApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 21 common frames omitted
+Caused by: java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:326)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:112)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:93)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:98)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 25 common frames omitted
+2026-04-15 17:48:58 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 4700 (C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub)
+2026-04-15 17:48:58 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-15 17:48:58 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-15 17:48:58 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-15 17:48:58 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-15 17:48:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-15 17:48:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 5 JPA repository interfaces.
+2026-04-15 17:49:00 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-15 17:49:00 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-15 17:49:00 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-15 17:49:00 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-15 17:49:00 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1376 ms
+2026-04-15 17:49:00 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-15 17:49:00 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-04-15 17:49:00 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-15 17:49:00 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-15 17:49:00 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 17:49:00 [restartedMain] WARN  org.postgresql.util.PGPropertyUtil - JDBC URL invalid port number: npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech
+2026-04-15 17:49:00 [restartedMain] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:326)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:112)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:93)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tn.enicarthage.campushub.CampushubApplication.main(CampushubApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-04-15 17:49:00 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-15 17:49:01 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-15 17:49:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 17:49:01 [restartedMain] WARN  org.postgresql.util.PGPropertyUtil - JDBC URL invalid port number: npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech
+2026-04-15 17:49:01 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+2026-04-15 17:49:01 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+2026-04-15 17:49:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-04-15 17:49:01 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-15 17:49:01 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tn.enicarthage.campushub.CampushubApplication.main(CampushubApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 21 common frames omitted
+Caused by: java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://neondb_owner:npg_eAYkrvb8ou2l@ep-cold-rain-abr4f4u6-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:326)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:112)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:93)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:98)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 25 common frames omitted
+2026-04-15 17:54:34 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 7432 (C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub)
+2026-04-15 17:54:34 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-15 17:54:34 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-15 17:54:34 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-15 17:54:34 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-15 17:54:34 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-15 17:54:34 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2026-04-15 17:54:35 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-15 17:54:35 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-15 17:54:35 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-15 17:54:35 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-15 17:54:35 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1409 ms
+2026-04-15 17:54:35 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-15 17:54:35 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-04-15 17:54:35 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-15 17:54:36 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-15 17:54:36 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 17:54:36 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@737d9f82
+2026-04-15 17:54:36 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-15 17:54:37 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-15 17:54:38 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-15 17:54:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table demandes_documents (
+        id bigserial not null,
+        commentaire_admin TEXT,
+        date_demande timestamp(6),
+        statut varchar(255) check (statut in ('EN_ATTENTE','EN_COURS','PRET','REJETE','RECUPERE')),
+        type_document varchar(255) not null check (type_document in ('CERTIFICAT_SCOLARITE','RELEVE_NOTES','ATTESTATION_PRESENCE','CARTE_ETUDIANT','AUTRE')),
+        demandeur_id bigint not null,
+        primary key (id)
+    )
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table evenements (
+        id bigserial not null,
+        created_at timestamp(6),
+        date_debut timestamp(6) not null,
+        date_fin timestamp(6) not null,
+        description TEXT,
+        image_url varchar(255),
+        lieu varchar(255),
+        nb_participants_max integer,
+        statut varchar(255) check (statut in ('OUVERT','PLEIN','ANNULE','TERMINE')),
+        titre varchar(255) not null,
+        organisateur_id bigint,
+        primary key (id)
+    )
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table reservations (
+        id bigserial not null,
+        commentaire_admin varchar(1000),
+        created_at timestamp(6),
+        date_debut timestamp(6) not null,
+        date_fin timestamp(6) not null,
+        motif varchar(500) not null,
+        nombre_participants integer,
+        statut varchar(255) not null check (statut in ('EN_ATTENTE','APPROUVEE','REJETEE')),
+        updated_at timestamp(6),
+        enseignant_id bigint not null,
+        salle_id bigint not null,
+        primary key (id)
+    )
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table salle_equipements (
+        salle_id bigint not null,
+        equipement varchar(255)
+    )
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table salles (
+        id bigserial not null,
+        batiment varchar(255) not null,
+        capacite integer not null,
+        disponible boolean not null,
+        etage integer not null,
+        image_url varchar(255),
+        nom varchar(255) not null,
+        primary key (id)
+    )
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        id bigserial not null,
+        avatar varchar(255),
+        created_at timestamp(6),
+        departement varchar(255),
+        email varchar(255) not null,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','ADMIN','RESPONSABLE_CLUB')),
+        updated_at timestamp(6),
+        primary key (id)
+    )
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists salles 
+       drop constraint if exists UK_baqiyi6ypsidfq05qu8l9o2w9
+2026-04-15 17:54:39 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-04-15 17:54:39 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uk_baqiyi6ypsidfq05qu8l9o2w9" of relation "salles" does not exist, skipping
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists salles 
+       add constraint UK_baqiyi6ypsidfq05qu8l9o2w9 unique (nom)
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists users 
+       drop constraint if exists UK_6dotkott2kjsp8vw4d0m25fb7
+2026-04-15 17:54:39 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-04-15 17:54:39 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uk_6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists users 
+       add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists demandes_documents 
+       add constraint FKlgwr4r3qewjp47fxihkl424kw 
+       foreign key (demandeur_id) 
+       references users
+2026-04-15 17:54:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists evenements 
+       add constraint FKagpicvosgoiu78fpgetfxbstf 
+       foreign key (organisateur_id) 
+       references users
+2026-04-15 17:54:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       add constraint FK1493g8mbd97uyl4eojskpag8i 
+       foreign key (enseignant_id) 
+       references users
+2026-04-15 17:54:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       add constraint FK11c2598mdsm9g395pl5ubdvi3 
+       foreign key (salle_id) 
+       references salles
+2026-04-15 17:54:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists salle_equipements 
+       add constraint FK16mjv18ki1mc8y6h27d40voq7 
+       foreign key (salle_id) 
+       references salles
+2026-04-15 17:54:40 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-15 17:54:40 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-15 17:54:41 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-15 17:54:41 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 60a691b2-9140-4cf2-80d6-da31c2e8aa99
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-15 17:54:41 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1ac38253, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@213f1908, org.springframework.security.web.context.SecurityContextHolderFilter@665ca008, org.springframework.security.web.header.HeaderWriterFilter@3d320551, org.springframework.web.filter.CorsFilter@3a120098, org.springframework.security.web.authentication.logout.LogoutFilter@4e334da5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a72e49c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ee4b2dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ba37e32, org.springframework.security.web.access.ExceptionTranslationFilter@14d4124c, org.springframework.security.web.access.intercept.AuthorizationFilter@7639afcc]
+2026-04-15 17:54:41 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-15 17:54:41 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-04-15 17:54:41 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-15 17:54:41 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-15 17:54:41 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-15 17:54:41 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-15 17:54:41 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-04-15 18:00:54 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 7356 (C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub)
+2026-04-15 18:00:54 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-15 18:00:54 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-15 18:00:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-15 18:00:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-15 18:00:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-15 18:00:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 5 JPA repository interfaces.
+2026-04-15 18:00:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-15 18:00:55 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-15 18:00:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-15 18:00:55 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-15 18:00:55 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1360 ms
+2026-04-15 18:00:56 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-15 18:00:56 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-04-15 18:00:56 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-15 18:00:56 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-15 18:00:56 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 18:00:57 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d9c0c4a
+2026-04-15 18:00:57 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-15 18:00:57 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-15 18:00:59 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-15 18:01:01 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-15 18:01:02 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-15 18:01:03 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-15 18:01:03 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 75ba7219-7088-4e08-a1b8-8bdd1dfe9815
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-15 18:01:03 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5b2c2343, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@268cb418, org.springframework.security.web.context.SecurityContextHolderFilter@766e9ef9, org.springframework.security.web.header.HeaderWriterFilter@77f490fb, org.springframework.web.filter.CorsFilter@36931570, org.springframework.security.web.authentication.logout.LogoutFilter@56229eef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bf61d87, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51f9276e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ea62f8f, org.springframework.security.web.access.ExceptionTranslationFilter@5e119ef4, org.springframework.security.web.access.intercept.AuthorizationFilter@6c9239ff]
+2026-04-15 18:01:04 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-15 18:01:04 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-04-15 18:01:04 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-15 18:01:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-15 18:01:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-15 18:01:04 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-15 18:01:04 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-04-15 18:03:19 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 16596 (C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub)
+2026-04-15 18:03:19 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-15 18:03:19 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-15 18:03:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-15 18:03:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-15 18:03:19 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-15 18:03:19 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2026-04-15 18:03:20 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-15 18:03:20 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-15 18:03:20 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-15 18:03:20 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-15 18:03:20 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1292 ms
+2026-04-15 18:03:20 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-15 18:03:20 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-04-15 18:03:20 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-15 18:03:20 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-15 18:03:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 18:03:21 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a3a3af0
+2026-04-15 18:03:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-15 18:03:22 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-15 18:03:23 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-15 18:03:25 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-15 18:03:25 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-15 18:03:26 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-15 18:03:26 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d25eb4d1-912a-4df3-8e11-da3d33b69c41
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-15 18:03:26 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3029f4d6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51da8216, org.springframework.security.web.context.SecurityContextHolderFilter@5ae87df, org.springframework.security.web.header.HeaderWriterFilter@2e8ff4b3, org.springframework.web.filter.CorsFilter@6a5b209a, org.springframework.security.web.authentication.logout.LogoutFilter@6300a8db, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4678f0f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@30c9d3b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3aa9791a, org.springframework.security.web.access.ExceptionTranslationFilter@17877a44, org.springframework.security.web.access.intercept.AuthorizationFilter@7bc34a37]
+2026-04-15 18:03:26 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-15 18:03:26 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-04-15 18:03:26 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-15 18:03:26 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-15 18:03:26 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-15 18:03:26 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-15 18:03:26 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-04-15 18:05:26 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 6108 (C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub)
+2026-04-15 18:05:26 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-15 18:05:26 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-15 18:05:26 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-15 18:05:26 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-15 18:05:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-15 18:05:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 5 JPA repository interfaces.
+2026-04-15 18:05:27 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-04-15 18:05:27 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-15 18:05:27 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-15 18:05:28 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-15 18:05:28 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1318 ms
+2026-04-15 18:05:28 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-15 18:05:28 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-04-15 18:05:28 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-15 18:05:28 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-15 18:05:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 18:05:29 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43a2f23
+2026-04-15 18:05:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-15 18:05:29 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-15 18:05:30 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-15 18:05:32 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-15 18:05:32 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-15 18:05:33 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-15 18:05:33 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 5e418cc9-1034-4a20-9777-478097156ac6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-15 18:05:33 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1af62894, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49b753ed, org.springframework.security.web.context.SecurityContextHolderFilter@17afb163, org.springframework.security.web.header.HeaderWriterFilter@210ca234, org.springframework.web.filter.CorsFilter@754a5e2a, org.springframework.security.web.authentication.logout.LogoutFilter@3083e2a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e021df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42f4caf6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@249d9652, org.springframework.security.web.access.ExceptionTranslationFilter@5cd7933d, org.springframework.security.web.access.intercept.AuthorizationFilter@5780925d]
+2026-04-15 18:05:33 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-15 18:05:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-04-15 18:05:33 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 7.663 seconds (process running for 7.998)
+2026-04-15 18:05:33 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 0
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Création des utilisateurs...
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Création d'un nouvel utilisateur : admin@enicarthage.tn
+2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur créé avec succès - ID: 1
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Création d'un nouvel utilisateur : jean.dupont@enicarthage.tn
+2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur créé avec succès - ID: 2
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Création d'un nouvel utilisateur : sophie.martin@enicarthage.tn
+2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur créé avec succès - ID: 3
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Création d'un nouvel utilisateur : ahmed.benali@enicarthage.tn
+2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur créé avec succès - ID: 4
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 4 utilisateurs créés
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Création des salles...
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle MAC
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 1
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : LABO Informatique
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 2
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 20
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 3
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 21
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 4
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 22
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 5
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 23
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 6
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 24
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 7
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 25
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 8
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 26
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 9
+2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 27
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 10
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Amphithéâtre Principal
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 11
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        salles s1_0
+2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Nombre total de salles : 11
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 11 salles créées
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Création des réservations...
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.service.UserService - ? Recherche de l'utilisateur par email: jean.dupont@enicarthage.tn
+2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Recherche des salles du bâtiment : Bâtiment Annexe
+2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.batiment=?
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Création d'une nouvelle réservation pour la salle ID: 1
+2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.salle_id=? 
+        and (
+            (
+                r1_0.date_debut<=? 
+                and r1_0.date_fin>=?
+            )
+        )
+2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Réservation créée avec succès - ID: 1
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Création d'une nouvelle réservation pour la salle ID: 1
+2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.salle_id=? 
+        and (
+            (
+                r1_0.date_debut<=? 
+                and r1_0.date_fin>=?
+            )
+        )
+2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Réservation créée avec succès - ID: 2
+2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        reservations r1_0
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Nombre total de réservations : 2
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 2 réservations créées
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Création des événements...
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.service.UserService - ? Recherche de l'utilisateur par email: admin@enicarthage.tn
+2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-04-15 18:05:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        evenements
+        (created_at, date_debut, date_fin, description, image_url, lieu, nb_participants_max, organisateur_id, statut, titre) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        evenements
+        (created_at, date_debut, date_fin, description, image_url, lieu, nb_participants_max, organisateur_id, statut, titre) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        evenements e1_0
+2026-04-15 18:05:40 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 2 événements créés
+2026-04-15 18:05:40 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Création des demandes de documents...
+2026-04-15 18:05:40 [restartedMain] INFO  t.e.campushub.service.UserService - ? Recherche de l'utilisateur par email: ahmed.benali@enicarthage.tn
+2026-04-15 18:05:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-04-15 18:05:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        demandes_documents
+        (commentaire_admin, date_demande, demandeur_id, statut, type_document) 
+    values
+        (?, ?, ?, ?, ?)
+2026-04-15 18:05:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        demandes_documents
+        (commentaire_admin, date_demande, demandeur_id, statut, type_document) 
+    values
+        (?, ?, ?, ?, ?)
+2026-04-15 18:05:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        demandes_documents dd1_0
+2026-04-15 18:05:41 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 2 demandes de documents créées
+2026-04-15 18:05:41 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données terminée avec succès !
+2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-04-15 18:09:00 [http-nio-8081-exec-1] INFO  t.e.c.controller.SalleController - GET /api/v1/salles
+2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
+2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:09:00 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0
+2026-04-15 18:09:00 [http-nio-8081-exec-1] INFO  t.e.campushub.service.SalleService - ? Récupération de toutes les salles
+2026-04-15 18:09:00 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-04-15 18:09:01 [http-nio-8081-exec-2] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:09:01 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-04-15 18:09:01 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-3] INFO  t.e.c.controller.SalleController - GET /api/v1/salles
+2026-04-15 18:09:01 [http-nio-8081-exec-4] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
+2026-04-15 18:09:01 [http-nio-8081-exec-3] INFO  t.e.campushub.service.SalleService - ? Récupération de toutes les salles
+2026-04-15 18:09:01 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-04-15 18:09:01 [http-nio-8081-exec-4] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:09:01 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-4] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:09:01 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:01 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:02 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:02 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:02 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:02 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:02 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:02 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:02 [http-nio-8081-exec-5] INFO  t.e.c.controller.SalleController - GET /api/v1/salles
+2026-04-15 18:09:02 [http-nio-8081-exec-6] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
+2026-04-15 18:09:02 [http-nio-8081-exec-6] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:09:02 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0
+2026-04-15 18:09:02 [http-nio-8081-exec-5] INFO  t.e.campushub.service.SalleService - ? Récupération de toutes les salles
+2026-04-15 18:09:02 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-04-15 18:09:02 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:02 [http-nio-8081-exec-6] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:09:02 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-04-15 18:09:02 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:02 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.id=?
+2026-04-15 18:09:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:08 [http-nio-8081-exec-2] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
+2026-04-15 18:09:08 [http-nio-8081-exec-4] INFO  t.e.c.controller.SalleController - GET /api/v1/salles
+2026-04-15 18:09:08 [http-nio-8081-exec-2] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:09:08 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0
+2026-04-15 18:09:08 [http-nio-8081-exec-4] INFO  t.e.campushub.service.SalleService - ? Récupération de toutes les salles
+2026-04-15 18:09:08 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-04-15 18:09:09 [http-nio-8081-exec-2] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:09:09 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:09 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:16 [http-nio-8081-exec-1] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
+2026-04-15 18:09:16 [http-nio-8081-exec-1] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:09:16 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0
+2026-04-15 18:09:16 [http-nio-8081-exec-1] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:09:16 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-04-15 18:09:16 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.id=?
+2026-04-15 18:09:16 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] INFO  t.e.c.controller.SalleController - GET /api/v1/salles
+2026-04-15 18:09:17 [http-nio-8081-exec-3] INFO  t.e.campushub.service.SalleService - ? Récupération de toutes les salles
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.c.c.ReservationController - POST /api/v1/reservations
+2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:10:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0
+2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.campushub.service.SalleService - ? Recherche de la salle avec ID: 3
+2026-04-15 18:10:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.id=?
+2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.c.service.ReservationService - Création d'une nouvelle réservation pour la salle ID: 3
+2026-04-15 18:10:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.salle_id=? 
+        and (
+            (
+                r1_0.date_debut<=? 
+                and r1_0.date_fin>=?
+            )
+        )
+2026-04-15 18:10:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.c.service.ReservationService - Réservation créée avec succès - ID: 3
+2026-04-15 18:10:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:10:27 [http-nio-8081-exec-10] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
+2026-04-15 18:10:28 [http-nio-8081-exec-10] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:10:28 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0
+2026-04-15 18:10:28 [http-nio-8081-exec-10] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:10:28 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-04-15 18:10:28 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.id=?
+2026-04-15 18:10:28 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.id=?
+2026-04-15 18:10:28 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
+2026-04-15 18:10:28 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.salle_id,
+        e1_0.equipement 
+    from
+        salle_equipements e1_0 
+    where
+        e1_0.salle_id=?
