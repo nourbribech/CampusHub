@@ -1,82 +1,144 @@
 package tn.enicarthage.campushub.controller;
 
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tn.enicarthage.campushub.dto.CreateReservationDto;
 import tn.enicarthage.campushub.dto.ReservationDto;
-import tn.enicarthage.campushub.dto.SalleDto;
-import tn.enicarthage.campushub.dto.UserDto;
+import tn.enicarthage.campushub.model.Reservation;
+import tn.enicarthage.campushub.model.Salle;
+import tn.enicarthage.campushub.model.User;
+import tn.enicarthage.campushub.service.ReservationService;
+import tn.enicarthage.campushub.service.SalleService;
+import tn.enicarthage.campushub.service.UserService;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/reservations")
 @CrossOrigin(origins = "http://localhost:4200")
+@RequiredArgsConstructor
+@Slf4j
 public class ReservationController {
 
-    private List<ReservationDto> reservations = new ArrayList<>(Arrays.asList(
-            new ReservationDto(
-                    "1", "1",
-                    new SalleDto("1", "Amphithéâtre A", 200, Arrays.asList("Projecteur"), "Bâtiment A", 1, true, null),
-                    "user1",
-                    new UserDto("user1", "Dupont", "Jean", "jean.dupont@enicarthage.tn", "ENSEIGNANT", "Informatique", null),
-                    LocalDateTime.now().plusDays(3),
-                    LocalDateTime.now().plusDays(3).plusHours(2),
-                    "Cours de Programmation Avancée",
-                    30, "APPROUVEE", null, LocalDateTime.now().minusDays(5)
-            ),
-            new ReservationDto(
-                    "2", "2",
-                    new SalleDto("2", "Salle B12", 30, Arrays.asList("Tableau"), "Bâtiment B", 1, true, null),
-                    "user1",
-                    new UserDto("user1", "Dupont", "Jean", "jean.dupont@enicarthage.tn", "ENSEIGNANT", "Informatique", null),
-                    LocalDateTime.now().plusDays(7),
-                    LocalDateTime.now().plusDays(7).plusHours(3),
-                    "TP Base de Données",
-                    25, "EN_ATTENTE", null, LocalDateTime.now().minusDays(2)
-            )
-    ));
+    private final ReservationService reservationService;
+    private final UserService userService;
+    private final SalleService salleService;
 
     @GetMapping("/me")
-    public List<ReservationDto> getMesReservations() {
-        return reservations;
+    public ResponseEntity<List<ReservationDto>> getMesReservations() {
+        log.info("GET /api/v1/reservations/me");
+
+        // Pour l'instant, on récupère les réservations du premier enseignant
+        // TODO: Récupérer l'utilisateur connecté depuis le contexte de sécurité
+        User enseignant = userService.getUsersByRole(User.Role.ENSEIGNANT)
+                .stream()
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Aucun enseignant trouvé"));
+
+        List<Reservation> reservations = reservationService.getReservationsByEnseignant(enseignant.getId());
+        List<ReservationDto> dtos = reservations.stream()
+                .map(this::convertToDto)
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(dtos);
     }
 
     @GetMapping("/{id}")
-    public ReservationDto getReservationById(@PathVariable String id) {
-        return reservations.stream()
-                .filter(r -> r.getId().equals(id))
-                .findFirst()
-                .orElse(null);
+    public ResponseEntity<ReservationDto> getReservationById(@PathVariable Long id) {
+        log.info("GET /api/v1/reservations/{}", id);
+
+        Reservation reservation = reservationService.getReservationById(id)
+                .orElseThrow(() -> new RuntimeException("Réservation non trouvée"));
+
+        return ResponseEntity.ok(convertToDto(reservation));
     }
 
     @PostMapping
-    public ReservationDto creerReservation(@RequestBody CreateReservationDto dto) {
-        System.out.println("POST /api/v1/reservations - 200 OK");
-        ReservationDto nouvelle = new ReservationDto();
-        nouvelle.setId(UUID.randomUUID().toString());
-        nouvelle.setSalleId(dto.getSalleId());
-        nouvelle.setSalle(new SalleDto(dto.getSalleId(), "Salle " + dto.getSalleId(),
-                30, Arrays.asList("Equipements"), "Bâtiment", 1, true, null));
-        nouvelle.setEnseignantId("user1");
-        nouvelle.setEnseignant(new UserDto("user1", "Dupont", "Jean",
-                "jean.dupont@enicarthage.tn", "ENSEIGNANT", "Informatique", null));
-        nouvelle.setDateDebut(dto.getDateDebut());
-        nouvelle.setDateFin(dto.getDateFin());
-        nouvelle.setMotif(dto.getMotif());
-        nouvelle.setNombreParticipants(dto.getNombreParticipants());
-        nouvelle.setStatut("EN_ATTENTE");
-        nouvelle.setCreatedAt(LocalDateTime.now());
+    public ResponseEntity<ReservationDto> creerReservation(@RequestBody CreateReservationDto dto) {
+        log.info("POST /api/v1/reservations");
 
-        reservations.add(nouvelle);
-        return nouvelle;
+        // Récupérer l'enseignant (pour l'instant le premier)
+        User enseignant = userService.getUsersByRole(User.Role.ENSEIGNANT)
+                .stream()
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Enseignant non trouvé"));
+
+        // Récupérer la salle
+        Salle salle = salleService.getSalleById(Long.parseLong(dto.getSalleId()))
+                .orElseThrow(() -> new RuntimeException("Salle non trouvée"));
+
+        // Créer la réservation
+        Reservation reservation = new Reservation();
+        reservation.setEnseignant(enseignant);
+        reservation.setSalle(salle);
+        reservation.setDateDebut(LocalDateTime.parse(dto.getDateDebut()));
+        reservation.setDateFin(LocalDateTime.(dto.getDateFin()));
+        reservation.setMotif(dto.getMotif());
+        reservation.setNombreParticipants(dto.getNombreParticipants());
+        reservation.setStatut(Reservation.Statut.EN_ATTENTE);
+
+        Reservation savedReservation = reservationService.createReservation(reservation);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(convertToDto(savedReservation));
     }
 
     @DeleteMapping("/{id}")
-    public void annulerReservation(@PathVariable String id) {
-        reservations.removeIf(r -> r.getId().equals(id));
+    public ResponseEntity<Void> annulerReservation(@PathVariable Long id) {
+        log.info("DELETE /api/v1/reservations/{}", id);
+
+        reservationService.deleteReservation(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ReservationDto> modifierReservation(
+            @PathVariable Long id,
+            @RequestBody CreateReservationDto dto) {
+        log.info("PUT /api/v1/reservations/{}", id);
+
+        Reservation reservation = reservationService.getReservationById(id)
+                .orElseThrow(() -> new RuntimeException("Réservation non trouvée"));
+
+        reservation.setDateDebut(LocalDateTime.parse(dto.getDateDebut()));
+        reservation.setDateFin(LocalDateTime.parse(dto.getDateFin()));
+        reservation.setMotif(dto.getMotif());
+        reservation.setNombreParticipants(dto.getNombreParticipants());
+
+        Reservation updatedReservation = reservationService.updateReservation(id, reservation);
+
+        return ResponseEntity.ok(convertToDto(updatedReservation));
+    }
+
+    private ReservationDto convertToDto(Reservation reservation) {
+        ReservationDto dto = new ReservationDto();
+        dto.setId(reservation.getId().toString());
+        dto.setSalleId(reservation.getSalle().getId().toString());
+
+        // Salle DTO
+        tn.enicarthage.campushub.dto.SalleDto salleDto = new tn.enicarthage.campushub.dto.SalleDto();
+        salleDto.setId(reservation.getSalle().getId().toString());
+        salleDto.setNom(reservation.getSalle().getNom());
+        salleDto.setCapacite(reservation.getSalle().getCapacite());
+        salleDto.setEquipements(reservation.getSalle().getEquipements());
+        salleDto.setBatiment(reservation.getSalle().getBatiment());
+        salleDto.setEtage(reservation.getSalle().getEtage());
+        salleDto.setDisponible(reservation.getSalle().getDisponible());
+        dto.setSalle(salleDto);
+
+        dto.setEnseignantId(reservation.getEnseignant().getId().toString());
+        dto.setDateDebut(reservation.getDateDebut());
+        dto.setDateFin(reservation.getDateFin());
+        dto.setMotif(reservation.getMotif());
+        dto.setNombreParticipants(reservation.getNombreParticipants());
+        dto.setStatut(reservation.getStatut().name());
+        dto.setCommentaireAdmin(reservation.getCommentaireAdmin());
+        dto.setCreatedAt(reservation.getCreatedAt());
+
+        return dto;
     }
 }
