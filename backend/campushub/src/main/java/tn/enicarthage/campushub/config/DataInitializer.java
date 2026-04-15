@@ -4,16 +4,16 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import tn.enicarthage.campushub.model.DemandeDocument;
-import tn.enicarthage.campushub.model.Evenement;
-import tn.enicarthage.campushub.model.Reservation;
-import tn.enicarthage.campushub.model.Salle;
-import tn.enicarthage.campushub.model.User;
-import tn.enicarthage.campushub.service.DemandeDocumentService;
-import tn.enicarthage.campushub.service.EvenementService;
-import tn.enicarthage.campushub.service.ReservationService;
-import tn.enicarthage.campushub.service.SalleService;
-import tn.enicarthage.campushub.service.UserService;
+import tn.enicarthage.campushub.model.enseignant.DemandeDocument;
+import tn.enicarthage.campushub.model.enseignant.Evenement;
+import tn.enicarthage.campushub.model.enseignant.Reservation;
+import tn.enicarthage.campushub.model.enseignant.Salle;
+import tn.enicarthage.campushub.service.enseignant.DemandeDocumentService;
+import tn.enicarthage.campushub.service.enseignant.EvenementService;
+import tn.enicarthage.campushub.service.enseignant.ReservationService;
+import tn.enicarthage.campushub.service.enseignant.SalleService;
+import tn.enicarthage.campushub.service.enseignant.UserService;
+import tn.enicarthage.campushub.shared.model.User;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -39,23 +39,12 @@ public class DataInitializer implements CommandLineRunner {
         }
 
         try {
-            // Créer des utilisateurs
             createUsers();
-
-            // Créer des salles
             createSalles();
-
-            // Créer des réservations
             createReservations();
-
-            // Créer des événements
             createEvents();
-
-            // Créer des demandes de documents
             createDemandes();
-
             log.info("✅ Initialisation des données terminée avec succès !");
-
         } catch (Exception e) {
             log.error("❌ Erreur lors de l'initialisation des données", e);
         }
@@ -64,7 +53,6 @@ public class DataInitializer implements CommandLineRunner {
     private void createUsers() {
         log.info("📝 Création des utilisateurs...");
 
-        // Admin
         User admin = new User();
         admin.setNom("Admin");
         admin.setPrenom("System");
@@ -74,7 +62,6 @@ public class DataInitializer implements CommandLineRunner {
         admin.setDepartement("Administration");
         userService.createUser(admin);
 
-        // Enseignants
         User enseignant1 = new User();
         enseignant1.setNom("Dupont");
         enseignant1.setPrenom("Jean");
@@ -93,7 +80,6 @@ public class DataInitializer implements CommandLineRunner {
         enseignant2.setDepartement("Mécatronique");
         userService.createUser(enseignant2);
 
-        // Étudiant
         User etudiant = new User();
         etudiant.setNom("Ben Ali");
         etudiant.setPrenom("Ahmed");
@@ -109,7 +95,6 @@ public class DataInitializer implements CommandLineRunner {
     private void createSalles() {
         log.info("📝 Création des salles...");
 
-        // Bâtiment Annexe - RDC
         Salle mac = new Salle();
         mac.setNom("Salle MAC");
         mac.setCapacite(30);
@@ -128,7 +113,6 @@ public class DataInitializer implements CommandLineRunner {
         labo.setDisponible(true);
         salleService.createSalle(labo);
 
-        // Bâtiment Annexe - 1er étage
         for (int i = 0; i <= 7; i++) {
             Salle salle = new Salle();
             salle.setNom("Salle " + (20 + i));
@@ -140,7 +124,6 @@ public class DataInitializer implements CommandLineRunner {
             salleService.createSalle(salle);
         }
 
-        // Bâtiment Principal - Amphi
         Salle amphi = new Salle();
         amphi.setNom("Amphithéâtre Principal");
         amphi.setCapacite(250);
@@ -161,7 +144,6 @@ public class DataInitializer implements CommandLineRunner {
 
         Salle salle = salleService.getSallesByBatiment("Bâtiment Annexe").get(0);
 
-        // Réservation 1 - Approuvée
         Reservation reservation1 = new Reservation();
         reservation1.setEnseignant(enseignant);
         reservation1.setSalle(salle);
@@ -172,7 +154,6 @@ public class DataInitializer implements CommandLineRunner {
         reservation1.setStatut(Reservation.Statut.APPROUVEE);
         reservationService.createReservation(reservation1);
 
-        // Réservation 2 - En attente
         Reservation reservation2 = new Reservation();
         reservation2.setEnseignant(enseignant);
         reservation2.setSalle(salle);
@@ -192,7 +173,6 @@ public class DataInitializer implements CommandLineRunner {
         User admin = userService.getUserByEmail("admin@enicarthage.tn")
                 .orElseThrow(() -> new RuntimeException("Admin non trouvé"));
 
-        // Événement 1
         Evenement event1 = new Evenement();
         event1.setTitre("Welcome Day ENICarthage");
         event1.setDescription("Journée d'accueil pour les nouveaux étudiants.");
@@ -204,7 +184,6 @@ public class DataInitializer implements CommandLineRunner {
         event1.setStatut(Evenement.Statut.OUVERT);
         evenementService.createEvenement(event1);
 
-        // Événement 2
         Evenement event2 = new Evenement();
         event2.setTitre("Hackathon CampusHub");
         event2.setDescription("Compétition de développement pour améliorer la vie étudiante.");
@@ -225,7 +204,6 @@ public class DataInitializer implements CommandLineRunner {
         User etudiant = userService.getUserByEmail("ahmed.benali@enicarthage.tn")
                 .orElseThrow(() -> new RuntimeException("Étudiant non trouvé"));
 
-        // Demande 1
         DemandeDocument demande1 = new DemandeDocument();
         demande1.setTypeDocument(DemandeDocument.TypeDocument.CERTIFICAT_SCOLARITE);
         demande1.setDemandeur(etudiant);
@@ -233,7 +211,6 @@ public class DataInitializer implements CommandLineRunner {
         demande1.setCommentaireAdmin("Votre certificat est prêt à être récupéré au bureau d'ordre.");
         demandeDocumentService.createDemande(demande1);
 
-        // Demande 2
         DemandeDocument demande2 = new DemandeDocument();
         demande2.setTypeDocument(DemandeDocument.TypeDocument.RELEVE_NOTES);
         demande2.setDemandeur(etudiant);
