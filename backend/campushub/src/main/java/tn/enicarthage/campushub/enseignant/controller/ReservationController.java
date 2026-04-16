@@ -1,4 +1,4 @@
-﻿package tn.enicarthage.campushub.controller.enseignant;
+package tn.enicarthage.campushub.enseignant.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,17 +6,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import tn.enicarthage.campushub.dto.enseignant.CreateReservationDto;
-import tn.enicarthage.campushub.dto.enseignant.ReservationDto;
-import tn.enicarthage.campushub.dto.enseignant.SalleDto;
-import tn.enicarthage.campushub.model.enseignant.Reservation;
-import tn.enicarthage.campushub.model.enseignant.Salle;
-import tn.enicarthage.campushub.service.enseignant.ReservationService;
-import tn.enicarthage.campushub.service.enseignant.SalleService;
-import tn.enicarthage.campushub.service.enseignant.UserService;
+import tn.enicarthage.campushub.enseignant.dto.CreateReservationDto;
+import tn.enicarthage.campushub.enseignant.dto.ReservationDto;
+import tn.enicarthage.campushub.enseignant.dto.SalleDto;
+import tn.enicarthage.campushub.enseignant.model.Reservation;
+import tn.enicarthage.campushub.enseignant.model.Salle;
+import tn.enicarthage.campushub.enseignant.service.ReservationService;
+import tn.enicarthage.campushub.enseignant.service.SalleService;
+import tn.enicarthage.campushub.enseignant.service.UserService;
 import tn.enicarthage.campushub.shared.model.User;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 

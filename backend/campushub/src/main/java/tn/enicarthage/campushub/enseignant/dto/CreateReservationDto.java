@@ -1,4 +1,4 @@
-package tn.enicarthage.campushub.dto.enseignant;
+package tn.enicarthage.campushub.enseignant.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

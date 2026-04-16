@@ -1,4 +1,4 @@
-﻿package tn.enicarthage.campushub.controller.enseignant;
+package tn.enicarthage.campushub.enseignant.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,11 +6,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import tn.enicarthage.campushub.dto.enseignant.DemandeDocumentDto;
-import tn.enicarthage.campushub.model.enseignant.DemandeDocument;
+import tn.enicarthage.campushub.enseignant.dto.DemandeDocumentDto;
+import tn.enicarthage.campushub.enseignant.model.DemandeDocument;
 import tn.enicarthage.campushub.shared.model.User;
-import tn.enicarthage.campushub.service.enseignant.DemandeDocumentService;
-import tn.enicarthage.campushub.service.enseignant.UserService;
+import tn.enicarthage.campushub.enseignant.service.DemandeDocumentService;
+import tn.enicarthage.campushub.enseignant.service.UserService;
 
 import java.util.List;
 import java.util.stream.Collectors;

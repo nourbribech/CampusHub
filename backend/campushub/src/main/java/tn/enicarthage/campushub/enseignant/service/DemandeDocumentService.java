@@ -1,9 +1,9 @@
-package tn.enicarthage.campushub.service.enseignant;
+package tn.enicarthage.campushub.enseignant.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tn.enicarthage.campushub.model.enseignant.DemandeDocument;
-import tn.enicarthage.campushub.repository.enseignant.DemandeDocumentRepository;
+import tn.enicarthage.campushub.enseignant.model.DemandeDocument;
+import tn.enicarthage.campushub.enseignant.repository.DemandeDocumentRepository;
 
 import java.util.List;
 import java.util.Optional;

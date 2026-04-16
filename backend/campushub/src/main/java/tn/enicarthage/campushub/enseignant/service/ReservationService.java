@@ -1,13 +1,12 @@
-﻿package tn.enicarthage.campushub.service.enseignant;
+package tn.enicarthage.campushub.enseignant.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tn.enicarthage.campushub.model.enseignant.Reservation;
-import tn.enicarthage.campushub.model.enseignant.Salle;
-import tn.enicarthage.campushub.repository.enseignant.ReservationRepository;
-import tn.enicarthage.campushub.repository.enseignant.SalleRepository;
+import tn.enicarthage.campushub.enseignant.model.Reservation;
+import tn.enicarthage.campushub.enseignant.repository.ReservationRepository;
+import tn.enicarthage.campushub.enseignant.repository.SalleRepository;
 import tn.enicarthage.campushub.shared.repository.UserRepository;
 
 import java.time.LocalDateTime;

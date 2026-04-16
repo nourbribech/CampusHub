@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tn.enicarthage.campushub.admin.dto.DashboardStatsDto;
 import tn.enicarthage.campushub.admin.service.AdminService;
-import tn.enicarthage.campushub.model.enseignant.Reservation;
+import tn.enicarthage.campushub.enseignant.model.Reservation;
 import tn.enicarthage.campushub.shared.model.User;
 
 import java.util.List;

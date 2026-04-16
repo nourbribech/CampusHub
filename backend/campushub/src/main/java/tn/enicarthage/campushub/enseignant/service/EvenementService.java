@@ -1,9 +1,9 @@
-package tn.enicarthage.campushub.service.enseignant;
+package tn.enicarthage.campushub.enseignant.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tn.enicarthage.campushub.model.enseignant.Evenement;
-import tn.enicarthage.campushub.repository.enseignant.EvenementRepository;
+import tn.enicarthage.campushub.enseignant.model.Evenement;
+import tn.enicarthage.campushub.enseignant.repository.EvenementRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;

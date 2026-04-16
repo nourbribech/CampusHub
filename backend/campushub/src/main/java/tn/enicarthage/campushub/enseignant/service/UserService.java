@@ -1,4 +1,4 @@
-package tn.enicarthage.campushub.service.enseignant;
+package tn.enicarthage.campushub.enseignant.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

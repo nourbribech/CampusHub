@@ -1,4 +1,4 @@
-package tn.enicarthage.campushub.controller.enseignant;
+package tn.enicarthage.campushub.enseignant.controller;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

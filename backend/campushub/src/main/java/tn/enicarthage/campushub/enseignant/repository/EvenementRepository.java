@@ -1,8 +1,8 @@
-package tn.enicarthage.campushub.repository.enseignant;
+package tn.enicarthage.campushub.enseignant.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import tn.enicarthage.campushub.model.enseignant.Evenement;
+import tn.enicarthage.campushub.enseignant.model.Evenement;
 
 import java.time.LocalDateTime;
 import java.util.List;

@@ -4,8 +4,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tn.enicarthage.campushub.model.enseignant.DemandeDocument;
-import tn.enicarthage.campushub.model.enseignant.Evenement;
+import tn.enicarthage.campushub.enseignant.model.DemandeDocument;
+import tn.enicarthage.campushub.enseignant.model.Evenement;
 import tn.enicarthage.campushub.shared.model.User;
 import tn.enicarthage.campushub.student.service.StudentService;
 

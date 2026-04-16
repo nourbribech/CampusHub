@@ -1,12 +1,12 @@
-package tn.enicarthage.campushub.controller.enseignant;
+package tn.enicarthage.campushub.enseignant.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tn.enicarthage.campushub.dto.enseignant.SalleDto;
-import tn.enicarthage.campushub.model.enseignant.Salle;
-import tn.enicarthage.campushub.service.enseignant.SalleService;
+import tn.enicarthage.campushub.enseignant.dto.SalleDto;
+import tn.enicarthage.campushub.enseignant.model.Salle;
+import tn.enicarthage.campushub.enseignant.service.SalleService;
 
 import java.util.List;
 import java.util.stream.Collectors;

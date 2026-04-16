@@ -885,15 +885,15 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:05:33 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:05:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:05:33 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 7.663 seconds (process running for 7.998)
-2026-04-15 18:05:33 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:05:33 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 0
-2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Création des utilisateurs...
-2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Création d'un nouvel utilisateur : admin@enicarthage.tn
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Crï¿½ation des utilisateurs...
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Crï¿½ation d'un nouvel utilisateur : admin@enicarthage.tn
 2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         u1_0.id 
@@ -910,8 +910,8 @@ This generated password is for development use only. Your security configuration
         (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur créé avec succès - ID: 1
-2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Création d'un nouvel utilisateur : jean.dupont@enicarthage.tn
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur crï¿½ï¿½ avec succï¿½s - ID: 1
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Crï¿½ation d'un nouvel utilisateur : jean.dupont@enicarthage.tn
 2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         u1_0.id 
@@ -928,8 +928,8 @@ This generated password is for development use only. Your security configuration
         (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur créé avec succès - ID: 2
-2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Création d'un nouvel utilisateur : sophie.martin@enicarthage.tn
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur crï¿½ï¿½ avec succï¿½s - ID: 2
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Crï¿½ation d'un nouvel utilisateur : sophie.martin@enicarthage.tn
 2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         u1_0.id 
@@ -946,8 +946,8 @@ This generated password is for development use only. Your security configuration
         (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur créé avec succès - ID: 3
-2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Création d'un nouvel utilisateur : ahmed.benali@enicarthage.tn
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur crï¿½ï¿½ avec succï¿½s - ID: 3
+2026-04-15 18:05:34 [restartedMain] INFO  t.e.campushub.service.UserService - ? Crï¿½ation d'un nouvel utilisateur : ahmed.benali@enicarthage.tn
 2026-04-15 18:05:34 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         u1_0.id 
@@ -964,16 +964,16 @@ This generated password is for development use only. Your security configuration
         (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur créé avec succès - ID: 4
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.UserService - ? Utilisateur crï¿½ï¿½ avec succï¿½s - ID: 4
 2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 4 utilisateurs créés
-2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Création des salles...
-2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle MAC
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 4 utilisateurs crï¿½ï¿½s
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Crï¿½ation des salles...
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : Salle MAC
 2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -981,37 +981,7 @@ This generated password is for development use only. Your security configuration
         (batiment, capacite, disponible, etage, image_url, nom) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 1
-2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        salle_equipements
-        (salle_id, equipement) 
-    values
-        (?, ?)
-2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        salle_equipements
-        (salle_id, equipement) 
-    values
-        (?, ?)
-2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        salle_equipements
-        (salle_id, equipement) 
-    values
-        (?, ?)
-2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : LABO Informatique
-2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        salles
-        (batiment, capacite, disponible, etage, image_url, nom) 
-    values
-        (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 2
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 1
 2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1033,7 +1003,7 @@ This generated password is for development use only. Your security configuration
         (salle_id, equipement) 
     values
         (?, ?)
-2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 20
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : LABO Informatique
 2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1041,7 +1011,37 @@ This generated password is for development use only. Your security configuration
         (batiment, capacite, disponible, etage, image_url, nom) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 3
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 2
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:35 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : Salle 20
+2026-04-15 18:05:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 3
 2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1063,7 +1063,7 @@ This generated password is for development use only. Your security configuration
         (salle_id, equipement) 
     values
         (?, ?)
-2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 21
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : Salle 21
 2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1071,7 +1071,7 @@ This generated password is for development use only. Your security configuration
         (batiment, capacite, disponible, etage, image_url, nom) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 4
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 4
 2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1093,37 +1093,7 @@ This generated password is for development use only. Your security configuration
         (salle_id, equipement) 
     values
         (?, ?)
-2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 22
-2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        salles
-        (batiment, capacite, disponible, etage, image_url, nom) 
-    values
-        (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 5
-2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        salle_equipements
-        (salle_id, equipement) 
-    values
-        (?, ?)
-2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        salle_equipements
-        (salle_id, equipement) 
-    values
-        (?, ?)
-2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        salle_equipements
-        (salle_id, equipement) 
-    values
-        (?, ?)
-2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 23
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : Salle 22
 2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1131,7 +1101,37 @@ This generated password is for development use only. Your security configuration
         (batiment, capacite, disponible, etage, image_url, nom) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 6
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 5
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : Salle 23
+2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-04-15 18:05:36 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 6
 2026-04-15 18:05:36 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1153,7 +1153,7 @@ This generated password is for development use only. Your security configuration
         (salle_id, equipement) 
     values
         (?, ?)
-2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 24
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : Salle 24
 2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1161,7 +1161,7 @@ This generated password is for development use only. Your security configuration
         (batiment, capacite, disponible, etage, image_url, nom) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 7
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 7
 2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1183,7 +1183,7 @@ This generated password is for development use only. Your security configuration
         (salle_id, equipement) 
     values
         (?, ?)
-2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 25
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : Salle 25
 2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1191,7 +1191,7 @@ This generated password is for development use only. Your security configuration
         (batiment, capacite, disponible, etage, image_url, nom) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 8
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 8
 2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1213,7 +1213,7 @@ This generated password is for development use only. Your security configuration
         (salle_id, equipement) 
     values
         (?, ?)
-2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 26
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : Salle 26
 2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1221,7 +1221,7 @@ This generated password is for development use only. Your security configuration
         (batiment, capacite, disponible, etage, image_url, nom) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 9
+2026-04-15 18:05:37 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 9
 2026-04-15 18:05:37 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1243,7 +1243,7 @@ This generated password is for development use only. Your security configuration
         (salle_id, equipement) 
     values
         (?, ?)
-2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Salle 27
+2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : Salle 27
 2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1251,7 +1251,7 @@ This generated password is for development use only. Your security configuration
         (batiment, capacite, disponible, etage, image_url, nom) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 10
+2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 10
 2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1273,7 +1273,7 @@ This generated password is for development use only. Your security configuration
         (salle_id, equipement) 
     values
         (?, ?)
-2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Création d'une nouvelle salle : Amphithéâtre Principal
+2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Crï¿½ation d'une nouvelle salle : Amphithï¿½ï¿½tre Principal
 2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1281,7 +1281,7 @@ This generated password is for development use only. Your security configuration
         (batiment, capacite, disponible, etage, image_url, nom) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle créée avec succès - ID: 11
+2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Salle crï¿½ï¿½e avec succï¿½s - ID: 11
 2026-04-15 18:05:38 [restartedMain] DEBUG org.hibernate.SQL - 
     insert 
     into
@@ -1316,8 +1316,8 @@ This generated password is for development use only. Your security configuration
     from
         salles s1_0
 2026-04-15 18:05:38 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Nombre total de salles : 11
-2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 11 salles créées
-2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Création des réservations...
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 11 salles crï¿½ï¿½es
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Crï¿½ation des rï¿½servations...
 2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.service.UserService - ? Recherche de l'utilisateur par email: jean.dupont@enicarthage.tn
 2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
     select
@@ -1335,7 +1335,7 @@ This generated password is for development use only. Your security configuration
         users u1_0 
     where
         u1_0.email=?
-2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Recherche des salles du bâtiment : Bâtiment Annexe
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.service.SalleService - ? Recherche des salles du bï¿½timent : Bï¿½timent Annexe
 2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         s1_0.id,
@@ -1349,7 +1349,7 @@ This generated password is for development use only. Your security configuration
         salles s1_0 
     where
         s1_0.batiment=?
-2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Création d'une nouvelle réservation pour la salle ID: 1
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Crï¿½ation d'une nouvelle rï¿½servation pour la salle ID: 1
 2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -1380,8 +1380,8 @@ This generated password is for development use only. Your security configuration
         (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Réservation créée avec succès - ID: 1
-2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Création d'une nouvelle réservation pour la salle ID: 1
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Rï¿½servation crï¿½ï¿½e avec succï¿½s - ID: 1
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Crï¿½ation d'une nouvelle rï¿½servation pour la salle ID: 1
 2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -1412,15 +1412,15 @@ This generated password is for development use only. Your security configuration
         (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Réservation créée avec succès - ID: 2
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Rï¿½servation crï¿½ï¿½e avec succï¿½s - ID: 2
 2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         reservations r1_0
-2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Nombre total de réservations : 2
-2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 2 réservations créées
-2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Création des événements...
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.c.service.ReservationService - Nombre total de rï¿½servations : 2
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 2 rï¿½servations crï¿½ï¿½es
+2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Crï¿½ation des ï¿½vï¿½nements...
 2026-04-15 18:05:39 [restartedMain] INFO  t.e.campushub.service.UserService - ? Recherche de l'utilisateur par email: admin@enicarthage.tn
 2026-04-15 18:05:39 [restartedMain] DEBUG org.hibernate.SQL - 
     select
@@ -1457,8 +1457,8 @@ This generated password is for development use only. Your security configuration
         count(*) 
     from
         evenements e1_0
-2026-04-15 18:05:40 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 2 événements créés
-2026-04-15 18:05:40 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Création des demandes de documents...
+2026-04-15 18:05:40 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 2 ï¿½vï¿½nements crï¿½ï¿½s
+2026-04-15 18:05:40 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Crï¿½ation des demandes de documents...
 2026-04-15 18:05:40 [restartedMain] INFO  t.e.campushub.service.UserService - ? Recherche de l'utilisateur par email: ahmed.benali@enicarthage.tn
 2026-04-15 18:05:40 [restartedMain] DEBUG org.hibernate.SQL - 
     select
@@ -1495,14 +1495,14 @@ This generated password is for development use only. Your security configuration
         count(*) 
     from
         demandes_documents dd1_0
-2026-04-15 18:05:41 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 2 demandes de documents créées
-2026-04-15 18:05:41 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données terminée avec succès !
+2026-04-15 18:05:41 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? 2 demandes de documents crï¿½ï¿½es
+2026-04-15 18:05:41 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es terminï¿½e avec succï¿½s !
 2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
 2026-04-15 18:09:00 [http-nio-8081-exec-1] INFO  t.e.c.controller.SalleController - GET /api/v1/salles
 2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
-2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:09:00 [http-nio-8081-exec-2] INFO  t.e.campushub.service.UserService - ? Rï¿½cupï¿½ration des utilisateurs avec le rï¿½le : ENSEIGNANT
 2026-04-15 18:09:00 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
     select
         u1_0.id,
@@ -1517,7 +1517,7 @@ This generated password is for development use only. Your security configuration
         u1_0.updated_at 
     from
         users u1_0
-2026-04-15 18:09:00 [http-nio-8081-exec-1] INFO  t.e.campushub.service.SalleService - ? Récupération de toutes les salles
+2026-04-15 18:09:00 [http-nio-8081-exec-1] INFO  t.e.campushub.service.SalleService - ? Rï¿½cupï¿½ration de toutes les salles
 2026-04-15 18:09:00 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
     select
         s1_0.id,
@@ -1529,7 +1529,7 @@ This generated password is for development use only. Your security configuration
         s1_0.nom 
     from
         salles s1_0
-2026-04-15 18:09:01 [http-nio-8081-exec-2] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:09:01 [http-nio-8081-exec-2] INFO  t.e.c.service.ReservationService - Rï¿½cupï¿½ration des rï¿½servations de l'enseignant ID: 2
 2026-04-15 18:09:01 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -1604,7 +1604,7 @@ This generated password is for development use only. Your security configuration
         e1_0.salle_id=?
 2026-04-15 18:09:01 [http-nio-8081-exec-3] INFO  t.e.c.controller.SalleController - GET /api/v1/salles
 2026-04-15 18:09:01 [http-nio-8081-exec-4] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
-2026-04-15 18:09:01 [http-nio-8081-exec-3] INFO  t.e.campushub.service.SalleService - ? Récupération de toutes les salles
+2026-04-15 18:09:01 [http-nio-8081-exec-3] INFO  t.e.campushub.service.SalleService - ? Rï¿½cupï¿½ration de toutes les salles
 2026-04-15 18:09:01 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
     select
         s1_0.id,
@@ -1616,7 +1616,7 @@ This generated password is for development use only. Your security configuration
         s1_0.nom 
     from
         salles s1_0
-2026-04-15 18:09:01 [http-nio-8081-exec-4] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:09:01 [http-nio-8081-exec-4] INFO  t.e.campushub.service.UserService - ? Rï¿½cupï¿½ration des utilisateurs avec le rï¿½le : ENSEIGNANT
 2026-04-15 18:09:01 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
     select
         u1_0.id,
@@ -1655,7 +1655,7 @@ This generated password is for development use only. Your security configuration
         salle_equipements e1_0 
     where
         e1_0.salle_id=?
-2026-04-15 18:09:01 [http-nio-8081-exec-4] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:09:01 [http-nio-8081-exec-4] INFO  t.e.c.service.ReservationService - Rï¿½cupï¿½ration des rï¿½servations de l'enseignant ID: 2
 2026-04-15 18:09:01 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -1818,7 +1818,7 @@ This generated password is for development use only. Your security configuration
         e1_0.salle_id=?
 2026-04-15 18:09:02 [http-nio-8081-exec-5] INFO  t.e.c.controller.SalleController - GET /api/v1/salles
 2026-04-15 18:09:02 [http-nio-8081-exec-6] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
-2026-04-15 18:09:02 [http-nio-8081-exec-6] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:09:02 [http-nio-8081-exec-6] INFO  t.e.campushub.service.UserService - ? Rï¿½cupï¿½ration des utilisateurs avec le rï¿½le : ENSEIGNANT
 2026-04-15 18:09:02 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
     select
         u1_0.id,
@@ -1833,7 +1833,7 @@ This generated password is for development use only. Your security configuration
         u1_0.updated_at 
     from
         users u1_0
-2026-04-15 18:09:02 [http-nio-8081-exec-5] INFO  t.e.campushub.service.SalleService - ? Récupération de toutes les salles
+2026-04-15 18:09:02 [http-nio-8081-exec-5] INFO  t.e.campushub.service.SalleService - ? Rï¿½cupï¿½ration de toutes les salles
 2026-04-15 18:09:02 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
     select
         s1_0.id,
@@ -1853,7 +1853,7 @@ This generated password is for development use only. Your security configuration
         salle_equipements e1_0 
     where
         e1_0.salle_id=?
-2026-04-15 18:09:02 [http-nio-8081-exec-6] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:09:02 [http-nio-8081-exec-6] INFO  t.e.c.service.ReservationService - Rï¿½cupï¿½ration des rï¿½servations de l'enseignant ID: 2
 2026-04-15 18:09:02 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -1976,7 +1976,7 @@ This generated password is for development use only. Your security configuration
         e1_0.salle_id=?
 2026-04-15 18:09:08 [http-nio-8081-exec-2] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
 2026-04-15 18:09:08 [http-nio-8081-exec-4] INFO  t.e.c.controller.SalleController - GET /api/v1/salles
-2026-04-15 18:09:08 [http-nio-8081-exec-2] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:09:08 [http-nio-8081-exec-2] INFO  t.e.campushub.service.UserService - ? Rï¿½cupï¿½ration des utilisateurs avec le rï¿½le : ENSEIGNANT
 2026-04-15 18:09:08 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
     select
         u1_0.id,
@@ -1991,7 +1991,7 @@ This generated password is for development use only. Your security configuration
         u1_0.updated_at 
     from
         users u1_0
-2026-04-15 18:09:08 [http-nio-8081-exec-4] INFO  t.e.campushub.service.SalleService - ? Récupération de toutes les salles
+2026-04-15 18:09:08 [http-nio-8081-exec-4] INFO  t.e.campushub.service.SalleService - ? Rï¿½cupï¿½ration de toutes les salles
 2026-04-15 18:09:08 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
     select
         s1_0.id,
@@ -2003,7 +2003,7 @@ This generated password is for development use only. Your security configuration
         s1_0.nom 
     from
         salles s1_0
-2026-04-15 18:09:09 [http-nio-8081-exec-2] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:09:09 [http-nio-8081-exec-2] INFO  t.e.c.service.ReservationService - Rï¿½cupï¿½ration des rï¿½servations de l'enseignant ID: 2
 2026-04-15 18:09:09 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -2133,7 +2133,7 @@ This generated password is for development use only. Your security configuration
     where
         e1_0.salle_id=?
 2026-04-15 18:09:16 [http-nio-8081-exec-1] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
-2026-04-15 18:09:16 [http-nio-8081-exec-1] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:09:16 [http-nio-8081-exec-1] INFO  t.e.campushub.service.UserService - ? Rï¿½cupï¿½ration des utilisateurs avec le rï¿½le : ENSEIGNANT
 2026-04-15 18:09:16 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
     select
         u1_0.id,
@@ -2148,7 +2148,7 @@ This generated password is for development use only. Your security configuration
         u1_0.updated_at 
     from
         users u1_0
-2026-04-15 18:09:16 [http-nio-8081-exec-1] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:09:16 [http-nio-8081-exec-1] INFO  t.e.c.service.ReservationService - Rï¿½cupï¿½ration des rï¿½servations de l'enseignant ID: 2
 2026-04-15 18:09:16 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -2190,7 +2190,7 @@ This generated password is for development use only. Your security configuration
     where
         e1_0.salle_id=?
 2026-04-15 18:09:17 [http-nio-8081-exec-3] INFO  t.e.c.controller.SalleController - GET /api/v1/salles
-2026-04-15 18:09:17 [http-nio-8081-exec-3] INFO  t.e.campushub.service.SalleService - ? Récupération de toutes les salles
+2026-04-15 18:09:17 [http-nio-8081-exec-3] INFO  t.e.campushub.service.SalleService - ? Rï¿½cupï¿½ration de toutes les salles
 2026-04-15 18:09:17 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
     select
         s1_0.id,
@@ -2291,7 +2291,7 @@ This generated password is for development use only. Your security configuration
     where
         e1_0.salle_id=?
 2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.c.c.ReservationController - POST /api/v1/reservations
-2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.campushub.service.UserService - ? Rï¿½cupï¿½ration des utilisateurs avec le rï¿½le : ENSEIGNANT
 2026-04-15 18:10:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
     select
         u1_0.id,
@@ -2320,7 +2320,7 @@ This generated password is for development use only. Your security configuration
         salles s1_0 
     where
         s1_0.id=?
-2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.c.service.ReservationService - Création d'une nouvelle réservation pour la salle ID: 3
+2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.c.service.ReservationService - Crï¿½ation d'une nouvelle rï¿½servation pour la salle ID: 3
 2026-04-15 18:10:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -2351,7 +2351,7 @@ This generated password is for development use only. Your security configuration
         (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.c.service.ReservationService - Réservation créée avec succès - ID: 3
+2026-04-15 18:10:23 [http-nio-8081-exec-8] INFO  t.e.c.service.ReservationService - Rï¿½servation crï¿½ï¿½e avec succï¿½s - ID: 3
 2026-04-15 18:10:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
     select
         e1_0.salle_id,
@@ -2361,7 +2361,7 @@ This generated password is for development use only. Your security configuration
     where
         e1_0.salle_id=?
 2026-04-15 18:10:27 [http-nio-8081-exec-10] INFO  t.e.c.c.ReservationController - GET /api/v1/reservations/me
-2026-04-15 18:10:28 [http-nio-8081-exec-10] INFO  t.e.campushub.service.UserService - ? Récupération des utilisateurs avec le rôle : ENSEIGNANT
+2026-04-15 18:10:28 [http-nio-8081-exec-10] INFO  t.e.campushub.service.UserService - ? Rï¿½cupï¿½ration des utilisateurs avec le rï¿½le : ENSEIGNANT
 2026-04-15 18:10:28 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
     select
         u1_0.id,
@@ -2376,7 +2376,7 @@ This generated password is for development use only. Your security configuration
         u1_0.updated_at 
     from
         users u1_0
-2026-04-15 18:10:28 [http-nio-8081-exec-10] INFO  t.e.c.service.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 18:10:28 [http-nio-8081-exec-10] INFO  t.e.c.service.ReservationService - Rï¿½cupï¿½ration des rï¿½servations de l'enseignant ID: 2
 2026-04-15 18:10:28 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -2438,7 +2438,7 @@ This generated password is for development use only. Your security configuration
         salle_equipements e1_0 
     where
         e1_0.salle_id=?
-2026-04-15 18:23:20 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m50s388ms615µs700ns).
+2026-04-15 18:23:20 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m50s388ms615ï¿½s700ns).
 2026-04-15 18:37:41 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
 2026-04-15 18:37:41 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-15 18:37:41 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
@@ -2473,14 +2473,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:37:46 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:37:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:37:46 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 4.798 seconds (process running for 1940.321)
-2026-04-15 18:37:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:37:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:37:46 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:37:46 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:37:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:37:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:37:46 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:39:07 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
 2026-04-15 18:39:07 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2516,14 +2516,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:39:10 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:39:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:39:10 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 2.96 seconds (process running for 2024.743)
-2026-04-15 18:39:10 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:39:10 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:39:10 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:39:10 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:39:10 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:39:10 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:39:10 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:39:22 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
 2026-04-15 18:39:22 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2559,14 +2559,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:39:26 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:39:26 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:39:26 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 3.407 seconds (process running for 2040.086)
-2026-04-15 18:39:26 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:39:26 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:39:26 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:39:26 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:39:26 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:39:26 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:39:26 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:40:29 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
 2026-04-15 18:40:29 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2602,14 +2602,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:40:32 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:40:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:40:32 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 3.577 seconds (process running for 2106.931)
-2026-04-15 18:40:32 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:40:32 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:40:32 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:40:32 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:40:33 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:40:33 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:40:33 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:40:45 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
 2026-04-15 18:40:45 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2645,14 +2645,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:40:49 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:40:49 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:40:49 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 3.691 seconds (process running for 2123.609)
-2026-04-15 18:40:49 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:40:49 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:40:49 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:40:49 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:40:49 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:40:49 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:40:49 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:41:21 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
 2026-04-15 18:41:21 [Thread-23] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2688,14 +2688,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:41:24 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:41:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:41:24 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 2.916 seconds (process running for 2158.889)
-2026-04-15 18:41:24 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:41:24 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:41:24 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:41:24 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:41:24 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:41:24 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:41:24 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:41:33 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
 2026-04-15 18:41:33 [Thread-27] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2731,14 +2731,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:41:36 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:41:36 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:41:36 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 3.017 seconds (process running for 2170.748)
-2026-04-15 18:41:36 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:41:36 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:41:36 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:41:36 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:41:36 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:41:36 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:41:36 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:42:00 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
 2026-04-15 18:42:00 [Thread-31] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2774,14 +2774,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:42:04 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:42:04 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:42:04 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 3.66 seconds (process running for 2198.721)
-2026-04-15 18:42:04 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:42:04 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:42:04 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:42:04 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:42:04 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:42:04 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:42:04 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:42:45 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
 2026-04-15 18:42:45 [Thread-35] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2817,14 +2817,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:42:48 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:42:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:42:48 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 3.155 seconds (process running for 2242.524)
-2026-04-15 18:42:48 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:42:48 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:42:48 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:42:48 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:42:48 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:42:48 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:42:48 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:42:59 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
 2026-04-15 18:42:59 [Thread-39] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2860,14 +2860,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:43:02 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:43:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:43:02 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 3.326 seconds (process running for 2256.724)
-2026-04-15 18:43:02 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:43:02 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:43:02 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:43:02 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:43:02 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:43:02 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:43:02 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:43:52 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
 2026-04-15 18:43:52 [Thread-43] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2903,14 +2903,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:43:55 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:43:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:43:55 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 2.913 seconds (process running for 2309.279)
-2026-04-15 18:43:55 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:43:55 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:43:55 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:43:55 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:43:55 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:43:55 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:43:55 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:43:57 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
 2026-04-15 18:43:57 [Thread-47] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2946,14 +2946,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:44:00 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:44:00 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:44:00 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 2.833 seconds (process running for 2314.812)
-2026-04-15 18:44:00 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:44:00 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:44:00 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:44:00 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:44:00 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:44:00 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:44:00 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:44:10 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
 2026-04-15 18:44:10 [Thread-51] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -2989,14 +2989,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:44:13 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:44:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:44:13 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 2.798 seconds (process running for 2327.484)
-2026-04-15 18:44:13 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:44:13 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:44:13 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:44:13 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:44:13 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:44:13 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:44:13 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:44:29 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (1 addition, 1 deletion, 1 modification)
 2026-04-15 18:44:29 [Thread-55] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3032,14 +3032,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:44:32 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:44:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:44:32 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 2.762 seconds (process running for 2346.724)
-2026-04-15 18:44:32 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:44:32 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:44:32 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:44:32 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:44:32 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:44:32 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:44:32 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:44:43 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
 2026-04-15 18:44:43 [Thread-59] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3075,14 +3075,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:44:46 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:44:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:44:46 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 2.857 seconds (process running for 2360.487)
-2026-04-15 18:44:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:44:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:44:46 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:44:46 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:44:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:44:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:44:46 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:45:15 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 4 class path changes (2 additions, 2 deletions, 0 modifications)
 2026-04-15 18:45:15 [Thread-63] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3118,14 +3118,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:45:18 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:45:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:45:18 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 2.966 seconds (process running for 2392.704)
-2026-04-15 18:45:18 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:45:18 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:45:18 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:45:18 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:45:18 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:45:18 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:45:18 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:47:12 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 8 class path changes (4 additions, 4 deletions, 0 modifications)
 2026-04-15 18:47:12 [Thread-67] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3161,14 +3161,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:47:15 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:47:15 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:47:15 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 2.866 seconds (process running for 2509.616)
-2026-04-15 18:47:15 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:47:15 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:47:15 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:47:15 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:47:15 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:47:15 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:47:15 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:47:16 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 4 class path changes (2 additions, 2 deletions, 0 modifications)
 2026-04-15 18:47:17 [Thread-71] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3204,14 +3204,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:47:20 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:47:20 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:47:20 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 2.894 seconds (process running for 2514.213)
-2026-04-15 18:47:20 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:47:20 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:47:20 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:47:20 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:47:20 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:47:20 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:47:20 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:55:58 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2026-04-15 18:55:58 [Thread-75] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3247,14 +3247,14 @@ This generated password is for development use only. Your security configuration
 2026-04-15 18:56:01 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 18:56:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 18:56:01 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 3.252 seconds (process running for 3035.691)
-2026-04-15 18:56:01 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 18:56:01 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 18:56:01 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
 2026-04-15 18:56:01 [restartedMain] INFO  t.e.campushub.service.UserService - ? Nombre total d'utilisateurs : 4
-2026-04-15 18:56:01 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 18:56:01 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 18:56:01 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 18:56:48 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-15 18:56:48 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Shutdown initiated...
@@ -3286,7 +3286,7 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'demandeDocumentController' for bean class [tn.enicarthage.campushub.enseignant.controller.DemandeDocumentController] conflicts with existing, non-compatible bean definition of same name and class [tn.enicarthage.campushub.controller.enseignant.DemandeDocumentController]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'demandeDocumentController' for bean class [tn.enicarthage.campushub.enseignant.controller.DemandeDocumentController] conflicts with existing, non-compatible bean definition of same name and class [tn.enicarthage.campushub.enseignant.controller.DemandeDocumentController]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
@@ -3322,7 +3322,7 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'demandeDocumentController' for bean class [tn.enicarthage.campushub.enseignant.controller.DemandeDocumentController] conflicts with existing, non-compatible bean definition of same name and class [tn.enicarthage.campushub.controller.enseignant.DemandeDocumentController]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'demandeDocumentController' for bean class [tn.enicarthage.campushub.enseignant.controller.DemandeDocumentController] conflicts with existing, non-compatible bean definition of same name and class [tn.enicarthage.campushub.enseignant.controller.DemandeDocumentController]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
@@ -3389,13 +3389,13 @@ This generated password is for development use only. Your security configuration
 2026-04-15 23:32:59 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 23:32:59 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 23:32:59 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 11.448 seconds (process running for 11.686)
-2026-04-15 23:33:00 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 23:33:00 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 23:33:00 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
-2026-04-15 23:33:00 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 23:33:00 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 23:33:58 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2026-04-15 23:33:58 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-15 23:33:58 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
@@ -3430,13 +3430,13 @@ This generated password is for development use only. Your security configuration
 2026-04-15 23:34:04 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 23:34:04 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 23:34:04 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 5.164 seconds (process running for 75.76)
-2026-04-15 23:34:04 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 23:34:04 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 23:34:04 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
-2026-04-15 23:34:04 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 23:34:04 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 23:34:04 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 23:34:05 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2026-04-15 23:34:05 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3472,13 +3472,13 @@ This generated password is for development use only. Your security configuration
 2026-04-15 23:34:10 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 23:34:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 23:34:10 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 4.47 seconds (process running for 81.961)
-2026-04-15 23:34:10 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 23:34:10 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 23:34:10 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
-2026-04-15 23:34:10 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 23:34:10 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 23:34:10 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 23:34:11 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
 2026-04-15 23:34:11 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3514,13 +3514,13 @@ This generated password is for development use only. Your security configuration
 2026-04-15 23:34:17 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 23:34:17 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 23:34:17 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 5.244 seconds (process running for 88.918)
-2026-04-15 23:34:17 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 23:34:17 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 23:34:17 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
-2026-04-15 23:34:17 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 23:34:17 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 23:34:17 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 23:34:18 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2026-04-15 23:34:18 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3556,13 +3556,13 @@ This generated password is for development use only. Your security configuration
 2026-04-15 23:34:24 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 23:34:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 23:34:24 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 5.438 seconds (process running for 96.331)
-2026-04-15 23:34:24 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 23:34:24 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 23:34:24 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
-2026-04-15 23:34:24 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 23:34:24 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 23:34:24 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 23:34:26 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
 2026-04-15 23:34:26 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3598,13 +3598,13 @@ This generated password is for development use only. Your security configuration
 2026-04-15 23:34:30 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 23:34:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 23:34:30 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 3.93 seconds (process running for 101.92)
-2026-04-15 23:34:30 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 23:34:30 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 23:34:30 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
-2026-04-15 23:34:30 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 23:34:30 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 23:34:30 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 23:34:31 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2026-04-15 23:34:31 [Thread-23] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3640,13 +3640,13 @@ This generated password is for development use only. Your security configuration
 2026-04-15 23:34:35 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 23:34:35 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 23:34:35 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 3.629 seconds (process running for 107.255)
-2026-04-15 23:34:35 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 23:34:35 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 23:34:35 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
-2026-04-15 23:34:35 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 23:34:35 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 23:34:35 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2026-04-15 23:34:36 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 6092 (C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Projects\campushub-fullstack\backend\campushub)
 2026-04-15 23:34:36 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
@@ -3735,19 +3735,19 @@ This generated password is for development use only. Your security configuration
 2026-04-15 23:36:46 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2026-04-15 23:36:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
 2026-04-15 23:36:46 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 6.607 seconds (process running for 6.867)
-2026-04-15 23:36:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des données...
+2026-04-15 23:36:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Initialisation des donnï¿½es...
 2026-04-15 23:36:46 [restartedMain] DEBUG org.hibernate.SQL - 
     select
         count(*) 
     from
         users u1_0
-2026-04-15 23:36:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Données déjà présentes, initialisation annulée
+2026-04-15 23:36:46 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ? Donnï¿½es dï¿½jï¿½ prï¿½sentes, initialisation annulï¿½e
 2026-04-15 23:37:28 [http-nio-8081-exec-9] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-04-15 23:37:28 [http-nio-8081-exec-9] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2026-04-15 23:37:28 [http-nio-8081-exec-9] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
 2026-04-15 23:37:28 [http-nio-8081-exec-1] INFO  t.e.c.c.enseignant.SalleController - GET /api/v1/salles
 2026-04-15 23:37:28 [http-nio-8081-exec-9] INFO  t.e.c.c.e.ReservationController - GET /api/v1/reservations/me
-2026-04-15 23:37:28 [http-nio-8081-exec-1] INFO  t.e.c.s.enseignant.SalleService - ? Récupération de toutes les salles
+2026-04-15 23:37:28 [http-nio-8081-exec-1] INFO  t.e.c.s.enseignant.SalleService - ? Rï¿½cupï¿½ration de toutes les salles
 2026-04-15 23:37:28 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
     select
         s1_0.id,
@@ -3773,7 +3773,7 @@ This generated password is for development use only. Your security configuration
         u1_0.updated_at 
     from
         users u1_0
-2026-04-15 23:37:29 [http-nio-8081-exec-9] INFO  t.e.c.s.e.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 23:37:29 [http-nio-8081-exec-9] INFO  t.e.c.s.e.ReservationService - Rï¿½cupï¿½ration des rï¿½servations de l'enseignant ID: 2
 2026-04-15 23:37:29 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
     select
         e1_0.salle_id,
@@ -3939,7 +3939,7 @@ This generated password is for development use only. Your security configuration
         u1_0.updated_at 
     from
         users u1_0
-2026-04-15 23:37:30 [http-nio-8081-exec-5] INFO  t.e.c.s.enseignant.SalleService - ? Récupération de toutes les salles
+2026-04-15 23:37:30 [http-nio-8081-exec-5] INFO  t.e.c.s.enseignant.SalleService - ? Rï¿½cupï¿½ration de toutes les salles
 2026-04-15 23:37:30 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
     select
         s1_0.id,
@@ -3951,7 +3951,7 @@ This generated password is for development use only. Your security configuration
         s1_0.nom 
     from
         salles s1_0
-2026-04-15 23:37:30 [http-nio-8081-exec-6] INFO  t.e.c.s.e.ReservationService - Récupération des réservations de l'enseignant ID: 2
+2026-04-15 23:37:30 [http-nio-8081-exec-6] INFO  t.e.c.s.e.ReservationService - Rï¿½cupï¿½ration des rï¿½servations de l'enseignant ID: 2
 2026-04-15 23:37:30 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -4102,7 +4102,7 @@ This generated password is for development use only. Your security configuration
     where
         e1_0.salle_id=?
 2026-04-15 23:37:35 [http-nio-8081-exec-4] INFO  t.e.c.c.enseignant.SalleController - GET /api/v1/salles
-2026-04-15 23:37:35 [http-nio-8081-exec-4] INFO  t.e.c.s.enseignant.SalleService - ? Récupération de toutes les salles
+2026-04-15 23:37:35 [http-nio-8081-exec-4] INFO  t.e.c.s.enseignant.SalleService - ? Rï¿½cupï¿½ration de toutes les salles
 2026-04-15 23:37:35 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
     select
         s1_0.id,
@@ -4231,7 +4231,7 @@ This generated password is for development use only. Your security configuration
         salles s1_0 
     where
         s1_0.id=?
-2026-04-15 23:38:23 [http-nio-8081-exec-2] INFO  t.e.c.s.e.ReservationService - Création d'une nouvelle réservation pour la salle ID: 1
+2026-04-15 23:38:23 [http-nio-8081-exec-2] INFO  t.e.c.s.e.ReservationService - Crï¿½ation d'une nouvelle rï¿½servation pour la salle ID: 1
 2026-04-15 23:38:23 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
     select
         r1_0.id,
@@ -4262,7 +4262,7 @@ This generated password is for development use only. Your security configuration
         (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2026-04-15 23:38:23 [http-nio-8081-exec-2] INFO  t.e.c.s.e.ReservationService - Réservation créée avec succès - ID: 4
+2026-04-15 23:38:23 [http-nio-8081-exec-2] INFO  t.e.c.s.e.ReservationService - Rï¿½servation crï¿½ï¿½e avec succï¿½s - ID: 4
 2026-04-15 23:38:23 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
     select
         e1_0.salle_id,

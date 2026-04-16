@@ -3,10 +3,10 @@ package tn.enicarthage.campushub.student.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import tn.enicarthage.campushub.model.enseignant.DemandeDocument;
-import tn.enicarthage.campushub.model.enseignant.Evenement;
-import tn.enicarthage.campushub.repository.enseignant.DemandeDocumentRepository;
-import tn.enicarthage.campushub.repository.enseignant.EvenementRepository;
+import tn.enicarthage.campushub.enseignant.model.DemandeDocument;
+import tn.enicarthage.campushub.enseignant.model.Evenement;
+import tn.enicarthage.campushub.enseignant.repository.DemandeDocumentRepository;
+import tn.enicarthage.campushub.enseignant.repository.EvenementRepository;
 import tn.enicarthage.campushub.shared.model.User;
 import tn.enicarthage.campushub.shared.repository.UserRepository;
 

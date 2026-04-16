@@ -1,10 +1,10 @@
-package tn.enicarthage.campushub.repository.enseignant;
+package tn.enicarthage.campushub.enseignant.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import tn.enicarthage.campushub.model.enseignant.Reservation;
+import tn.enicarthage.campushub.enseignant.model.Reservation;
 
 import java.time.LocalDateTime;
 import java.util.List;
