@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Mes Demandes</h1>
+
+  <table class="table table-striped" *ngIf="!loading; else loadingTpl">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Message</th>
+        <th>Date</th>
+        <th>Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of demandes">
+        <td>{{ d.id }}</td>
+        <td>{{ d.type }}</td>
+        <td>{{ d.message || '-' }}</td>
+        <td>{{ d.submittedAt | date:'short' }}</td>
+        <td>
+          <span class="badge"
+                [class.bg-warning]="d.status === 'PENDING'"
+                [class.bg-success]="d.status === 'APPROVED'"
+                [class.bg-danger]="d.status === 'REJECTED'">
+            {{ d.status }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #loadingTpl>
+    <p class="text-center">Chargement de vos demandes...</p>
+  </ng-template>
+</div>
