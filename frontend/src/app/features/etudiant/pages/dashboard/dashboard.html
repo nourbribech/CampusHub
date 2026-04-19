@@ -1,51 +1,99 @@
-<div class="dashboard-container">
-  <h1>👋 Tableau de bord - Étudiant</h1>
+<div class="min-h-screen bg-gray-50">
+  <app-header titre="Tableau de bord Étudiant" sousTitre="Bienvenue sur CampusHub" [showRetour]="false">
+    <div class="flex gap-3">
+      <button routerLink="/etudiant/evenements"
+        class="bg-white border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition flex items-center gap-2">
+        <span>🎉</span> Événements
+      </button>
+      <button routerLink="/etudiant/clubs"
+        class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all transform hover:scale-105 flex items-center gap-2">
+        <span>🏛️</span> Clubs
+      </button>
+    </div>
+  </app-header>
 
-  <div class="row g-4">
-    <!-- Stats Cards -->
-    <div class="col-md-4">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="text-primary">{{ clubs.length }}</h5>
-          <p class="card-text">Clubs actifs</p>
-        </div>
-      </div>
+  <div class="p-8">
+    <div *ngIf="loading" class="flex justify-center items-center h-64">
+      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
     </div>
-    <div class="col-md-4">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="text-success">{{ evenements.length }}</h5>
-          <p class="card-text">Événements à venir</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="text-warning">{{ demandes.length }}</h5>
-          <p class="card-text">Demandes en cours</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <h2 class="mt-5">Derniers événements</h2>
-  <div class="row" *ngIf="!loading; else loadingTpl">
-    <div class="col-md-4" *ngFor="let event of evenements">
-      <div class="card h-100">
-        <div class="card-body">
-          <h5>{{ event.title }}</h5>
-          <p class="text-muted small">{{ event.date | date:'short' }}</p>
-          <button class="btn btn-primary btn-sm w-100"
-                  (click)="register(event.id)">
-            S'inscrire
+    <div *ngIf="!loading">
+      <!-- Stat cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 text-white shadow-lg">
+          <h3 class="font-semibold mb-2 flex items-center gap-2"><span>🏛️</span> Clubs actifs</h3>
+          <div class="text-5xl font-bold mb-1">{{ clubs.length }}</div>
+          <p class="text-sm opacity-90">Clubs disponibles</p>
+          <button routerLink="/etudiant/clubs"
+            class="mt-4 bg-white text-primary px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition text-sm">
+            Découvrir →
+          </button>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"><span>🎉</span> Événements à venir</h3>
+          <div class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            {{ evenements.length }}
+          </div>
+          <p class="text-sm text-gray-600 mt-2">Événements approuvés</p>
+          <button routerLink="/etudiant/evenements"
+            class="mt-4 text-primary font-semibold hover:underline text-sm flex items-center gap-1">
+            Voir tout <span>→</span>
+          </button>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"><span>📋</span> Mes demandes</h3>
+          <div class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            {{ demandes.length }}
+          </div>
+          <p class="text-sm text-gray-600 mt-2">Demandes soumises</p>
+          <button routerLink="/etudiant/mes-demandes"
+            class="mt-4 text-primary font-semibold hover:underline text-sm flex items-center gap-1">
+            Voir tout <span>→</span>
           </button>
         </div>
       </div>
+
+      <!-- Recent events -->
+      <div class="bg-white rounded-xl border border-gray-200 shadow-sm">
+        <div class="p-6 border-b border-gray-200 flex items-center justify-between">
+          <h2 class="text-xl font-bold text-gray-900 flex items-center gap-2"><span>🎉</span> Derniers événements</h2>
+          <button routerLink="/etudiant/evenements" class="text-primary font-semibold hover:underline text-sm">
+            Voir tout →
+          </button>
+        </div>
+
+        <div class="p-6">
+          <div *ngIf="evenements.length > 0; else aucunEvenement" class="space-y-4">
+            <div *ngFor="let event of evenements"
+              class="border border-gray-100 rounded-lg p-5 hover:bg-gray-50 transition-colors">
+              <div class="flex items-start justify-between">
+                <div class="flex-1">
+                  <h3 class="font-bold text-lg text-gray-900 mb-1">{{ event.title }}</h3>
+                  <p class="text-gray-600 text-sm mb-3">{{ event.description }}</p>
+                  <div class="flex flex-wrap gap-4 text-sm text-gray-500">
+                    <span class="flex items-center gap-1">📅 {{ event.date | date:'dd/MM/yyyy' }}</span>
+                    <span *ngIf="event.location" class="flex items-center gap-1">📍 {{ event.location }}</span>
+                    <span class="flex items-center gap-1">👥 {{ event.registeredCount || 0 }} / {{ event.capacity }}</span>
+                  </div>
+                </div>
+                <button (click)="register(event.id)"
+                  class="ml-4 px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-opacity-90 transition text-sm whitespace-nowrap">
+                  S'inscrire
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <ng-template #aucunEvenement>
+            <div class="text-center py-16">
+              <div class="text-7xl mb-4">📭</div>
+              <p class="text-xl text-gray-600">Aucun événement à venir</p>
+            </div>
+          </ng-template>
+        </div>
+      </div>
     </div>
   </div>
-
-  <ng-template #loadingTpl>
-    <p class="text-center">Chargement...</p>
-  </ng-template>
 </div>

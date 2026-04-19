@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';   // ← THIS WAS MISSING / NOT SAVED
+import { CommonModule } from '@angular/common';   
 
 import { EtudiantRoutingModule } from './etudiant-routing-module';
 
@@ -12,6 +12,7 @@ import { ClubService } from './services/club.service';
 import { EvenementService } from './services/evenement.service';
 import { DemandeService } from './services/demande.service';
 
+import { Header } from '../../shared/components/header/header';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -20,8 +21,8 @@ import { DemandeService } from './services/demande.service';
     MesDemandesComponent
   ],
   imports: [
-    CommonModule,                    // ← MUST BE HERE
-    EtudiantRoutingModule
+    CommonModule,                    
+    EtudiantRoutingModule,Header
   ],
   providers: [
     ClubService,

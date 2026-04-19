@@ -8,7 +8,7 @@ import { Club, Evenement, Demande } from '../../../../core/models';
   selector: 'app-dashboard',
   templateUrl: './dashboard.html',
   styleUrls: ['./dashboard.scss'],
-  standalone: false 
+  standalone: false
 })
 export class DashboardComponent implements OnInit {
   clubs: Club[] = [];
@@ -28,23 +28,22 @@ export class DashboardComponent implements OnInit {
 
   private loadDashboardData(): void {
     Promise.all([
-      this.clubService.getActiveClubs().toPromise(),
-      this.evenementService.getApprovedEvents().toPromise(),
-      this.demandeService.getMyRequests().toPromise()
+      this.clubService.getActiveClubs().toPromise().catch(() => []),
+      this.evenementService.getApprovedEvents().toPromise().catch(() => []),
+      this.demandeService.getMyRequests().toPromise().catch(() => [])
     ]).then(([clubs, evenements, demandes]) => {
       this.clubs = clubs?.slice(0, 3) || [];
       this.evenements = evenements?.slice(0, 3) || [];
       this.demandes = demandes?.slice(0, 3) || [];
+    }).finally(() => {
       this.loading = false;
-    }).catch(() => this.loading = false);
+    });
   }
+
   register(eventId: number): void {
     this.evenementService.registerForEvent(eventId).subscribe({
-      next: (msg) => {
-        alert(msg);                    // you can replace with a toast later
-        this.loadDashboardData();      // refresh the dashboard
-      },
-      error: (err) => alert(err.error?.message || 'Erreur lors de l\'inscription')
+      next: (msg) => alert(msg),
+      error: (err) => alert('Erreur: ' + (err.error?.message || 'Impossible de s\'inscrire'))
     });
   }
 }
