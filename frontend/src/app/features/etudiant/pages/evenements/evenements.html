@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Événements</h1>
+
+  <div class="row" *ngIf="!loading; else loadingTpl">
+    <!-- Available events -->
+    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let event of evenements">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5>{{ event.title }}</h5>
+          <p class="text-muted">{{ event.date | date:'medium' }}</p>
+          <p>{{ event.description }}</p>
+          <div class="d-flex justify-content-between">
+            <span class="badge bg-info">{{ event.registeredCount }} / {{ event.capacity }}</span>
+            <button class="btn btn-success btn-sm"
+                    (click)="register(event.id)">
+              S'inscrire
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- My registrations -->
+  <h2 class="mt-5">Mes inscriptions</h2>
+  <ul class="list-group" *ngIf="myRegistrations.length > 0; else noRegistrationTpl">
+    <li class="list-group-item" *ngFor="let reg of myRegistrations">
+      {{ reg.title }} — {{ reg.date | date:'short' }}
+    </li>
+  </ul>
+  <ng-template #noRegistrationTpl>
+    <p class="text-muted">Vous n'êtes inscrit à aucun événement pour le moment.</p>
+  </ng-template>
+
+  <ng-template #loadingTpl>
+    <p class="text-center">Chargement des événements...</p>
+  </ng-template>
+</div>

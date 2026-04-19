@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>Clubs & Associations</h1>
+
+  <div class="row" *ngIf="!loading; else loadingTpl">
+    <!-- All active clubs -->
+    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let club of clubs">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ club.name }}</h5>
+          <p class="card-text">{{ club.description }}</p>
+          <p class="badge bg-success" *ngIf="club.status === 'ACTIVE'">Actif</p>
+
+          <button class="btn btn-outline-primary w-100 mt-3"
+                  (click)="applyToClub(club.id, 'Je souhaite rejoindre ce club')">
+            Candidater
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- My applications -->
+  <h2 class="mt-5">Mes candidatures</h2>
+  <table class="table table-hover" *ngIf="myApplications.length > 0">
+    <thead>
+      <tr>
+        <th>Club</th>
+        <th>Motivation</th>
+        <th>Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let app of myApplications">
+        <td>{{ app.clubId }}</td>
+        <td>{{ app.motivation }}</td>
+        <td>
+          <span class="badge" 
+                [class.bg-warning]="app.status === 'PENDING'"
+                [class.bg-success]="app.status === 'ACCEPTED'"
+                [class.bg-danger]="app.status === 'REJECTED'">
+            {{ app.status }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #loadingTpl>
+    <p class="text-center">Chargement des clubs...</p>
+  </ng-template>
+</div>
