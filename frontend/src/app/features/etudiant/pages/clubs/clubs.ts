@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClubService } from '../../services/club.service';
-import { Club, ClubApplication } from '../../../../core/models/club';
-
+import { Club, ClubApplication } from '../../../../core/models';
 @Component({
   selector: 'app-clubs',
   templateUrl: './clubs.html',
@@ -23,7 +22,8 @@ export class ClubsComponent implements OnInit {
   private loadClubs(): void {
     this.clubService.getActiveClubs().subscribe({
       next: (data) => this.clubs = data,
-      error: (err) => console.error(err)
+      error: (err) => console.error(err),
+      complete: () => this.loading = false
     });
   }
 
@@ -40,7 +40,27 @@ export class ClubsComponent implements OnInit {
         alert(msg);
         this.loadMyApplications();
       },
-      error: (err) => alert(err.error?.message || 'Erreur')
+      error: (err) => alert('Erreur: ' + (err.error?.message || 'Impossible de candidater'))
     });
   }
+  hasApplied(clubId: number): boolean {
+  return this.myApplications.some(a => a.clubId === clubId);
+}
+getApplicationStatusClass(clubId: number): string {
+  const app = this.myApplications.find(a => a.clubId === clubId);
+  const map: Record<string, string> = {
+    ACCEPTED: 'bg-green-100 text-green-700',
+    REJECTED: 'bg-red-100 text-red-700',
+    PENDING: 'bg-yellow-100 text-yellow-700'
+  };
+  return app ? map[app.status] : '';
+}
+getApplicationStatusLabel(clubId: number): string {
+  const app = this.myApplications.find(a => a.clubId === clubId);
+  const map: Record<string, string> = { ACCEPTED: '✅ Accepté', REJECTED: '❌ Rejeté', PENDING: '⏳ En attente' };
+  return app ? map[app.status] : '';
+}
+getAcceptedCount(): number {
+  return this.myApplications.filter(app => app.status === 'ACCEPTED').length;
+}
 }
