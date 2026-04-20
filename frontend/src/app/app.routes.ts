@@ -1,29 +1,16 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'etudiant',       
-    pathMatch: 'full'
-  },
-
- 
-  {
-    path: 'enseignant',
-    loadChildren: () => import('./features/enseignant/enseignant-routing-module')
-      .then(m => m.EnseignantRoutingModule)
-  },
-
-  
-  {
-    path: 'etudiant',
-    loadChildren: () => import('./features/etudiant/etudiant-routing-module')
-      .then(m => m.EtudiantRoutingModule)
-  },
-
-  // Catch-all
-  {
-    path: '**',
-    redirectTo: 'etudiant'
-  }
+    { path: '', redirectTo: 'admin/dashboard', pathMatch: 'full' },
+    {
+        path: 'auth',
+        loadChildren: () =>
+            import('./features/auth/auth-module').then(m => m.AuthModule)
+    },
+    {
+        path: 'admin',
+        loadChildren: () =>
+            import('./features/admin/admin-module').then(m => m.AdminModule)
+    },
+    { path: '**', redirectTo: 'admin/dashboard' }
 ];

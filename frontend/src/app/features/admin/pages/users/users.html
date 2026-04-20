@@ -1,0 +1,60 @@
+<div class="space-y-6">
+  <div class="flex items-center justify-between">
+    <div>
+      <h2 class="text-2xl font-bold text-primary">Utilisateurs</h2>
+      <p class="text-gray-400 text-sm mt-1">Gestion des comptes utilisateurs</p>
+    </div>
+    <button class="bg-primary text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-blue-800 transition">
+      + Ajouter
+    </button>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+    <div class="p-5 border-b border-gray-100">
+      <input type="text" placeholder="🔍 Rechercher un utilisateur..."
+        class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+    </div>
+    <table class="w-full">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="text-left px-6 py-3 text-xs font-semibold text-gray-500 uppercase">Utilisateur</th>
+          <th class="text-left px-6 py-3 text-xs font-semibold text-gray-500 uppercase">Email</th>
+          <th class="text-left px-6 py-3 text-xs font-semibold text-gray-500 uppercase">Rôle</th>
+          <th class="text-left px-6 py-3 text-xs font-semibold text-gray-500 uppercase">Statut</th>
+          <th class="text-left px-6 py-3 text-xs font-semibold text-gray-500 uppercase">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-100">
+        <tr *ngFor="let user of users" class="hover:bg-gray-50 transition">
+          <td class="px-6 py-4">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
+                {{ user.prenom.charAt(0) }}{{ user.nom.charAt(0) }}
+              </div>
+              <div>
+                <p class="font-medium text-gray-800 text-sm">{{ user.prenom }} {{ user.nom }}</p>
+              </div>
+            </div>
+          </td>
+          <td class="px-6 py-4 text-sm text-gray-600">{{ user.email }}</td>
+          <td class="px-6 py-4">
+            <span [class]="'text-xs font-medium px-3 py-1 rounded-full ' + getRoleBadge(user.role)">
+              {{ user.role }}
+            </span>
+          </td>
+          <td class="px-6 py-4">
+            <span [class]="user.status === 'actif' ? 'bg-green-100 text-green-700 text-xs font-medium px-3 py-1 rounded-full' : 'bg-red-100 text-red-700 text-xs font-medium px-3 py-1 rounded-full'">
+              {{ user.status }}
+            </span>
+          </td>
+          <td class="px-6 py-4">
+            <div class="flex gap-2">
+              <button class="text-blue-500 hover:text-blue-700 text-sm font-medium transition">Modifier</button>
+              <button class="text-red-500 hover:text-red-700 text-sm font-medium transition">Supprimer</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

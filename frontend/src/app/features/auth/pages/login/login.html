@@ -1,0 +1,132 @@
+<div class="min-h-screen flex">
+
+  <!-- Left Panel -->
+  <div class="hidden lg:flex w-1/2 bg-primary flex-col justify-between p-12 relative overflow-hidden">
+    
+    <!-- Background geometric shapes -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 left-10 w-64 h-64 border border-white opacity-10 rounded-3xl rotate-12"></div>
+      <div class="absolute top-40 left-32 w-48 h-48 border border-white opacity-10 rounded-3xl rotate-45"></div>
+      <div class="absolute bottom-40 right-10 w-72 h-72 border border-white opacity-10 rounded-3xl -rotate-12"></div>
+      <div class="absolute bottom-20 right-20 w-40 h-40 border border-white opacity-10 rounded-3xl rotate-6"></div>
+    </div>
+
+    <!-- Top logo -->
+    <div class="relative z-10">
+      <div class="w-12 h-12 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-12">
+        <span class="text-white text-2xl font-bold">✦</span>
+      </div>
+    </div>
+
+    <!-- Center content -->
+    <div class="relative z-10">
+      <h1 class="text-white text-5xl font-bold leading-tight mb-6">
+        Bienvenue sur<br>CampusHub! 👋
+      </h1>
+      <p class="text-blue-200 text-lg leading-relaxed max-w-sm">
+        Gérez vos événements, réservations et demandes administratives en un seul endroit.
+      </p>
+    </div>
+
+    <!-- Bottom -->
+    <div class="relative z-10">
+      <p class="text-blue-300 text-sm">© 2025 ENICarthage. Tous droits réservés.</p>
+    </div>
+  </div>
+
+  <!-- Right Panel -->
+  <div class="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white">
+    <div class="w-full max-w-md">
+
+      <!-- Brand name (mobile only) -->
+      <div class="lg:hidden text-center mb-8">
+        <h1 class="text-primary text-2xl font-bold">CampusHub</h1>
+        <p class="text-gray-400 text-sm">ENICarthage</p>
+      </div>
+
+      <!-- Header -->
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Bon retour ! 👋</h2>
+        <p class="text-gray-500 text-sm">
+          Pas encore de compte ?
+          <a href="#" class="text-secondary font-medium hover:underline">Contactez l'administration</a>
+        </p>
+      </div>
+
+      <!-- Error alert -->
+      <div *ngIf="errorMsg"
+        class="mb-6 bg-red-50 border border-red-200 text-red-600 rounded-xl px-4 py-3 text-sm flex items-center gap-2">
+        <span>⚠️</span> {{ errorMsg }}
+      </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="space-y-5">
+
+        <!-- Email -->
+        <div>
+          <input
+            formControlName="email"
+            type="email"
+            placeholder="Email institutionnel"
+            class="w-full px-0 py-3 border-0 border-b-2 border-gray-200 focus:border-primary focus:outline-none transition-colors text-gray-800 text-sm placeholder-gray-400 bg-transparent"
+            [class.border-red-400]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+          />
+          <p *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+            class="text-red-500 text-xs mt-1">Email invalide</p>
+        </div>
+
+        <!-- Password -->
+        <div>
+          <div class="relative">
+            <input
+              formControlName="password"
+              [type]="showPassword ? 'text' : 'password'"
+              placeholder="Mot de passe"
+              class="w-full px-0 py-3 border-0 border-b-2 border-gray-200 focus:border-primary focus:outline-none transition-colors text-gray-800 text-sm placeholder-gray-400 bg-transparent pr-10"
+              [class.border-red-400]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+            />
+            <button type="button" (click)="showPassword = !showPassword"
+              class="absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition">
+              {{ showPassword ? '🙈' : '👁️' }}
+            </button>
+          </div>
+          <p *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+            class="text-red-500 text-xs mt-1">Minimum 8 caractères</p>
+        </div>
+
+        <!-- Submit button -->
+        <div class="pt-2">
+          <button
+            type="submit"
+            [disabled]="loginForm.invalid || loading"
+            class="w-full bg-primary text-white font-semibold py-3.5 rounded-xl hover:bg-blue-800 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm">
+            <span *ngIf="loading" class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+            {{ loading ? 'Connexion...' : 'Se connecter' }}
+          </button>
+        </div>
+
+        <!-- Divider -->
+        <div class="flex items-center gap-4 py-2">
+          <div class="flex-1 h-px bg-gray-200"></div>
+          <span class="text-gray-400 text-xs">ou</span>
+          <div class="flex-1 h-px bg-gray-200"></div>
+        </div>
+
+        <!-- SSO Button -->
+        <button type="button"
+          class="w-full border-2 border-gray-200 text-gray-700 font-medium py-3.5 rounded-xl hover:border-primary hover:text-primary transition-all duration-200 flex items-center justify-center gap-2 text-sm">
+          <span>🏛️</span> Connexion via SSO ENICarthage
+        </button>
+
+        <!-- Forgot password -->
+        <div class="text-center pt-2">
+          <span class="text-gray-500 text-sm">Mot de passe oublié ? </span>
+          <a routerLink="/auth/forgot-password" class="text-primary font-medium text-sm hover:underline">
+            Cliquez ici
+          </a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</div>
