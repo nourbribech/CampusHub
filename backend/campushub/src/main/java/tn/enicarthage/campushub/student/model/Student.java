@@ -1,4 +1,4 @@
-package tn.enicarthage.campushub.student;
+package tn.enicarthage.campushub.student.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,8 @@
-package tn.enicarthage.campushub.club;
+package tn.enicarthage.campushub.student.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import tn.enicarthage.campushub.model.enums.ClubStatus;
+import tn.enicarthage.campushub.student.model.ClubStatus;
+import tn.enicarthage.campushub.student.model.Club;
 
 import java.util.List;
 

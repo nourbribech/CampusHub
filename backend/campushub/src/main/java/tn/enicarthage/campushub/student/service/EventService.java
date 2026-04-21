@@ -1,11 +1,15 @@
-package tn.enicarthage.campushub.event;
+package tn.enicarthage.campushub.student.service;
 
-import tn.enicarthage.campushub.student.Student;
-import tn.enicarthage.campushub.student.StudentRepository;
-import tn.enicarthage.campushub.model.enums.EventStatus;
+import tn.enicarthage.campushub.student.repository.EventRegistrationRepository;
+import tn.enicarthage.campushub.student.repository.EventRepository;
+import tn.enicarthage.campushub.student.model.Student;
+import tn.enicarthage.campushub.student.repository.StudentRepository;
+import tn.enicarthage.campushub.student.model.EventStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import tn.enicarthage.campushub.student.model.Event;
+import tn.enicarthage.campushub.student.model.EventRegistration;
 
 import java.util.List;
 

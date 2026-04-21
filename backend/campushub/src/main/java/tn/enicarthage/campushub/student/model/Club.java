@@ -1,11 +1,10 @@
-package tn.enicarthage.campushub.club;
+package tn.enicarthage.campushub.student.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import tn.enicarthage.campushub.model.enums.ClubStatus;
 
 @Entity
 @Table(name = "clubs")

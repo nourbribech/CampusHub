@@ -1,12 +1,13 @@
-package tn.enicarthage.campushub.club;
+package tn.enicarthage.campushub.student.repository;
 
-import tn.enicarthage.campushub.student.Student;
-import tn.enicarthage.campushub.student.StudentRepository;
+import tn.enicarthage.campushub.student.model.Student;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import tn.enicarthage.campushub.model.enums.ApplicationStatus;
-import tn.enicarthage.campushub.model.enums.ClubStatus;
+import tn.enicarthage.campushub.student.model.ApplicationStatus;
+import tn.enicarthage.campushub.student.model.ClubStatus;
+import tn.enicarthage.campushub.student.model.Club;
+import tn.enicarthage.campushub.student.model.ClubApplication;
 
 import java.util.List;
 

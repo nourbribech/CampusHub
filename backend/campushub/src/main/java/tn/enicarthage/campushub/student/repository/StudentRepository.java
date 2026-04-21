@@ -1,6 +1,7 @@
-package tn.enicarthage.campushub.student;
+package tn.enicarthage.campushub.student.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import tn.enicarthage.campushub.student.model.Student;
 
 import java.util.Optional;
 

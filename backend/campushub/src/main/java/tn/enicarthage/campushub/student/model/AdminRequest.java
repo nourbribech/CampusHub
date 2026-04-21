@@ -1,7 +1,5 @@
-package tn.enicarthage.campushub.request;
+package tn.enicarthage.campushub.student.model;
 
-import tn.enicarthage.campushub.model.enums.RequestStatus;
-import tn.enicarthage.campushub.model.enums.RequestType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

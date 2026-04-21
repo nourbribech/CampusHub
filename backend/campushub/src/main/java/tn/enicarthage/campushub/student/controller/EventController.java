@@ -1,8 +1,10 @@
-package tn.enicarthage.campushub.event;
+package tn.enicarthage.campushub.student.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import tn.enicarthage.campushub.student.model.Event;
+import tn.enicarthage.campushub.student.service.EventService;
 
 import java.util.List;
 

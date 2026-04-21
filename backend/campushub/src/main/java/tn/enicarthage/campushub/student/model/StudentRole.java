@@ -1,4 +1,4 @@
-package tn.enicarthage.campushub.student;
+package tn.enicarthage.campushub.student.model;
 
 public enum StudentRole {
     STUDENT,

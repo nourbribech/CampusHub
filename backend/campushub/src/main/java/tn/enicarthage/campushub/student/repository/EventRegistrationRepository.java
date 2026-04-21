@@ -1,6 +1,7 @@
-package tn.enicarthage.campushub.event;
+package tn.enicarthage.campushub.student.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import tn.enicarthage.campushub.student.model.EventRegistration;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,9 +1,10 @@
-package tn.enicarthage.campushub.request;
+package tn.enicarthage.campushub.student.service;
 
-import tn.enicarthage.campushub.model.enums.RequestStatus;
-import tn.enicarthage.campushub.student.Student;
-import tn.enicarthage.campushub.student.StudentRepository;
-import tn.enicarthage.campushub.request.AdminRequest;
+import tn.enicarthage.campushub.student.model.AdminRequest;
+import tn.enicarthage.campushub.student.model.RequestStatus;
+import tn.enicarthage.campushub.student.model.Student;
+import tn.enicarthage.campushub.student.repository.AdminRequestRepository;
+import tn.enicarthage.campushub.student.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
