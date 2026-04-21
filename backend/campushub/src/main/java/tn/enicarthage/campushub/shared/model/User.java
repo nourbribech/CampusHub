@@ -2,17 +2,22 @@ package tn.enicarthage.campushub.shared.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import java.util.Collection;
 @Entity
 @Table(name = "users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class User {
 
     @Id
@@ -55,7 +60,19 @@ public class User {
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority("ROLE_" + role.name()));
+    }
 
+    public String getUsername() {
+        return email;
+    }
+
+    public boolean isAccountNonExpired() { return true; }
+    public boolean isAccountNonLocked() { return true; }
+    public boolean isCredentialsNonExpired() { return true; }
+
+    public boolean isEnabled() { return true; }
     public enum Role {
         ETUDIANT,
         ENSEIGNANT,
