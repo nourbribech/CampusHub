@@ -1,0 +1,47 @@
+<div class="space-y-6">
+  <div>
+    <h2 class="text-2xl font-bold text-primary">Validation des événements</h2>
+    <p class="text-gray-400 text-sm mt-1">Approuvez ou rejetez les événements soumis</p>
+  </div>
+
+  <div class="space-y-4">
+    <div *ngFor="let event of events"
+      class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition">
+      <div class="flex items-start justify-between">
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center text-2xl">📅</div>
+          <div>
+            <h3 class="font-bold text-gray-800">{{ event.titre }}</h3>
+            <p class="text-sm text-gray-500 mt-1">{{ event.club }} — {{ event.date }} — {{ event.lieu }}</p>
+            <p class="text-sm text-gray-500">👥 {{ event.participants }} participants attendus</p>
+          </div>
+        </div>
+        <div>
+          <span *ngIf="event.status === 'EN_ATTENTE'"
+            class="bg-yellow-100 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+            En attente
+          </span>
+          <span *ngIf="event.status === 'APPROUVE'"
+            class="bg-green-100 text-green-700 text-xs font-medium px-3 py-1 rounded-full">
+            ✓ Approuvé
+          </span>
+          <span *ngIf="event.status === 'REJETE'"
+            class="bg-red-100 text-red-700 text-xs font-medium px-3 py-1 rounded-full">
+            ✗ Rejeté
+          </span>
+        </div>
+      </div>
+
+      <div *ngIf="event.status === 'EN_ATTENTE'" class="flex gap-3 mt-5 pt-4 border-t border-gray-100">
+        <button (click)="approuver(event)"
+          class="bg-green-500 text-white px-6 py-2 rounded-xl text-sm font-medium hover:bg-green-600 transition">
+          ✓ Approuver
+        </button>
+        <button (click)="rejeter(event)"
+          class="bg-red-500 text-white px-6 py-2 rounded-xl text-sm font-medium hover:bg-red-600 transition">
+          ✗ Rejeter
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

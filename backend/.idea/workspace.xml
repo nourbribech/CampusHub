@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68368dba-db97-427e-8eb0-fe0687ccde2d" name="Changes" comment="conflict-res">
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/AdminRequestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/ClubController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/EventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/AdminRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/ApplicationStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/Club.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/ClubApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/ClubStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/EventRegistration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/EventStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/RequestStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/RequestType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/StudentRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/AdminRequestRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/ClubApplicationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/ClubRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/ClubService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/EventRegistrationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/EventRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/service/AdminRequestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/service/EventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/campushub-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/campushub-backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/logs/campushub.log" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/logs/campushub.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/dto/StudentProfileDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nourbribech&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nourbribech/CampusHub.git&quot;,
+    &quot;accountId&quot;: &quot;8e59f0fd-7eb6-4f03-a393-7b335c321ee6&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.idea/campushub-backend.iml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3CTxAKzn99d98A7J3G9bDibU8mW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CampushubApplication.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Application.campushub.executor": "Run",
+    "Maven.campushub [org.springframework.boot:spring-boot-maven-plugin:3.2.5:run].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "#5 on Merging emna-feature",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/dell/Documents/2eme-annee/s2/CampusHub/backend/campushub/src/main/java/tn/enicarthage/campushub"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend\campushub\src\main\java\tn\enicarthage\campushub" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tn.enicarthage.campushub.shared.model" />
+      <recent name="tn.enicarthage.campushub.evenement.service" />
+      <recent name="tn.enicarthage.campushub.shared.repository" />
+      <recent name="tn.enicarthage.campushub.evenement.controller" />
+      <recent name="tn.enicarthage.campushub.demande.controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="tn.enicarthage.campushub.CampushubApplication" />
+      <module name="campushub-backend" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68368dba-db97-427e-8eb0-fe0687ccde2d" name="Changes" comment="" />
+      <created>1776423218606</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776423218606</updated>
+    </task>
+    <task id="LOCAL-00001" summary="backend-sync">
+      <option name="closed" value="true" />
+      <created>1776625673948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776625673948</updated>
+    </task>
+    <task id="LOCAL-00002" summary="backend-sync">
+      <option name="closed" value="true" />
+      <created>1776764281898</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1776764281898</updated>
+    </task>
+    <task id="LOCAL-00003" summary="conflict-res">
+      <option name="closed" value="true" />
+      <created>1777548194137</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777548194137</updated>
+    </task>
+    <task id="LOCAL-00004" summary="conflict-res">
+      <option name="closed" value="true" />
+      <created>1777551702925</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777551702925</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="backend-sync" />
+    <MESSAGE value="conflict-res" />
+    <option name="LAST_COMMIT_MESSAGE" value="conflict-res" />
+  </component>
+</project>

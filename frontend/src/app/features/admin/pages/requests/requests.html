@@ -1,0 +1,77 @@
+<div class="space-y-6">
+  <div>
+    <h2 class="text-2xl font-bold text-primary">Demandes Administratives</h2>
+    <p class="text-gray-400 text-sm mt-1">Traitez les demandes des étudiants et clubs</p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="flex gap-2 bg-gray-100 p-1 rounded-xl w-fit">
+    <button *ngFor="let tab of ['tous', 'en_attente', 'approuve', 'rejete']"
+      (click)="activeTab = tab"
+      [class]="activeTab === tab ? 'bg-white text-primary shadow-sm font-semibold' : 'text-gray-500 hover:text-gray-700'"
+      class="px-4 py-2 rounded-lg text-sm transition capitalize">
+      {{ tab === 'tous' ? 'Tous' : tab === 'en_attente' ? 'En attente' : tab === 'approuve' ? 'Approuvés' : 'Rejetés' }}
+    </button>
+  </div>
+
+  <!-- Requests list -->
+  <div class="space-y-3">
+    <div *ngFor="let r of filteredRequests"
+      class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 hover:shadow-md transition">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-11 h-11 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center text-xl">
+            {{ getTypeIcon(r.type) }}
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-semibold text-gray-800 text-sm">{{ r.detail }}</h3>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded-full">{{ r.type }}</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-0.5">👤 {{ r.demandeur }} — {{ r.date }}</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span [class]="'text-xs font-medium px-3 py-1 rounded-full ' + getStatusClass(r.status)">
+            {{ r.status }}
+          </span>
+          <div *ngIf="r.status === 'EN_ATTENTE'" class="flex gap-2">
+            <button (click)="approuver(r)"
+              class="bg-green-500 text-white text-xs px-4 py-2 rounded-lg hover:bg-green-600 transition font-medium">
+              ✓ Approuver
+            </button>
+            <button (click)="openRejectModal(r)"
+              class="bg-red-500 text-white text-xs px-4 py-2 rounded-lg hover:bg-red-600 transition font-medium">
+              ✗ Rejeter
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reject Modal -->
+  <div *ngIf="showRejectModal"
+    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6">
+      <h3 class="text-lg font-bold text-gray-800 mb-2">Rejeter la demande</h3>
+      <p class="text-sm text-gray-500 mb-4">Veuillez indiquer la raison du rejet</p>
+      <textarea
+        [(ngModel)]="rejectComment"
+        rows="4"
+        placeholder="Motif du rejet..."
+        class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none">
+      </textarea>
+      <div class="flex gap-3 mt-4">
+        <button (click)="showRejectModal = false"
+          class="flex-1 bg-gray-100 text-gray-600 py-3 rounded-xl text-sm font-medium hover:bg-gray-200 transition">
+          Annuler
+        </button>
+        <button (click)="confirmerRejet()"
+          class="flex-1 bg-red-500 text-white py-3 rounded-xl text-sm font-medium hover:bg-red-600 transition">
+          Confirmer le rejet
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

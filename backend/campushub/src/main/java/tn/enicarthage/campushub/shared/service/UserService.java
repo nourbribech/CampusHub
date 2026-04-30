@@ -1,32 +1,45 @@
-package tn.enicarthage.campushub.enseignant.service;
+package tn.enicarthage.campushub.shared.service;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
+import tn.enicarthage.campushub.shared.dto.UserDto;           // adapte si le package est différent
 import tn.enicarthage.campushub.shared.model.User;
+
 import tn.enicarthage.campushub.shared.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@Slf4j
-@Transactional
 public class UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
+    /**
+     * Méthode pour créer un utilisateur avec mot de passe hashé (pour tests / admin)
+     */
     public User createUser(User user) {
-        log.info("📝 Création d'un nouvel utilisateur : {}", user.getEmail());
         if (userRepository.existsByEmail(user.getEmail())) {
-            throw new RuntimeException("Un utilisateur avec cet email existe déjà");
+            throw new RuntimeException("Un utilisateur avec cet email existe déjà : " + user.getEmail());
         }
+        // Hash the password before saving
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
+
+    /**
+     * Méthode optionnelle : trouver un utilisateur par email
+     */
+    public Optional<User> findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    // Tu peux ajouter d'autres méthodes plus tard (update, delete, getAll...)
+    // In shared/service/UserService.java — add these methods:
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
@@ -34,10 +47,6 @@ public class UserService {
 
     public Optional<User> getUserById(Long id) {
         return userRepository.findById(id);
-    }
-
-    public Optional<User> getUserByEmail(String email) {
-        return userRepository.findByEmail(email);
     }
 
     public User updateUser(Long id, User userDetails) {
@@ -58,32 +67,23 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    public Optional<User> authenticate(String email, String password) {
-        return userRepository.findByEmailAndPassword(email, password);
-    }
-
     public List<User> getUsersByRole(User.Role role) {
         return userRepository.findAll().stream()
                 .filter(u -> u.getRole() == role)
                 .toList();
     }
 
-    public List<User> getUsersByDepartement(String departement) {
-        return userRepository.findAll().stream()
-                .filter(u -> departement.equals(u.getDepartement()))
-                .toList();
-    }
-
-    public Map<User.Role, Long> getStatistiquesParRole() {
-        return userRepository.findAll().stream()
-                .collect(Collectors.groupingBy(User::getRole, Collectors.counting()));
-    }
-
     public boolean emailExists(String email) {
         return userRepository.existsByEmail(email);
+    }
+
+    public Optional<User> getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
 
     public long countUsers() {
         return userRepository.count();
     }
+
+// DO NOT carry over the raw authenticate(email, password) method — it's unsafe
 }

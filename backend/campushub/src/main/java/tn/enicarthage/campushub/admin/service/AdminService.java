@@ -3,92 +3,126 @@ package tn.enicarthage.campushub.admin.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import tn.enicarthage.campushub.admin.dto.DashboardStatsDto;
-import tn.enicarthage.campushub.enseignant.model.Reservation;
-import tn.enicarthage.campushub.enseignant.repository.DemandeDocumentRepository;
-import tn.enicarthage.campushub.enseignant.repository.EvenementRepository;
-import tn.enicarthage.campushub.enseignant.repository.ReservationRepository;
-import tn.enicarthage.campushub.enseignant.repository.SalleRepository;
-import tn.enicarthage.campushub.enseignant.model.DemandeDocument;
+import tn.enicarthage.campushub.admin.dto.AdminStatsDto;
+import tn.enicarthage.campushub.admin.model.*;
+import tn.enicarthage.campushub.admin.repository.*;
 import tn.enicarthage.campushub.shared.model.User;
 import tn.enicarthage.campushub.shared.repository.UserRepository;
 
 import java.util.List;
 
-/**
- * Service dédié au domaine Admin — Binôme 3
- * Responsabilités :
- * - Statistiques globales du dashboard
- * - Approbation / Rejet des réservations
- * - Gestion des utilisateurs (activation, suppression)
- * - Traitement des demandes de documents
- */
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class AdminService {
 
     private final UserRepository userRepository;
-    private final SalleRepository salleRepository;
-    private final ReservationRepository reservationRepository;
-    private final EvenementRepository evenementRepository;
-    private final DemandeDocumentRepository demandeDocumentRepository;
+    private final EventRepository eventRepository;
+    private final AdminReservationRepository reservationRepository;
+    private final ClubRepository clubRepository;
+    private final DemandeAdminRepository demandeAdminRepository;
 
-    // ==================== DASHBOARD ====================
-
-    public DashboardStatsDto getDashboardStats() {
-        log.info("📊 Génération des statistiques du dashboard admin");
-        DashboardStatsDto stats = new DashboardStatsDto();
-        stats.setTotalUtilisateurs(userRepository.count());
-        stats.setTotalEnseignants(userRepository.findAll().stream()
-                .filter(u -> u.getRole() == User.Role.ENSEIGNANT).count());
-        stats.setTotalEtudiants(userRepository.findAll().stream()
-                .filter(u -> u.getRole() == User.Role.ETUDIANT).count());
-        stats.setTotalSalles(salleRepository.count());
-        stats.setSallesDisponibles(salleRepository.findByDisponibleTrue().size());
-        stats.setTotalReservations(reservationRepository.count());
-        stats.setReservationsEnAttente(reservationRepository.findByStatut(Reservation.Statut.EN_ATTENTE).size());
-        stats.setReservationsApprouvees(reservationRepository.findByStatut(Reservation.Statut.APPROUVEE).size());
-        stats.setTotalEvenements(evenementRepository.count());
-        stats.setDemandesDocumentsEnAttente(
-                demandeDocumentRepository.findByStatut(DemandeDocument.Statut.EN_ATTENTE).size());
-        return stats;
+    // ── STATS ──
+    public AdminStatsDto getStats() {
+        return new AdminStatsDto(
+                userRepository.count(),
+                eventRepository.count(),
+                eventRepository.countByStatut(Event.Statut.EN_ATTENTE),
+                reservationRepository.countByStatut(Reservation.Statut.EN_ATTENTE),
+                demandeAdminRepository.countByStatut(DemandeAdmin.Statut.EN_ATTENTE),
+                clubRepository.count()
+        );
     }
 
-    // ==================== RÉSERVATIONS ====================
-
-    public List<Reservation> getReservationsEnAttente() {
-        log.info("📋 Admin : Récupération des réservations en attente");
-        return reservationRepository.findByStatut(Reservation.Statut.EN_ATTENTE);
-    }
-
-    public Reservation approuverReservation(Long id, String commentaire) {
-        log.info("✅ Admin : Approbation de la réservation ID: {}", id);
-        Reservation reservation = reservationRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Réservation non trouvée"));
-        reservation.setStatut(Reservation.Statut.APPROUVEE);
-        reservation.setCommentaireAdmin(commentaire);
-        return reservationRepository.save(reservation);
-    }
-
-    public Reservation rejeterReservation(Long id, String raison) {
-        log.info("❌ Admin : Rejet de la réservation ID: {}", id);
-        Reservation reservation = reservationRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Réservation non trouvée"));
-        reservation.setStatut(Reservation.Statut.REJETEE);
-        reservation.setCommentaireAdmin(raison);
-        return reservationRepository.save(reservation);
-    }
-
-    // ==================== UTILISATEURS ====================
-
+    // ── USERS ──
     public List<User> getAllUsers() {
-        log.info("👥 Admin : Récupération de tous les utilisateurs");
         return userRepository.findAll();
     }
 
     public void deleteUser(Long id) {
-        log.info("🗑️ Admin : Suppression de l'utilisateur ID: {}", id);
         userRepository.deleteById(id);
+    }
+
+    // ── EVENTS ──
+    public List<Event> getAllEvents() {
+        return eventRepository.findAll();
+    }
+
+    public List<Event> getPendingEvents() {
+        return eventRepository.findByStatut(Event.Statut.EN_ATTENTE);
+    }
+
+    public Event approuverEvent(Long id) {
+        Event event = eventRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Event not found"));
+        event.setStatut(Event.Statut.APPROUVE);
+        return eventRepository.save(event);
+    }
+
+    public Event rejeterEvent(Long id, String commentaire) {
+        Event event = eventRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Event not found"));
+        event.setStatut(Event.Statut.REJETE);
+        event.setCommentaireAdmin(commentaire);
+        return eventRepository.save(event);
+    }
+
+    // ── RESERVATIONS ──
+    public List<Reservation> getAllReservations() {
+        return reservationRepository.findAll();
+    }
+
+    public Reservation approuverReservation(Long id) {
+        Reservation r = reservationRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Reservation not found"));
+        r.setStatut(Reservation.Statut.APPROUVEE);
+        return reservationRepository.save(r);
+    }
+
+    public Reservation rejeterReservation(Long id, String commentaire) {
+        Reservation r = reservationRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Reservation not found"));
+        r.setStatut(Reservation.Statut.REJETEE);
+        r.setCommentaireAdmin(commentaire);
+        return reservationRepository.save(r);
+    }
+
+    // ── CLUBS ──
+    public List<Club> getAllClubs() {
+        return clubRepository.findAll();
+    }
+
+    public Club approuverClub(Long id) {
+        Club club = clubRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Club not found"));
+        club.setStatut(Club.Statut.ACTIF);
+        return clubRepository.save(club);
+    }
+
+    public Club suspendreClub(Long id) {
+        Club club = clubRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Club not found"));
+        club.setStatut(Club.Statut.SUSPENDU);
+        return clubRepository.save(club);
+    }
+
+    // ── DEMANDES ──
+    public List<DemandeAdmin> getAllDemandes() {
+        return demandeAdminRepository.findAll();
+    }
+
+    public DemandeAdmin approuverDemande(Long id) {
+        DemandeAdmin d = demandeAdminRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Demande not found"));
+        d.setStatut(DemandeAdmin.Statut.APPROUVE);
+        return demandeAdminRepository.save(d);
+    }
+
+    public DemandeAdmin rejeterDemande(Long id, String commentaire) {
+        DemandeAdmin d = demandeAdminRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Demande not found"));
+        d.setStatut(DemandeAdmin.Statut.REJETE);
+        d.setCommentaireAdmin(commentaire);
+        return demandeAdminRepository.save(d);
     }
 }
