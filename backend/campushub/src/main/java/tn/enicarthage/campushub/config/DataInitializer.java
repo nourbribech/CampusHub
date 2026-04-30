@@ -12,7 +12,7 @@ import tn.enicarthage.campushub.enseignant.service.DemandeDocumentService;
 import tn.enicarthage.campushub.enseignant.service.EvenementService;
 import tn.enicarthage.campushub.enseignant.service.ReservationService;
 import tn.enicarthage.campushub.enseignant.service.SalleService;
-import tn.enicarthage.campushub.enseignant.service.UserService;
+import tn.enicarthage.campushub.shared.service.UserService;
 import tn.enicarthage.campushub.shared.model.User;
 
 import java.time.LocalDateTime;

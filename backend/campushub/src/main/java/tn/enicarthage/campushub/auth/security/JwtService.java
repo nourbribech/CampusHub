@@ -10,7 +10,6 @@ import tn.enicarthage.campushub.shared.model.User;
 
 import javax.crypto.SecretKey;
 import java.security.Key;
-import java.security.PublicKey;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -60,9 +59,9 @@ public class JwtService {
 
     private Claims extractAllClaims(String token) {
         return Jwts.parser()
-                .verifyWith((PublicKey) getSignInKey())        // nouvelle façon sécurisée
+                .verifyWith((SecretKey) getSignInKey())   // ✅ matches HMAC signing key
                 .build()
-                .parseSignedClaims(token)          // remplace parseClaimsJws
+                .parseSignedClaims(token)
                 .getPayload();
     }
 }

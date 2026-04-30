@@ -10,7 +10,7 @@ import tn.enicarthage.campushub.enseignant.dto.DemandeDocumentDto;
 import tn.enicarthage.campushub.enseignant.model.DemandeDocument;
 import tn.enicarthage.campushub.shared.model.User;
 import tn.enicarthage.campushub.enseignant.service.DemandeDocumentService;
-import tn.enicarthage.campushub.enseignant.service.UserService;
+import tn.enicarthage.campushub.shared.service.UserService;
 
 import java.util.List;
 import java.util.stream.Collectors;

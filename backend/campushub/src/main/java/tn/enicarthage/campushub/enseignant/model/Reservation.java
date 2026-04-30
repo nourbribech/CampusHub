@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 import tn.enicarthage.campushub.shared.model.User;
 
-@Entity
+@Entity(name = "Reservation")
 @Table(name = "reservations")
 @Data
 @NoArgsConstructor

@@ -10,7 +10,7 @@ import tn.enicarthage.campushub.enseignant.dto.EvenementDto;
 import tn.enicarthage.campushub.enseignant.model.Evenement;
 import tn.enicarthage.campushub.shared.model.User;
 import tn.enicarthage.campushub.enseignant.service.EvenementService;
-import tn.enicarthage.campushub.enseignant.service.UserService;
+import tn.enicarthage.campushub.shared.service.UserService;
 
 import java.util.List;
 import java.util.stream.Collectors;
