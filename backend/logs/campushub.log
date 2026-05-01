@@ -1,52 +1,94 @@
-2026-04-19 16:48:49 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.12 with PID 14628 (C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend\campushub\target\classes started by dell in C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend)
-2026-04-19 16:48:49 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
-2026-04-19 16:48:49 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
-2026-04-19 16:48:49 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-19 16:48:49 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-19 16:48:51 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-19 16:48:51 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117 ms. Found 5 JPA repository interfaces.
-2026-04-19 16:48:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
-2026-04-19 16:48:52 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-04-19 16:48:52 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2026-04-19 16:48:52 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-04-19 16:48:52 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2424 ms
-2026-04-19 16:48:52 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-04-19 16:48:52 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-04-19 16:48:52 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-04-19 16:48:53 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-19 16:48:53 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-04-19 16:48:56 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4c547a76
-2026-04-19 16:48:56 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-04-19 16:48:56 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-04-19 16:48:57 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-19 16:48:57 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:51 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.12 with PID 16740 (C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend\campushub\target\classes started by dell in C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend)
+2026-05-01 03:06:51 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-01 03:06:51 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-01 03:06:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-01 03:06:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-01 03:06:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-01 03:06:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 123 ms. Found 10 JPA repository interfaces.
+2026-05-01 03:06:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-01 03:06:53 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-01 03:06:53 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-01 03:06:53 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-01 03:06:53 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2471 ms
+2026-05-01 03:06:54 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-01 03:06:54 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-01 03:06:54 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-01 03:06:54 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-01 03:06:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-01 03:06:56 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c678d22
+2026-05-01 03:06:56 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-01 03:06:56 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-01 03:06:58 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-01 03:06:58 [restartedMain] DEBUG org.hibernate.SQL - 
     alter table if exists demandes_documents 
        drop constraint if exists FKlgwr4r3qewjp47fxihkl424kw
-2026-04-19 16:48:58 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:58 [restartedMain] DEBUG org.hibernate.SQL - 
     alter table if exists evenements 
        drop constraint if exists FKagpicvosgoiu78fpgetfxbstf
-2026-04-19 16:48:58 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:58 [restartedMain] DEBUG org.hibernate.SQL - 
     alter table if exists reservations 
        drop constraint if exists FK1493g8mbd97uyl4eojskpag8i
-2026-04-19 16:48:58 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:58 [restartedMain] DEBUG org.hibernate.SQL - 
     alter table if exists reservations 
        drop constraint if exists FK11c2598mdsm9g395pl5ubdvi3
-2026-04-19 16:48:58 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:58 [restartedMain] DEBUG org.hibernate.SQL - 
     alter table if exists salle_equipements 
        drop constraint if exists FK16mjv18ki1mc8y6h27d40voq7
-2026-04-19 16:48:59 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists club_applications cascade
+2026-05-01 03:06:59 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists clubs cascade
+2026-05-01 03:06:59 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists demandes_admin cascade
+2026-05-01 03:06:59 [restartedMain] DEBUG org.hibernate.SQL - 
     drop table if exists demandes_documents cascade
-2026-04-19 16:48:59 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:59 [restartedMain] DEBUG org.hibernate.SQL - 
     drop table if exists evenements cascade
-2026-04-19 16:48:59 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:59 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists event_registrations cascade
+2026-05-01 03:06:59 [restartedMain] DEBUG org.hibernate.SQL - 
     drop table if exists reservations cascade
-2026-04-19 16:48:59 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:59 [restartedMain] DEBUG org.hibernate.SQL - 
     drop table if exists salle_equipements cascade
-2026-04-19 16:49:00 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:59 [restartedMain] DEBUG org.hibernate.SQL - 
     drop table if exists salles cascade
-2026-04-19 16:49:00 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:59 [restartedMain] DEBUG org.hibernate.SQL - 
     drop table if exists users cascade
-2026-04-19 16:49:00 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:06:59 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table club_applications (
+        club_id bigint,
+        id bigserial not null,
+        student_id bigint,
+        motivation varchar(500),
+        status varchar(255) check (status in ('PENDING','ACCEPTED','REJECTED')),
+        primary key (id)
+    )
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table clubs (
+        nombre_membres integer,
+        created_at timestamp(6),
+        head_id bigint,
+        id bigserial not null,
+        description varchar(1000),
+        categorie varchar(255),
+        nom varchar(255) not null,
+        responsable varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','ACTIF','SUSPENDU')),
+        primary key (id)
+    )
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table demandes_admin (
+        created_at timestamp(6),
+        id bigserial not null,
+        student_id bigint,
+        submitted_at timestamp(6),
+        detail varchar(1000),
+        commentaire_admin varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','APPROUVE','REJETE')),
+        type varchar(255) not null check (type in ('CERTIFICAT','REMBOURSEMENT','MATERIEL','RESERVATION_SALLE','OTHER')),
+        primary key (id)
+    )
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
     create table demandes_documents (
         date_demande timestamp(6),
         demandeur_id bigint not null,
@@ -56,7 +98,7 @@
         type_document varchar(255) not null check (type_document in ('CERTIFICAT_SCOLARITE','RELEVE_NOTES','ATTESTATION_PRESENCE','CARTE_ETUDIANT','AUTRE')),
         primary key (id)
     )
-2026-04-19 16:49:00 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
     create table evenements (
         nb_participants_max integer,
         created_at timestamp(6),
@@ -64,14 +106,23 @@
         date_fin timestamp(6) not null,
         id bigserial not null,
         organisateur_id bigint,
+        commentaire_admin varchar(1000),
+        club varchar(255),
         description TEXT,
         image_url varchar(255),
         lieu varchar(255),
-        statut varchar(255) check (statut in ('OUVERT','PLEIN','ANNULE','TERMINE')),
+        statut varchar(255) check (statut in ('EN_ATTENTE','OUVERT','PLEIN','ANNULE','TERMINE','REJETE')),
         titre varchar(255) not null,
         primary key (id)
     )
-2026-04-19 16:49:01 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table event_registrations (
+        event_id bigint,
+        id bigserial not null,
+        student_id bigint,
+        primary key (id)
+    )
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
     create table reservations (
         nombre_participants integer,
         created_at timestamp(6),
@@ -86,12 +137,12 @@
         statut varchar(255) not null check (statut in ('EN_ATTENTE','APPROUVEE','REJETEE')),
         primary key (id)
     )
-2026-04-19 16:49:01 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
     create table salle_equipements (
         salle_id bigint not null,
         equipement varchar(255)
     )
-2026-04-19 16:49:01 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
     create table salles (
         capacite integer not null,
         disponible boolean not null,
@@ -102,7 +153,7 @@
         nom varchar(255) not null unique,
         primary key (id)
     )
-2026-04-19 16:49:02 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
     create table users (
         created_at timestamp(6),
         id bigserial not null,
@@ -116,50 +167,45 @@
         role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','ADMIN','RESPONSABLE_CLUB')),
         primary key (id)
     )
-2026-04-19 16:49:03 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
     alter table if exists demandes_documents 
        add constraint FKlgwr4r3qewjp47fxihkl424kw 
        foreign key (demandeur_id) 
        references users
-2026-04-19 16:49:03 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
     alter table if exists evenements 
        add constraint FKagpicvosgoiu78fpgetfxbstf 
        foreign key (organisateur_id) 
        references users
-2026-04-19 16:49:03 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
     alter table if exists reservations 
        add constraint FK1493g8mbd97uyl4eojskpag8i 
        foreign key (enseignant_id) 
        references users
-2026-04-19 16:49:03 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:07:00 [restartedMain] DEBUG org.hibernate.SQL - 
     alter table if exists reservations 
        add constraint FK11c2598mdsm9g395pl5ubdvi3 
        foreign key (salle_id) 
        references salles
-2026-04-19 16:49:03 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-05-01 03:07:01 [restartedMain] DEBUG org.hibernate.SQL - 
     alter table if exists salle_equipements 
        add constraint FK16mjv18ki1mc8y6h27d40voq7 
        foreign key (salle_id) 
        references salles
-2026-04-19 16:49:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-19 16:49:04 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-04-19 16:49:04 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-04-19 16:49:04 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
-
-Using generated security password: eaf834d3-4671-4ef2-be03-207bf8f4b9cd
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-04-19 16:49:05 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6cc788c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@82cdb78, org.springframework.security.web.context.SecurityContextHolderFilter@567f9c84, org.springframework.security.web.header.HeaderWriterFilter@7d8873d2, org.springframework.web.filter.CorsFilter@28760e73, org.springframework.security.web.authentication.logout.LogoutFilter@3572fadd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54689fbf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17352ece, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2337a1a0, org.springframework.security.web.access.ExceptionTranslationFilter@248d0cf2, org.springframework.security.web.access.intercept.AuthorizationFilter@47046164]
-2026-04-19 16:49:05 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2026-04-19 16:49:05 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-04-19 16:49:05 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-04-19 16:49:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-04-19 16:49:06 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-04-19 16:49:06 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+2026-05-01 03:07:01 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-01 03:07:01 [restartedMain] DEBUG t.e.c.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-01 03:07:01 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-01 03:07:02 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-01 03:07:02 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44a43eb7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d3b93f1, org.springframework.security.web.context.SecurityContextHolderFilter@142784c1, org.springframework.security.web.header.HeaderWriterFilter@16debb00, org.springframework.web.filter.CorsFilter@7c3e06b2, org.springframework.security.web.authentication.logout.LogoutFilter@5c5ff1be, tn.enicarthage.campushub.auth.security.JwtAuthenticationFilter@4bae18d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d7ef226, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35ceb0f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4932182c, org.springframework.security.web.session.SessionManagementFilter@52da84bc, org.springframework.security.web.access.ExceptionTranslationFilter@3b2bda8f, org.springframework.security.web.access.intercept.AuthorizationFilter@7df88bd1]
+2026-05-01 03:07:03 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-01 03:07:03 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-01 03:07:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-01 03:07:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-01 03:07:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-05-01 03:07:03 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-04-19 16:49:06 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+2026-05-01 03:07:03 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -173,3 +219,2158 @@ Action:
 
 Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
 
+2026-05-01 03:07:34 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.12 with PID 3116 (C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend\campushub\target\classes started by dell in C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend)
+2026-05-01 03:07:34 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-01 03:07:34 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-01 03:07:34 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-01 03:07:34 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-01 03:07:35 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-01 03:07:35 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99 ms. Found 10 JPA repository interfaces.
+2026-05-01 03:07:36 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-01 03:07:36 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-01 03:07:36 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-01 03:07:36 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-01 03:07:36 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1842 ms
+2026-05-01 03:07:36 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-01 03:07:36 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-01 03:07:36 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-01 03:07:36 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-01 03:07:36 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-01 03:07:37 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3b79c39e
+2026-05-01 03:07:37 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-01 03:07:38 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-01 03:07:39 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-01 03:07:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists demandes_documents 
+       drop constraint if exists FKlgwr4r3qewjp47fxihkl424kw
+2026-05-01 03:07:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists evenements 
+       drop constraint if exists FKagpicvosgoiu78fpgetfxbstf
+2026-05-01 03:07:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       drop constraint if exists FK1493g8mbd97uyl4eojskpag8i
+2026-05-01 03:07:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       drop constraint if exists FK11c2598mdsm9g395pl5ubdvi3
+2026-05-01 03:07:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists salle_equipements 
+       drop constraint if exists FK16mjv18ki1mc8y6h27d40voq7
+2026-05-01 03:07:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists club_applications cascade
+2026-05-01 03:07:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists clubs cascade
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists demandes_admin cascade
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists demandes_documents cascade
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists evenements cascade
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists event_registrations cascade
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists reservations cascade
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists salle_equipements cascade
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists salles cascade
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table club_applications (
+        club_id bigint,
+        id bigserial not null,
+        student_id bigint,
+        motivation varchar(500),
+        status varchar(255) check (status in ('PENDING','ACCEPTED','REJECTED')),
+        primary key (id)
+    )
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table clubs (
+        nombre_membres integer,
+        created_at timestamp(6),
+        head_id bigint,
+        id bigserial not null,
+        description varchar(1000),
+        categorie varchar(255),
+        nom varchar(255) not null,
+        responsable varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','ACTIF','SUSPENDU')),
+        primary key (id)
+    )
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table demandes_admin (
+        created_at timestamp(6),
+        id bigserial not null,
+        student_id bigint,
+        submitted_at timestamp(6),
+        detail varchar(1000),
+        commentaire_admin varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','APPROUVE','REJETE')),
+        type varchar(255) not null check (type in ('CERTIFICAT','REMBOURSEMENT','MATERIEL','RESERVATION_SALLE','OTHER')),
+        primary key (id)
+    )
+2026-05-01 03:07:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table demandes_documents (
+        date_demande timestamp(6),
+        demandeur_id bigint not null,
+        id bigserial not null,
+        commentaire_admin TEXT,
+        statut varchar(255) check (statut in ('EN_ATTENTE','EN_COURS','PRET','REJETE','RECUPERE')),
+        type_document varchar(255) not null check (type_document in ('CERTIFICAT_SCOLARITE','RELEVE_NOTES','ATTESTATION_PRESENCE','CARTE_ETUDIANT','AUTRE')),
+        primary key (id)
+    )
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table evenements (
+        nb_participants_max integer,
+        created_at timestamp(6),
+        date_debut timestamp(6) not null,
+        date_fin timestamp(6) not null,
+        id bigserial not null,
+        organisateur_id bigint,
+        commentaire_admin varchar(1000),
+        club varchar(255),
+        description TEXT,
+        image_url varchar(255),
+        lieu varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','OUVERT','PLEIN','ANNULE','TERMINE','REJETE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table event_registrations (
+        event_id bigint,
+        id bigserial not null,
+        student_id bigint,
+        primary key (id)
+    )
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table reservations (
+        nombre_participants integer,
+        created_at timestamp(6),
+        date_debut timestamp(6) not null,
+        date_fin timestamp(6) not null,
+        enseignant_id bigint not null,
+        id bigserial not null,
+        salle_id bigint not null,
+        updated_at timestamp(6),
+        motif varchar(500) not null,
+        commentaire_admin varchar(1000),
+        statut varchar(255) not null check (statut in ('EN_ATTENTE','APPROUVEE','REJETEE')),
+        primary key (id)
+    )
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table salle_equipements (
+        salle_id bigint not null,
+        equipement varchar(255)
+    )
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table salles (
+        capacite integer not null,
+        disponible boolean not null,
+        etage integer not null,
+        id bigserial not null,
+        batiment varchar(255) not null,
+        image_url varchar(255),
+        nom varchar(255) not null unique,
+        primary key (id)
+    )
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        created_at timestamp(6),
+        id bigserial not null,
+        updated_at timestamp(6),
+        avatar varchar(255),
+        departement varchar(255),
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','ADMIN','RESPONSABLE_CLUB')),
+        primary key (id)
+    )
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists demandes_documents 
+       add constraint FKlgwr4r3qewjp47fxihkl424kw 
+       foreign key (demandeur_id) 
+       references users
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists evenements 
+       add constraint FKagpicvosgoiu78fpgetfxbstf 
+       foreign key (organisateur_id) 
+       references users
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       add constraint FK1493g8mbd97uyl4eojskpag8i 
+       foreign key (enseignant_id) 
+       references users
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       add constraint FK11c2598mdsm9g395pl5ubdvi3 
+       foreign key (salle_id) 
+       references salles
+2026-05-01 03:07:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists salle_equipements 
+       add constraint FK16mjv18ki1mc8y6h27d40voq7 
+       foreign key (salle_id) 
+       references salles
+2026-05-01 03:07:41 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-01 03:07:42 [restartedMain] DEBUG t.e.c.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-01 03:07:42 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-01 03:07:43 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-01 03:07:43 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@322b34fe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41ef8461, org.springframework.security.web.context.SecurityContextHolderFilter@255d1b69, org.springframework.security.web.header.HeaderWriterFilter@77f4e965, org.springframework.web.filter.CorsFilter@5c5ff1be, org.springframework.security.web.authentication.logout.LogoutFilter@4828fc0a, tn.enicarthage.campushub.auth.security.JwtAuthenticationFilter@4f7362ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1273b4a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11b8f8f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4696d6a6, org.springframework.security.web.session.SessionManagementFilter@6a9b5a76, org.springframework.security.web.access.ExceptionTranslationFilter@6ee6b0fa, org.springframework.security.web.access.intercept.AuthorizationFilter@1d7dc94b]
+2026-05-01 03:07:43 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-01 03:07:43 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-01 03:07:43 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-01 03:07:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-01 03:07:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-05-01 03:07:43 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-01 03:07:44 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-05-01 03:09:00 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.12 with PID 23508 (C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend\campushub\target\classes started by dell in C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend)
+2026-05-01 03:09:00 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-01 03:09:00 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-01 03:09:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-01 03:09:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-01 03:09:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-01 03:09:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 10 JPA repository interfaces.
+2026-05-01 03:09:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-01 03:09:02 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-01 03:09:02 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-01 03:09:02 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-01 03:09:02 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1941 ms
+2026-05-01 03:09:02 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-01 03:09:02 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-01 03:09:02 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-01 03:09:02 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-01 03:09:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-01 03:09:03 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4be8007
+2026-05-01 03:09:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-01 03:09:04 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-01 03:09:05 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-01 03:09:05 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists demandes_documents 
+       drop constraint if exists FKlgwr4r3qewjp47fxihkl424kw
+2026-05-01 03:09:05 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists evenements 
+       drop constraint if exists FKagpicvosgoiu78fpgetfxbstf
+2026-05-01 03:09:05 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       drop constraint if exists FK1493g8mbd97uyl4eojskpag8i
+2026-05-01 03:09:05 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       drop constraint if exists FK11c2598mdsm9g395pl5ubdvi3
+2026-05-01 03:09:05 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists salle_equipements 
+       drop constraint if exists FK16mjv18ki1mc8y6h27d40voq7
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists club_applications cascade
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists clubs cascade
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists demandes_admin cascade
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists demandes_documents cascade
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists evenements cascade
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists event_registrations cascade
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists reservations cascade
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists salle_equipements cascade
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists salles cascade
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table club_applications (
+        club_id bigint,
+        id bigserial not null,
+        student_id bigint,
+        motivation varchar(500),
+        status varchar(255) check (status in ('PENDING','ACCEPTED','REJECTED')),
+        primary key (id)
+    )
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table clubs (
+        nombre_membres integer,
+        created_at timestamp(6),
+        head_id bigint,
+        id bigserial not null,
+        description varchar(1000),
+        categorie varchar(255),
+        nom varchar(255) not null,
+        responsable varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','ACTIF','SUSPENDU')),
+        primary key (id)
+    )
+2026-05-01 03:09:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table demandes_admin (
+        created_at timestamp(6),
+        id bigserial not null,
+        student_id bigint,
+        submitted_at timestamp(6),
+        detail varchar(1000),
+        commentaire_admin varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','APPROUVE','REJETE')),
+        type varchar(255) not null check (type in ('CERTIFICAT','REMBOURSEMENT','MATERIEL','RESERVATION_SALLE','OTHER')),
+        primary key (id)
+    )
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table demandes_documents (
+        date_demande timestamp(6),
+        demandeur_id bigint not null,
+        id bigserial not null,
+        commentaire_admin TEXT,
+        statut varchar(255) check (statut in ('EN_ATTENTE','EN_COURS','PRET','REJETE','RECUPERE')),
+        type_document varchar(255) not null check (type_document in ('CERTIFICAT_SCOLARITE','RELEVE_NOTES','ATTESTATION_PRESENCE','CARTE_ETUDIANT','AUTRE')),
+        primary key (id)
+    )
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table evenements (
+        nb_participants_max integer,
+        created_at timestamp(6),
+        date_debut timestamp(6) not null,
+        date_fin timestamp(6) not null,
+        id bigserial not null,
+        organisateur_id bigint,
+        commentaire_admin varchar(1000),
+        club varchar(255),
+        description TEXT,
+        image_url varchar(255),
+        lieu varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','OUVERT','PLEIN','ANNULE','TERMINE','REJETE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table event_registrations (
+        event_id bigint,
+        id bigserial not null,
+        student_id bigint,
+        primary key (id)
+    )
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table reservations (
+        nombre_participants integer,
+        created_at timestamp(6),
+        date_debut timestamp(6) not null,
+        date_fin timestamp(6) not null,
+        enseignant_id bigint not null,
+        id bigserial not null,
+        salle_id bigint not null,
+        updated_at timestamp(6),
+        motif varchar(500) not null,
+        commentaire_admin varchar(1000),
+        statut varchar(255) not null check (statut in ('EN_ATTENTE','APPROUVEE','REJETEE')),
+        primary key (id)
+    )
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table salle_equipements (
+        salle_id bigint not null,
+        equipement varchar(255)
+    )
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table salles (
+        capacite integer not null,
+        disponible boolean not null,
+        etage integer not null,
+        id bigserial not null,
+        batiment varchar(255) not null,
+        image_url varchar(255),
+        nom varchar(255) not null unique,
+        primary key (id)
+    )
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        created_at timestamp(6),
+        id bigserial not null,
+        updated_at timestamp(6),
+        avatar varchar(255),
+        departement varchar(255),
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','ADMIN','RESPONSABLE_CLUB')),
+        primary key (id)
+    )
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists demandes_documents 
+       add constraint FKlgwr4r3qewjp47fxihkl424kw 
+       foreign key (demandeur_id) 
+       references users
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists evenements 
+       add constraint FKagpicvosgoiu78fpgetfxbstf 
+       foreign key (organisateur_id) 
+       references users
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       add constraint FK1493g8mbd97uyl4eojskpag8i 
+       foreign key (enseignant_id) 
+       references users
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       add constraint FK11c2598mdsm9g395pl5ubdvi3 
+       foreign key (salle_id) 
+       references salles
+2026-05-01 03:09:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists salle_equipements 
+       add constraint FK16mjv18ki1mc8y6h27d40voq7 
+       foreign key (salle_id) 
+       references salles
+2026-05-01 03:09:08 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-01 03:09:08 [restartedMain] DEBUG t.e.c.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-01 03:09:08 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-01 03:09:09 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-01 03:09:09 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7038a031, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44a43eb7, org.springframework.security.web.context.SecurityContextHolderFilter@3791f337, org.springframework.security.web.header.HeaderWriterFilter@21dd05a8, org.springframework.web.filter.CorsFilter@7d3b93f1, org.springframework.security.web.authentication.logout.LogoutFilter@41ef8461, tn.enicarthage.campushub.auth.security.JwtAuthenticationFilter@126d1e20, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12de1d9d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d7ef226, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c3e06b2, org.springframework.security.web.session.SessionManagementFilter@34b2e4e0, org.springframework.security.web.access.ExceptionTranslationFilter@2baaf267, org.springframework.security.web.access.intercept.AuthorizationFilter@7b29e029]
+2026-05-01 03:09:09 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-01 03:09:09 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2026-05-01 03:09:10 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 10.288 seconds (process running for 10.862)
+2026-05-01 03:09:10 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 🚀 Initialisation des données ENICarthage...
+2026-05-01 03:09:10 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-05-01 03:09:10 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 📝 Création des utilisateurs...
+2026-05-01 03:09:10 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-01 03:09:10 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:10 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-01 03:09:11 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:11 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-01 03:09:11 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:11 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-01 03:09:11 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:11 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-01 03:09:12 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:12 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-01 03:09:12 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:12 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-01 03:09:12 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, role, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:13 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-05-01 03:09:13 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ✅ 7 utilisateurs créés
+2026-05-01 03:09:13 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 📝 Création des salles ENICarthage...
+2026-05-01 03:09:13 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle MAC
+2026-05-01 03:09:13 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:13 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:13 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:13 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:13 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:13 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : LABO Informatique
+2026-05-01 03:09:13 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:13 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:13 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:13 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:14 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:14 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle Polyvalente
+2026-05-01 03:09:14 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:14 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:14 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:14 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:14 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:14 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:14 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 20
+2026-05-01 03:09:14 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:14 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:14 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:15 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 21
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:15 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 22
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:15 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 23
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:15 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:16 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 24
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:16 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 25
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:16 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 26
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:16 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:17 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 27
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:17 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 30
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:17 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 31
+2026-05-01 03:09:17 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:18 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 32
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:18 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 33
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:19 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 34
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:19 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 35
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:19 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 36
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:20 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 37
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:20 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Amphithéâtre Principal
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:20 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P20
+2026-05-01 03:09:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:21 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P21
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:21 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P22
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:22 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P23
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:22 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P24
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:22 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P25
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:22 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:23 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P26
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:23 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P27
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:23 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P30
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:24 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P31
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:24 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P32
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:24 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P33
+2026-05-01 03:09:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:25 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P34
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:25 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P35
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:25 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:25 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P36
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:26 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P37
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:26 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P40
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:26 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:27 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P41
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:27 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P42
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:27 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P43
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:27 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:28 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P44
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:28 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P45
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:28 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P46
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:28 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:29 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P47
+2026-05-01 03:09:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-01 03:09:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        salles s1_0
+2026-05-01 03:09:29 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ✅ 44 salles créées
+2026-05-01 03:09:29 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 📝 Création des réservations exemple...
+2026-05-01 03:09:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-01 03:09:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.batiment=?
+2026-05-01 03:09:29 [restartedMain] INFO  t.e.c.e.service.ReservationService - Création d'une nouvelle réservation pour la salle ID: 1
+2026-05-01 03:09:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.salle_id=? 
+        and (
+            (
+                r1_0.date_debut<=? 
+                and r1_0.date_fin>=?
+            )
+        )
+2026-05-01 03:09:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:30 [restartedMain] INFO  t.e.c.e.service.ReservationService - Réservation créée avec succès - ID: 1
+2026-05-01 03:09:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.batiment=?
+2026-05-01 03:09:30 [restartedMain] INFO  t.e.c.e.service.ReservationService - Création d'une nouvelle réservation pour la salle ID: 2
+2026-05-01 03:09:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.salle_id=? 
+        and (
+            (
+                r1_0.date_debut<=? 
+                and r1_0.date_fin>=?
+            )
+        )
+2026-05-01 03:09:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:30 [restartedMain] INFO  t.e.c.e.service.ReservationService - Réservation créée avec succès - ID: 2
+2026-05-01 03:09:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-01 03:09:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.batiment=?
+2026-05-01 03:09:30 [restartedMain] INFO  t.e.c.e.service.ReservationService - Création d'une nouvelle réservation pour la salle ID: 21
+2026-05-01 03:09:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at 
+    from
+        reservations r1_0 
+    where
+        r1_0.salle_id=? 
+        and (
+            (
+                r1_0.date_debut<=? 
+                and r1_0.date_fin>=?
+            )
+        )
+2026-05-01 03:09:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:30 [restartedMain] INFO  t.e.c.e.service.ReservationService - Réservation créée avec succès - ID: 3
+2026-05-01 03:09:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        reservations r1_0
+2026-05-01 03:09:31 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ✅ 3 réservations créées
+2026-05-01 03:09:31 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 📝 Création des événements...
+2026-05-01 03:09:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-01 03:09:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        evenements
+        (club, commentaire_admin, created_at, date_debut, date_fin, description, image_url, lieu, nb_participants_max, organisateur_id, statut, titre) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        evenements
+        (club, commentaire_admin, created_at, date_debut, date_fin, description, image_url, lieu, nb_participants_max, organisateur_id, statut, titre) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        evenements
+        (club, commentaire_admin, created_at, date_debut, date_fin, description, image_url, lieu, nb_participants_max, organisateur_id, statut, titre) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-01 03:09:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        evenements e1_0
+2026-05-01 03:09:31 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ✅ 3 événements créés
+2026-05-01 03:09:31 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 📝 Création des demandes de documents...
+2026-05-01 03:09:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-01 03:09:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        demandes_documents
+        (commentaire_admin, date_demande, demandeur_id, statut, type_document) 
+    values
+        (?, ?, ?, ?, ?)
+2026-05-01 03:09:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        demandes_documents
+        (commentaire_admin, date_demande, demandeur_id, statut, type_document) 
+    values
+        (?, ?, ?, ?, ?)
+2026-05-01 03:09:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-01 03:09:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        demandes_documents
+        (commentaire_admin, date_demande, demandeur_id, statut, type_document) 
+    values
+        (?, ?, ?, ?, ?)
+2026-05-01 03:09:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        demandes_documents dd1_0
+2026-05-01 03:09:32 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ✅ 3 demandes de documents créées
+2026-05-01 03:09:32 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ✅ Initialisation des données terminée avec succès !
+2026-05-01 03:09:52 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-01 03:09:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-01 03:09:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

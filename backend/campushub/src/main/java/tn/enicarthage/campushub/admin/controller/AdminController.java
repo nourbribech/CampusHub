@@ -8,6 +8,9 @@ import tn.enicarthage.campushub.admin.dto.AdminStatsDto;
 import tn.enicarthage.campushub.admin.dto.RejectRequest;
 import tn.enicarthage.campushub.admin.model.*;
 import tn.enicarthage.campushub.admin.service.AdminService;
+import tn.enicarthage.campushub.enseignant.model.Evenement;
+import tn.enicarthage.campushub.enseignant.model.Reservation;
+import tn.enicarthage.campushub.shared.model.Club;
 import tn.enicarthage.campushub.shared.model.User;
 
 import java.util.List;
@@ -41,25 +44,25 @@ public class AdminController {
 
     // ── EVENTS ──
     @GetMapping("/events")
-    public ResponseEntity<List<Event>> getAllEvents() {
-        return ResponseEntity.ok(adminService.getAllEvents());
+    public ResponseEntity<List<Evenement>> getAllEvenements() {
+        return ResponseEntity.ok(adminService.getAllEvenements());
     }
 
     @GetMapping("/events/pending")
-    public ResponseEntity<List<Event>> getPendingEvents() {
-        return ResponseEntity.ok(adminService.getPendingEvents());
+    public ResponseEntity<List<Evenement>> getPendingEvenements() {
+        return ResponseEntity.ok(adminService.getPendingEvenements());
     }
 
     @PutMapping("/events/{id}/approuver")
-    public ResponseEntity<Event> approuverEvent(@PathVariable Long id) {
-        return ResponseEntity.ok(adminService.approuverEvent(id));
+    public ResponseEntity<Evenement> approuverEvenement(@PathVariable Long id) {
+        return ResponseEntity.ok(adminService.approuverEvenement(id));
     }
 
     @PutMapping("/events/{id}/rejeter")
-    public ResponseEntity<Event> rejeterEvent(
+    public ResponseEntity<Evenement> rejeterEvenement(
             @PathVariable Long id,
             @RequestBody RejectRequest request) {
-        return ResponseEntity.ok(adminService.rejeterEvent(id, request.getCommentaire()));
+        return ResponseEntity.ok(adminService.rejeterEvenement(id, request.getCommentaire()));
     }
 
     // ── RESERVATIONS ──

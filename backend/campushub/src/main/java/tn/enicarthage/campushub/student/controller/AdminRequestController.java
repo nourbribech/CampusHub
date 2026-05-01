@@ -3,8 +3,8 @@ package tn.enicarthage.campushub.student.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import tn.enicarthage.campushub.admin.model.DemandeAdmin;
 import tn.enicarthage.campushub.student.service.AdminRequestService;
-import tn.enicarthage.campushub.student.model.AdminRequest;
 
 import java.util.List;
 
@@ -16,17 +16,19 @@ public class AdminRequestController {
     private final AdminRequestService requestService;
 
     @PostMapping
-    public ResponseEntity<AdminRequest> submit(@RequestBody AdminRequest request) {
-        return ResponseEntity.ok(requestService.submitRequest(request));
+    public ResponseEntity<DemandeAdmin> submit(
+            @RequestParam DemandeAdmin.Type type,
+            @RequestParam String detail) {
+        return ResponseEntity.ok(requestService.submitRequest(type, detail));
     }
 
     @GetMapping
-    public ResponseEntity<List<AdminRequest>> myRequests() {
+    public ResponseEntity<List<DemandeAdmin>> myRequests() {
         return ResponseEntity.ok(requestService.getMyRequests());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<AdminRequest> getRequest(@PathVariable Long id) {
+    public ResponseEntity<DemandeAdmin> getRequest(@PathVariable Long id) {
         return ResponseEntity.ok(requestService.getMyRequest(id));
     }
 }

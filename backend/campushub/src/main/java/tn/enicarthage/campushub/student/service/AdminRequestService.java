@@ -1,13 +1,13 @@
 package tn.enicarthage.campushub.student.service;
 
-import tn.enicarthage.campushub.student.model.AdminRequest;
-import tn.enicarthage.campushub.student.model.RequestStatus;
-import tn.enicarthage.campushub.student.model.Student;
-import tn.enicarthage.campushub.student.repository.AdminRequestRepository;
-import tn.enicarthage.campushub.student.repository.StudentRepository;
+import tn.enicarthage.campushub.admin.model.DemandeAdmin;
+import tn.enicarthage.campushub.admin.repository.DemandeAdminRepository;
+import tn.enicarthage.campushub.shared.model.User;
+import tn.enicarthage.campushub.shared.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -15,41 +15,43 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AdminRequestService {
 
-    private final AdminRequestRepository requestRepository;
-    private final StudentRepository studentRepository;
+    private final DemandeAdminRepository demandeAdminRepository;
+    private final UserRepository userRepository;
 
-    private Student getCurrentStudent() {
+    private User getCurrentUser() {
         String email = SecurityContextHolder.getContext()
                 .getAuthentication().getName();
-        return studentRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Student not found"));
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
     }
 
-    // Submit a new request
-    public AdminRequest submitRequest(AdminRequest request) {
-        Student student = getCurrentStudent();
-        request.setStudentId(student.getId());
-        request.setStatus(RequestStatus.PENDING);
-        request.setSubmittedAt(LocalDateTime.now());
-        return requestRepository.save(request);
+    public DemandeAdmin submitRequest(DemandeAdmin.Type type, String detail) {
+        User user = getCurrentUser();
+
+        DemandeAdmin demande = new DemandeAdmin();
+        demande.setStudentId(user.getId());
+        demande.setType(type);
+        demande.setDetail(detail);
+        demande.setStatut(DemandeAdmin.Statut.EN_ATTENTE);
+        demande.setSubmittedAt(LocalDateTime.now());
+
+        return demandeAdminRepository.save(demande);
     }
 
-    // Track my requests
-    public List<AdminRequest> getMyRequests() {
-        Student student = getCurrentStudent();
-        return requestRepository.findByStudentId(student.getId());
+    public List<DemandeAdmin> getMyRequests() {
+        User user = getCurrentUser();
+        return demandeAdminRepository.findByStudentId(user.getId());
     }
 
-    // Get a single request (must belong to current student)
-    public AdminRequest getMyRequest(Long requestId) {
-        Student student = getCurrentStudent();
-        AdminRequest request = requestRepository.findById(requestId)
+    public DemandeAdmin getMyRequest(Long requestId) {
+        User user = getCurrentUser();
+        DemandeAdmin demande = demandeAdminRepository.findById(requestId)
                 .orElseThrow(() -> new RuntimeException("Request not found"));
 
-        if (!request.getStudentId().equals(student.getId())) {
+        if (!demande.getStudentId().equals(user.getId())) {
             throw new RuntimeException("Access denied");
         }
 
-        return request;
+        return demande;
     }
 }

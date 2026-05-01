@@ -2,7 +2,7 @@ package tn.enicarthage.campushub.admin.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import tn.enicarthage.campushub.admin.model.Reservation;
+import tn.enicarthage.campushub.enseignant.model.Reservation;
 import java.util.List;
 
 @Repository

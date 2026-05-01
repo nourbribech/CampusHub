@@ -6,6 +6,10 @@ import org.springframework.stereotype.Service;
 import tn.enicarthage.campushub.admin.dto.AdminStatsDto;
 import tn.enicarthage.campushub.admin.model.*;
 import tn.enicarthage.campushub.admin.repository.*;
+import tn.enicarthage.campushub.enseignant.model.Evenement;
+import tn.enicarthage.campushub.enseignant.model.Reservation;
+import tn.enicarthage.campushub.enseignant.repository.EvenementRepository;
+import tn.enicarthage.campushub.shared.model.Club;
 import tn.enicarthage.campushub.shared.model.User;
 import tn.enicarthage.campushub.shared.repository.UserRepository;
 
@@ -17,7 +21,7 @@ import java.util.List;
 public class AdminService {
 
     private final UserRepository userRepository;
-    private final EventRepository eventRepository;
+    private final EvenementRepository eventRepository;
     private final AdminReservationRepository reservationRepository;
     private final ClubRepository clubRepository;
     private final DemandeAdminRepository demandeAdminRepository;
@@ -27,7 +31,7 @@ public class AdminService {
         return new AdminStatsDto(
                 userRepository.count(),
                 eventRepository.count(),
-                eventRepository.countByStatut(Event.Statut.EN_ATTENTE),
+                eventRepository.countByStatut(Evenement.Statut.EN_ATTENTE),
                 reservationRepository.countByStatut(Reservation.Statut.EN_ATTENTE),
                 demandeAdminRepository.countByStatut(DemandeAdmin.Statut.EN_ATTENTE),
                 clubRepository.count()
@@ -44,25 +48,27 @@ public class AdminService {
     }
 
     // ── EVENTS ──
-    public List<Event> getAllEvents() {
+    public List<Evenement> getAllEvenements() {
         return eventRepository.findAll();
     }
 
-    public List<Event> getPendingEvents() {
-        return eventRepository.findByStatut(Event.Statut.EN_ATTENTE);
+    public List<Evenement> getPendingEvenements() {
+        return eventRepository.findByStatut(Evenement.Statut.EN_ATTENTE);
     }
 
-    public Event approuverEvent(Long id) {
-        Event event = eventRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Event not found"));
-        event.setStatut(Event.Statut.APPROUVE);
+    // approving an event means it's immediately open for registration.
+    // There's no reason to have a separate APPROUVE state that students can't act on.
+    public Evenement approuverEvenement(Long id) {
+        Evenement event = eventRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Evenement not found"));
+        event.setStatut(Evenement.Statut.OUVERT);  // approved = open
         return eventRepository.save(event);
     }
 
-    public Event rejeterEvent(Long id, String commentaire) {
-        Event event = eventRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Event not found"));
-        event.setStatut(Event.Statut.REJETE);
+    public Evenement rejeterEvenement(Long id, String commentaire) {
+        Evenement event = eventRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Evenement not found"));
+        event.setStatut(Evenement.Statut.REJETE);
         event.setCommentaireAdmin(commentaire);
         return eventRepository.save(event);
     }
