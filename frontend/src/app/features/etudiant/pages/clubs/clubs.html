@@ -54,17 +54,18 @@
         <div *ngFor="let club of clubs"
           class="bg-white rounded-xl border-2 border-gray-200 p-6 hover:border-primary hover:shadow-lg transition-all">
           <div class="flex items-start justify-between mb-4">
-            <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-lg">
-              {{ club.name.charAt(0) }}
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-lg">
+              {{ club.nom.charAt(0) }}
             </div>
             <span class="px-3 py-1 rounded-full text-xs font-semibold"
-              [ngClass]="club.status === 'ACTIVE' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'">
-              {{ club.status === 'ACTIVE' ? 'Actif' : 'Inactif' }}
+              [ngClass]="club.statut === 'ACTIF' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'">
+              {{ club.statut === 'ACTIF' ? 'Actif' : 'Inactif' }}
             </span>
           </div>
 
-          <h3 class="text-xl font-bold text-gray-900 mb-2">{{ club.name }}</h3>
-          <p *ngIf="club.category" class="text-sm text-primary font-semibold mb-3">{{ club.category }}</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">{{ club.nom }}</h3>
+          <p *ngIf="club.categorie" class="text-sm text-primary font-semibold mb-3">{{ club.categorie }}</p>
           <p *ngIf="club.description" class="text-gray-600 text-sm mb-4 line-clamp-3">{{ club.description }}</p>
 
           <div class="border-t border-gray-100 pt-4">

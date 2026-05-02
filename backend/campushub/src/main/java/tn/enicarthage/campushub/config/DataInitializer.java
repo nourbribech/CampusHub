@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import tn.enicarthage.campushub.admin.repository.ClubRepository;
 import tn.enicarthage.campushub.enseignant.model.DemandeDocument;
 import tn.enicarthage.campushub.enseignant.model.Evenement;
 import tn.enicarthage.campushub.enseignant.model.Reservation;
@@ -12,8 +13,14 @@ import tn.enicarthage.campushub.enseignant.service.DemandeDocumentService;
 import tn.enicarthage.campushub.enseignant.service.EvenementService;
 import tn.enicarthage.campushub.enseignant.service.ReservationService;
 import tn.enicarthage.campushub.enseignant.service.SalleService;
-import tn.enicarthage.campushub.shared.service.UserService;
+import tn.enicarthage.campushub.shared.model.Club;
 import tn.enicarthage.campushub.shared.model.User;
+import tn.enicarthage.campushub.shared.service.UserService;
+import tn.enicarthage.campushub.student.model.ApplicationStatus;
+import tn.enicarthage.campushub.student.model.ClubApplication;
+import tn.enicarthage.campushub.student.model.EventRegistration;
+import tn.enicarthage.campushub.student.repository.ClubApplicationRepository;
+import tn.enicarthage.campushub.student.repository.EventRegistrationRepository;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -29,6 +36,9 @@ public class DataInitializer implements CommandLineRunner {
     private final ReservationService reservationService;
     private final EvenementService evenementService;
     private final DemandeDocumentService demandeDocumentService;
+    private final ClubRepository clubRepository;
+    private final ClubApplicationRepository clubApplicationRepository;
+    private final EventRegistrationRepository eventRegistrationRepository;
 
     @Override
     public void run(String... args) {
@@ -45,337 +55,491 @@ public class DataInitializer implements CommandLineRunner {
             createReservations();
             createEvents();
             createDemandes();
+            createClubs();
             log.info("✅ Initialisation des données terminée avec succès !");
         } catch (Exception e) {
             log.error("❌ Erreur lors de l'initialisation des données", e);
         }
     }
 
+    // =========================================================================
+    // USERS
+    // =========================================================================
+
     private void createUsers() {
         log.info("📝 Création des utilisateurs...");
 
-        User admin = new User();
-        admin.setNom("Admin");
-        admin.setPrenom("System");
-        admin.setEmail("admin@enicarthage.tn");
-        admin.setPassword("admin123");
-        admin.setRole(User.Role.ADMIN);
-        admin.setDepartement("Administration");
-        userService.createUser(admin);
+        // --- Admin ---
+        createUser("Admin", "System", "admin@enicarthage.tn", "admin123",
+                List.of(User.Role.ADMIN), "Administration");
 
-        // Enseignants Informatique (Bâtiment Annexe)
-        User enseignant1 = new User();
-        enseignant1.setNom("Dupont");
-        enseignant1.setPrenom("Jean");
-        enseignant1.setEmail("jean.dupont@enicarthage.tn");
-        enseignant1.setPassword("enseignant123");
-        enseignant1.setRole(User.Role.ENSEIGNANT);
-        enseignant1.setDepartement("Informatique");
-        userService.createUser(enseignant1);
+        // --- Enseignants ---
+        createUser("Dupont", "Jean", "jean.dupont@enicarthage.tn", "enseignant123",
+                List.of(User.Role.ENSEIGNANT), "Informatique");
 
-        User enseignant2 = new User();
-        enseignant2.setNom("Ben Salah");
-        enseignant2.setPrenom("Sarra");
-        enseignant2.setEmail("sarra.bensalah@enicarthage.tn");
-        enseignant2.setPassword("enseignant123");
-        enseignant2.setRole(User.Role.ENSEIGNANT);
-        enseignant2.setDepartement("Informatique");
-        userService.createUser(enseignant2);
+        createUser("Ben Salah", "Sarra", "sarra.bensalah@enicarthage.tn", "enseignant123",
+                List.of(User.Role.ENSEIGNANT), "Informatique");
 
-        // Enseignants Mécatronique (Bâtiment Principal)
-        User enseignant3 = new User();
-        enseignant3.setNom("Martin");
-        enseignant3.setPrenom("Sophie");
-        enseignant3.setEmail("sophie.martin@enicarthage.tn");
-        enseignant3.setPassword("enseignant123");
-        enseignant3.setRole(User.Role.ENSEIGNANT);
-        enseignant3.setDepartement("Mécatronique");
-        userService.createUser(enseignant3);
+        createUser("Martin", "Sophie", "sophie.martin@enicarthage.tn", "enseignant123",
+                List.of(User.Role.ENSEIGNANT), "Mécatronique");
 
-        User enseignant4 = new User();
-        enseignant4.setNom("Gharbi");
-        enseignant4.setPrenom("Karim");
-        enseignant4.setEmail("karim.gharbi@enicarthage.tn");
-        enseignant4.setPassword("enseignant123");
-        enseignant4.setRole(User.Role.ENSEIGNANT);
-        enseignant4.setDepartement("Génie Industriel");
-        userService.createUser(enseignant4);
+        createUser("Gharbi", "Karim", "karim.gharbi@enicarthage.tn", "enseignant123",
+                List.of(User.Role.ENSEIGNANT), "Génie Industriel");
 
-        // Étudiants
-        User etudiant1 = new User();
-        etudiant1.setNom("Ben Ali");
-        etudiant1.setPrenom("Ahmed");
-        etudiant1.setEmail("ahmed.benali@enicarthage.tn");
-        etudiant1.setPassword("etudiant123");
-        etudiant1.setRole(User.Role.ETUDIANT);
-        etudiant1.setDepartement("Informatique");
-        userService.createUser(etudiant1);
+        // --- Students — Happy Path ---
+        // Standard Informatique student — used for most demande/event tests
+        createUser("Ben Ali", "Ahmed", "ahmed.benali@enicarthage.tn", "etudiant123",
+                List.of(User.Role.ETUDIANT), "Informatique");
 
-        User etudiant2 = new User();
-        etudiant2.setNom("Trabelsi");
-        etudiant2.setPrenom("Nour");
-        etudiant2.setEmail("nour.trabelsi@enicarthage.tn");
-        etudiant2.setPassword("etudiant123");
-        etudiant2.setRole(User.Role.ETUDIANT);
-        etudiant2.setDepartement("Mécatronique");
-        userService.createUser(etudiant2);
+        // Standard Mécatronique student
+        createUser("Trabelsi", "Nour", "nour.trabelsi@enicarthage.tn", "etudiant123",
+                List.of(User.Role.ETUDIANT), "Mécatronique");
+
+        // --- Students — Edge Cases ---
+
+        // Multi-role: ETUDIANT + RESPONSABLE_CLUB (club head scenario)
+        createUser("Jaziri", "Omar", "omar.jaziri@enicarthage.tn", "etudiant123",
+                List.of(User.Role.ETUDIANT, User.Role.RESPONSABLE_CLUB), "Informatique");
+
+        // Triple-role: ETUDIANT + RESPONSABLE_CLUB + ENSEIGNANT (assistant / monitor hybrid)
+        createUser("Sfar", "Lina", "lina.sfar@enicarthage.tn", "multi123",
+                List.of(User.Role.ETUDIANT, User.Role.RESPONSABLE_CLUB),
+                "Informatique");
+
+        // Génie Industriel student — tests department filtering if ever added
+        createUser("Msaada", "Yassine", "yassine.msaada@enicarthage.tn", "etudiant123",
+                List.of(User.Role.ETUDIANT), "Génie Industriel");
+
+        // Student with no activity — clean slate for isolation tests
+        createUser("Ferchichi", "Rim", "rim.ferchichi@enicarthage.tn", "etudiant123",
+                List.of(User.Role.ETUDIANT), "Mécatronique");
 
         log.info("✅ {} utilisateurs créés", userService.countUsers());
     }
 
+    private void createUser(String nom, String prenom, String email, String password,
+                            List<User.Role> roles, String departement) {
+        User u = new User();
+        u.setNom(nom);
+        u.setPrenom(prenom);
+        u.setEmail(email);
+        u.setPassword(password);
+        u.setRoles(roles);
+        u.setDepartement(departement);
+        userService.createUser(u);
+    }
+
+    // =========================================================================
+    // SALLES  (unchanged — already well structured)
+    // =========================================================================
+
     private void createSalles() {
         log.info("📝 Création des salles ENICarthage...");
 
-        // ============================================================
-        // BÂTIMENT ANNEXE — Section Informatique
-        // ============================================================
+        // --- Bâtiment Annexe — RDC ---
+        createSalle("Salle MAC", 30,
+                List.of("Ordinateurs Apple Mac", "Projecteur", "Tableau interactif", "WiFi"),
+                "Bâtiment Annexe", 0);
 
-        // --- RDC (Rez-de-chaussée) ---
-        Salle mac = new Salle();
-        mac.setNom("Salle MAC");
-        mac.setCapacite(30);
-        mac.setEquipements(Arrays.asList("Ordinateurs Apple Mac", "Projecteur", "Tableau interactif", "WiFi"));
-        mac.setBatiment("Bâtiment Annexe");
-        mac.setEtage(0);
-        mac.setDisponible(true);
-        salleService.createSalle(mac);
+        createSalle("LABO Informatique", 25,
+                List.of("Ordinateurs", "Serveurs", "Switch réseau", "WiFi"),
+                "Bâtiment Annexe", 0);
 
-        Salle labo = new Salle();
-        labo.setNom("LABO Informatique");
-        labo.setCapacite(25);
-        labo.setEquipements(Arrays.asList("Ordinateurs", "Serveurs", "Switch réseau", "WiFi"));
-        labo.setBatiment("Bâtiment Annexe");
-        labo.setEtage(0);
-        labo.setDisponible(true);
-        salleService.createSalle(labo);
+        createSalle("Salle Polyvalente", 150,
+                List.of("Scène", "Système audio", "Projecteur HD", "Micro", "WiFi"),
+                "Bâtiment Annexe", 0);
 
-        Salle polyvalente = new Salle();
-        polyvalente.setNom("Salle Polyvalente");
-        polyvalente.setCapacite(150);
-        polyvalente.setEquipements(Arrays.asList("Scène", "Système audio", "Projecteur HD", "Micro", "WiFi"));
-        polyvalente.setBatiment("Bâtiment Annexe");
-        polyvalente.setEtage(0);
-        polyvalente.setDisponible(true);
-        salleService.createSalle(polyvalente);
+        // --- Bâtiment Annexe — Étages 1 & 2 ---
+        for (int n : new int[]{20, 21, 22, 23, 24, 25, 26, 27})
+            createSalle("Salle " + n, 35, List.of("Projecteur", "Tableau blanc", "WiFi"), "Bâtiment Annexe", 1);
 
-        // --- 1er Étage — Salles 20 à 27 ---
-        int[] salles1erEtageAnnexe = {20, 21, 22, 23, 24, 25, 26, 27};
-        for (int num : salles1erEtageAnnexe) {
-            Salle salle = new Salle();
-            salle.setNom("Salle " + num);
-            salle.setCapacite(35);
-            salle.setEquipements(Arrays.asList("Projecteur", "Tableau blanc", "WiFi"));
-            salle.setBatiment("Bâtiment Annexe");
-            salle.setEtage(1);
-            salle.setDisponible(true);
-            salleService.createSalle(salle);
-        }
+        for (int n : new int[]{30, 31, 32, 33, 34, 35, 36, 37})
+            createSalle("Salle " + n, 35, List.of("Projecteur", "Tableau blanc", "WiFi"), "Bâtiment Annexe", 2);
 
-        // --- 2ème Étage — Salles 30 à 37 ---
-        int[] salles2emeEtageAnnexe = {30, 31, 32, 33, 34, 35, 36, 37};
-        for (int num : salles2emeEtageAnnexe) {
-            Salle salle = new Salle();
-            salle.setNom("Salle " + num);
-            salle.setCapacite(35);
-            salle.setEquipements(Arrays.asList("Projecteur", "Tableau blanc", "WiFi"));
-            salle.setBatiment("Bâtiment Annexe");
-            salle.setEtage(2);
-            salle.setDisponible(true);
-            salleService.createSalle(salle);
-        }
+        // --- Bâtiment Principal — RDC ---
+        createSalle("Amphithéâtre Principal", 250,
+                List.of("Projecteur HD", "Micro", "Système audio", "Écran géant", "WiFi"),
+                "Bâtiment Principal", 0);
 
-        // ============================================================
-        // BÂTIMENT PRINCIPAL — Section Mécatronique & Génie Industriel
-        // ============================================================
+        // --- Bâtiment Principal — Étages 1, 2 & 3 ---
+        for (int n : new int[]{20, 21, 22, 23, 24, 25, 26, 27})
+            createSalle("Salle P" + n, 35, List.of("Projecteur", "Tableau blanc", "WiFi"), "Bâtiment Principal", 1);
 
-        // --- RDC — Amphithéâtre ---
-        Salle amphi = new Salle();
-        amphi.setNom("Amphithéâtre Principal");
-        amphi.setCapacite(250);
-        amphi.setEquipements(Arrays.asList("Projecteur HD", "Micro", "Système audio", "Écran géant", "WiFi"));
-        amphi.setBatiment("Bâtiment Principal");
-        amphi.setEtage(0);
-        amphi.setDisponible(true);
-        salleService.createSalle(amphi);
+        for (int n : new int[]{30, 31, 32, 33, 34, 35, 36, 37})
+            createSalle("Salle P" + n, 35, List.of("Projecteur", "Tableau blanc", "WiFi"), "Bâtiment Principal", 2);
 
-        // --- 1er Étage — Salles 20 à 27 ---
-        int[] salles1erEtagePrincipal = {20, 21, 22, 23, 24, 25, 26, 27};
-        for (int num : salles1erEtagePrincipal) {
-            Salle salle = new Salle();
-            salle.setNom("Salle P" + num);   // Préfixe "P" pour distinguer du Bâtiment Annexe
-            salle.setCapacite(35);
-            salle.setEquipements(Arrays.asList("Projecteur", "Tableau blanc", "WiFi"));
-            salle.setBatiment("Bâtiment Principal");
-            salle.setEtage(1);
-            salle.setDisponible(true);
-            salleService.createSalle(salle);
-        }
-
-        // --- 2ème Étage — Salles 30 à 37 ---
-        int[] salles2emeEtagePrincipal = {30, 31, 32, 33, 34, 35, 36, 37};
-        for (int num : salles2emeEtagePrincipal) {
-            Salle salle = new Salle();
-            salle.setNom("Salle P" + num);
-            salle.setCapacite(35);
-            salle.setEquipements(Arrays.asList("Projecteur", "Tableau blanc", "WiFi"));
-            salle.setBatiment("Bâtiment Principal");
-            salle.setEtage(2);
-            salle.setDisponible(true);
-            salleService.createSalle(salle);
-        }
-
-        // --- 3ème Étage — Salles 40 à 47 ---
-        int[] salles3emeEtagePrincipal = {40, 41, 42, 43, 44, 45, 46, 47};
-        for (int num : salles3emeEtagePrincipal) {
-            Salle salle = new Salle();
-            salle.setNom("Salle P" + num);
-            salle.setCapacite(35);
-            salle.setEquipements(Arrays.asList("Projecteur", "Tableau blanc", "WiFi"));
-            salle.setBatiment("Bâtiment Principal");
-            salle.setEtage(3);
-            salle.setDisponible(true);
-            salleService.createSalle(salle);
-        }
+        for (int n : new int[]{40, 41, 42, 43, 44, 45, 46, 47})
+            createSalle("Salle P" + n, 35, List.of("Projecteur", "Tableau blanc", "WiFi"), "Bâtiment Principal", 3);
 
         log.info("✅ {} salles créées", salleService.countSalles());
     }
 
+    private void createSalle(String nom, int capacite, List<String> equipements,
+                             String batiment, int etage) {
+        Salle s = new Salle();
+        s.setNom(nom);
+        s.setCapacite(capacite);
+        s.setEquipements(equipements);
+        s.setBatiment(batiment);
+        s.setEtage(etage);
+        s.setDisponible(true);
+        salleService.createSalle(s);
+    }
+
+    // =========================================================================
+    // RESERVATIONS
+    // =========================================================================
+
     private void createReservations() {
         log.info("📝 Création des réservations exemple...");
 
-        User enseignant = userService.getUserByEmail("jean.dupont@enicarthage.tn")
-                .orElseThrow(() -> new RuntimeException("Enseignant non trouvé"));
+        User jean = findUser("jean.dupont@enicarthage.tn");
+        User sophie = findUser("sophie.martin@enicarthage.tn");
+        User sarra = findUser("sarra.bensalah@enicarthage.tn");
 
-        // Réserver la Salle MAC pour un TP
-        Salle salleMac = salleService.getSallesByBatiment("Bâtiment Annexe")
-                .stream()
-                .filter(s -> s.getNom().equals("Salle MAC"))
-                .findFirst()
-                .orElseThrow();
+        Salle mac   = findSalleByName("Bâtiment Annexe", "Salle MAC");
+        Salle labo  = findSalleByName("Bâtiment Annexe", "LABO Informatique");
+        Salle p20   = findSalleByName("Bâtiment Principal", "Salle P20");
+        Salle s21   = findSalleByName("Bâtiment Annexe", "Salle 21");
 
-        Reservation reservation1 = new Reservation();
-        reservation1.setEnseignant(enseignant);
-        reservation1.setSalle(salleMac);
-        reservation1.setDateDebut(LocalDateTime.now().plusDays(3).withHour(10).withMinute(0));
-        reservation1.setDateFin(LocalDateTime.now().plusDays(3).withHour(12).withMinute(0));
-        reservation1.setMotif("TP Programmation Web — Groupe GL3");
-        reservation1.setNombreParticipants(28);
-        reservation1.setStatut(Reservation.Statut.APPROUVEE);
-        reservationService.createReservation(reservation1);
+        // Future — APPROUVEE
+        createReservation(jean, mac,
+                daysFromNow(3, 10, 0), daysFromNow(3, 12, 0),
+                "TP Programmation Web — Groupe GL3", 28,
+                Reservation.Statut.APPROUVEE);
 
-        // Réserver le LABO pour un cours
-        Salle salleLabo = salleService.getSallesByBatiment("Bâtiment Annexe")
-                .stream()
-                .filter(s -> s.getNom().equals("LABO Informatique"))
-                .findFirst()
-                .orElseThrow();
+        // Future — EN_ATTENTE
+        createReservation(jean, labo,
+                daysFromNow(7, 14, 0), daysFromNow(7, 17, 0),
+                "TP Base de Données — Groupe RT2", 22,
+                Reservation.Statut.EN_ATTENTE);
 
-        Reservation reservation2 = new Reservation();
-        reservation2.setEnseignant(enseignant);
-        reservation2.setSalle(salleLabo);
-        reservation2.setDateDebut(LocalDateTime.now().plusDays(7).withHour(14).withMinute(0));
-        reservation2.setDateFin(LocalDateTime.now().plusDays(7).withHour(17).withMinute(0));
-        reservation2.setMotif("TP Base de Données — Groupe RT2");
-        reservation2.setNombreParticipants(22);
-        reservation2.setStatut(Reservation.Statut.EN_ATTENTE);
-        reservationService.createReservation(reservation2);
+        // Future — APPROUVEE (Mécatronique)
+        createReservation(sophie, p20,
+                daysFromNow(2, 8, 0), daysFromNow(2, 10, 0),
+                "Cours Automatique Industrielle — Groupe MI2", 30,
+                Reservation.Statut.APPROUVEE);
 
-        // Enseignant mécatronique réserve une salle du Bâtiment Principal
-        User enseignantMeca = userService.getUserByEmail("sophie.martin@enicarthage.tn")
-                .orElseThrow(() -> new RuntimeException("Enseignant Mécatronique non trouvé"));
+        // Past — APPROUVEE (completed, useful for history views)
+        createReservation(sarra, s21,
+                daysFromNow(-5, 9, 0), daysFromNow(-5, 11, 0),
+                "TP Algorithmes — Groupe GL2", 30,
+                Reservation.Statut.APPROUVEE);
 
-        Salle salleP20 = salleService.getSallesByBatiment("Bâtiment Principal")
-                .stream()
-                .filter(s -> s.getNom().equals("Salle P20"))
-                .findFirst()
-                .orElseThrow();
-
-        Reservation reservation3 = new Reservation();
-        reservation3.setEnseignant(enseignantMeca);
-        reservation3.setSalle(salleP20);
-        reservation3.setDateDebut(LocalDateTime.now().plusDays(2).withHour(8).withMinute(0));
-        reservation3.setDateFin(LocalDateTime.now().plusDays(2).withHour(10).withMinute(0));
-        reservation3.setMotif("Cours Automatique Industrielle — Groupe MI2");
-        reservation3.setNombreParticipants(30);
-        reservation3.setStatut(Reservation.Statut.APPROUVEE);
-        reservationService.createReservation(reservation3);
+        // Future — REFUSEE (rejection scenario)
+        createReservation(sarra, mac,
+                daysFromNow(4, 13, 0), daysFromNow(4, 15, 0),
+                "Cours Réseaux — conflit d'horaire", 20,
+                Reservation.Statut.REJETEE);
 
         log.info("✅ {} réservations créées", reservationService.countReservations());
     }
 
+    private void createReservation(User enseignant, Salle salle,
+                                   LocalDateTime debut, LocalDateTime fin,
+                                   String motif, int participants,
+                                   Reservation.Statut statut) {
+        Reservation r = new Reservation();
+        r.setEnseignant(enseignant);
+        r.setSalle(salle);
+        r.setDateDebut(debut);
+        r.setDateFin(fin);
+        r.setMotif(motif);
+        r.setNombreParticipants(participants);
+        r.setStatut(statut);
+        reservationService.createReservation(r);
+    }
+
+    // =========================================================================
+    // EVENTS  — full lifecycle coverage
+    // =========================================================================
+
     private void createEvents() {
         log.info("📝 Création des événements...");
 
-        User admin = userService.getUserByEmail("admin@enicarthage.tn")
-                .orElseThrow(() -> new RuntimeException("Admin non trouvé"));
+        User admin  = findUser("admin@enicarthage.tn");
+        User ahmed  = findUser("ahmed.benali@enicarthage.tn");
+        User omar   = findUser("omar.jaziri@enicarthage.tn");
 
-        // Événement Salle Polyvalente (Bâtiment Annexe)
-        Evenement event1 = new Evenement();
-        event1.setTitre("Welcome Day ENICarthage 2025");
-        event1.setDescription("Journée d'accueil pour les nouveaux étudiants — Toutes sections confondues.");
-        event1.setDateDebut(LocalDateTime.now().plusDays(10).withHour(9).withMinute(0));
-        event1.setDateFin(LocalDateTime.now().plusDays(10).withHour(17).withMinute(0));
-        event1.setLieu("Salle Polyvalente — Bâtiment Annexe");
-        event1.setNbParticipantsMax(150);
-        event1.setOrganisateur(admin);
-        event1.setStatut(Evenement.Statut.OUVERT);
-        evenementService.createEvenement(event1);
+        // ── OUVERT — future, plenty of capacity ──────────────────────────────
 
-        // Événement Amphithéâtre (Bâtiment Principal)
-        Evenement event2 = new Evenement();
-        event2.setTitre("Journée Portes Ouvertes ENICarthage");
-        event2.setDescription("Présentation des filières Informatique, Mécatronique et Génie Industriel aux futurs étudiants.");
-        event2.setDateDebut(LocalDateTime.now().plusDays(15).withHour(9).withMinute(0));
-        event2.setDateFin(LocalDateTime.now().plusDays(15).withHour(17).withMinute(0));
-        event2.setLieu("Amphithéâtre Principal — Bâtiment Principal");
-        event2.setNbParticipantsMax(250);
-        event2.setOrganisateur(admin);
-        event2.setStatut(Evenement.Statut.OUVERT);
-        evenementService.createEvenement(event2);
+        Evenement welcomeDay = createEvent(
+                "Welcome Day ENICarthage 2025",
+                "Journée d'accueil pour les nouveaux étudiants — Toutes sections confondues.",
+                daysFromNow(10, 9, 0), daysFromNow(10, 17, 0),
+                "Salle Polyvalente — Bâtiment Annexe",
+                150, admin, Evenement.Statut.OUVERT);
 
-        // Hackathon Salle MAC
-        Evenement event3 = new Evenement();
-        event3.setTitre("Hackathon CampusHub — 24h pour innover");
-        event3.setDescription("Compétition de développement logiciel pour améliorer la vie étudiante à ENICarthage.");
-        event3.setDateDebut(LocalDateTime.now().plusWeeks(2).withHour(18).withMinute(0));
-        event3.setDateFin(LocalDateTime.now().plusWeeks(2).plusDays(1).withHour(18).withMinute(0));
-        event3.setLieu("Salle MAC — Bâtiment Annexe");
-        event3.setNbParticipantsMax(30);
-        event3.setOrganisateur(admin);
-        event3.setStatut(Evenement.Statut.OUVERT);
-        evenementService.createEvenement(event3);
+        Evenement jpo = createEvent(
+                "Journée Portes Ouvertes ENICarthage",
+                "Présentation des filières Informatique, Mécatronique et Génie Industriel.",
+                daysFromNow(15, 9, 0), daysFromNow(15, 17, 0),
+                "Amphithéâtre Principal — Bâtiment Principal",
+                250, admin, Evenement.Statut.OUVERT);
+
+        Evenement workshop = createEvent(
+                "Coding Workshop Spring Boot",
+                "Atelier pratique Spring Boot pour étudiants — tous niveaux.",
+                daysFromNow(3, 14, 0), daysFromNow(3, 17, 0),
+                "Salle MAC — Bâtiment Annexe",
+                50, admin, Evenement.Statut.OUVERT);
+
+        // Student-submitted event (responsable de club) — also OUVERT
+        Evenement clubNight = createEvent(
+                "Club IT — Soirée Coding Challenge",
+                "Compétition inter-clubs de programmation organisée par le Club Informatique.",
+                daysFromNow(20, 18, 0), daysFromNow(20, 22, 0),
+                "Salle MAC — Bâtiment Annexe",
+                30, omar, Evenement.Statut.OUVERT);
+
+        // ── PLEIN — capacity exactly met, no more registrations allowed ───────
+        // capacity = 1 so it's trivially full after one seeded registration below
+        Evenement seminaire = createEvent(
+                "Séminaire IA & Robotique",
+                "Conférence sur l'Intelligence Artificielle appliquée à la robotique industrielle.",
+                daysFromNow(8, 10, 0), daysFromNow(8, 13, 0),
+                "Amphithéâtre Principal — Bâtiment Principal",
+                1, admin, Evenement.Statut.PLEIN);
+
+        // ── TERMINE — past events that concluded normally ─────────────────────
+        Evenement hackathon = createEvent(
+                "Hackathon CampusHub — 24h pour innover",
+                "Compétition de développement logiciel pour améliorer la vie étudiante.",
+                daysFromNow(-14, 18, 0), daysFromNow(-13, 18, 0),
+                "Salle MAC — Bâtiment Annexe",
+                30, admin, Evenement.Statut.TERMINE);
+
+        Evenement forumEmploi = createEvent(
+                "Forum Emploi & Stages ENICarthage",
+                "Rencontre avec des entreprises partenaires pour stages et emplois.",
+                daysFromNow(-7, 9, 0), daysFromNow(-7, 17, 0),
+                "Salle Polyvalente — Bâtiment Annexe",
+                120, admin, Evenement.Statut.TERMINE);
+
+        // ── ANNULE — cancelled before it happened ─────────────────────────────
+        Evenement sortieCulture = createEvent(
+                "Sortie Culturelle — Carthage by Night",
+                "Visite nocturne des ruines de Carthage pour les étudiants ENI.",
+                daysFromNow(5, 19, 0), daysFromNow(5, 23, 0),
+                "Départ ENICarthage", 60, admin, Evenement.Statut.ANNULE);
+
+        // ── REJETE — submitted by a student, rejected by admin ───────────────
+        Evenement concertRejete = createEvent(
+                "Concert Acoustique Campus",
+                "Soirée musicale organisée par des étudiants — demande rejetée faute de salle.",
+                daysFromNow(12, 20, 0), daysFromNow(12, 23, 0),
+                "Salle Polyvalente — Bâtiment Annexe",
+                100, ahmed, Evenement.Statut.REJETE);
+        // A rejected event should carry an admin comment explaining why
+        concertRejete.setCommentaireAdmin("Salle Polyvalente déjà réservée pour cette date.");
+        evenementService.createEvenement(concertRejete); // re-save not needed if service saves; see note below
+
+        // ── EN_ATTENTE — submitted, awaiting admin approval ───────────────────
+        createEvent(
+                "Atelier Design Thinking",
+                "Atelier collaboratif pour imaginer de nouveaux services étudiants.",
+                daysFromNow(25, 9, 0), daysFromNow(25, 12, 0),
+                "Salle 22 — Bâtiment Annexe",
+                25, omar, Evenement.Statut.EN_ATTENTE);
+
+        // ── Seed EventRegistrations ────────────────────────────────────────────
+        // ahmed is registered for workshop and welcomeDay
+        seedRegistration(ahmed.getId(), workshop.getId());
+        seedRegistration(ahmed.getId(), welcomeDay.getId());
+        // nour is registered for jpo
+        User nour = findUser("nour.trabelsi@enicarthage.tn");
+        seedRegistration(nour.getId(), jpo.getId());
+        // seminaire is PLEIN — the one seat is taken by yassine
+        User yassine = findUser("yassine.msaada@enicarthage.tn");
+        seedRegistration(yassine.getId(), seminaire.getId());
+        // omar is registered for hackathon (past, TERMINE)
+        seedRegistration(omar.getId(), hackathon.getId());
 
         log.info("✅ {} événements créés", evenementService.countEvenements());
     }
 
+    private Evenement createEvent(String titre, String description,
+                                  LocalDateTime debut, LocalDateTime fin,
+                                  String lieu, int capacite,
+                                  User organisateur, Evenement.Statut statut) {
+        Evenement e = new Evenement();
+        e.setTitre(titre);
+        e.setDescription(description);
+        e.setDateDebut(debut);
+        e.setDateFin(fin);
+        e.setLieu(lieu);
+        e.setNbParticipantsMax(capacite);
+        e.setOrganisateur(organisateur);
+        e.setStatut(statut);
+        return evenementService.createEvenement(e);
+    }
+
+    private void seedRegistration(Long studentId, Long eventId) {
+        EventRegistration reg = new EventRegistration();
+        reg.setStudentId(studentId);
+        reg.setEventId(eventId);
+        eventRegistrationRepository.save(reg);
+    }
+
+    // =========================================================================
+    // DEMANDES DE DOCUMENTS — all 5 statuses, multiple students, edge cases
+    // =========================================================================
+
     private void createDemandes() {
         log.info("📝 Création des demandes de documents...");
 
-        User etudiant = userService.getUserByEmail("ahmed.benali@enicarthage.tn")
-                .orElseThrow(() -> new RuntimeException("Étudiant non trouvé"));
+        User ahmed   = findUser("ahmed.benali@enicarthage.tn");
+        User nour    = findUser("nour.trabelsi@enicarthage.tn");
+        User yassine = findUser("yassine.msaada@enicarthage.tn");
+        User omar    = findUser("omar.jaziri@enicarthage.tn");
 
-        DemandeDocument demande1 = new DemandeDocument();
-        demande1.setTypeDocument(DemandeDocument.TypeDocument.CERTIFICAT_SCOLARITE);
-        demande1.setDemandeur(etudiant);
-        demande1.setStatut(DemandeDocument.Statut.PRET);
-        demande1.setCommentaireAdmin("Votre certificat est prêt à être récupéré au bureau d'ordre.");
-        demandeDocumentService.createDemande(demande1);
+        // ── Ahmed — covers all 5 statuses ────────────────────────────────────
+        createDemande(ahmed, DemandeDocument.TypeDocument.RELEVE_NOTES,
+                DemandeDocument.Statut.EN_ATTENTE, null);
 
-        DemandeDocument demande2 = new DemandeDocument();
-        demande2.setTypeDocument(DemandeDocument.TypeDocument.RELEVE_NOTES);
-        demande2.setDemandeur(etudiant);
-        demande2.setStatut(DemandeDocument.Statut.EN_ATTENTE);
-        demandeDocumentService.createDemande(demande2);
+        createDemande(ahmed, DemandeDocument.TypeDocument.CERTIFICAT_SCOLARITE,
+                DemandeDocument.Statut.EN_COURS, "Document en cours de traitement par le secrétariat.");
 
-        User etudiant2 = userService.getUserByEmail("nour.trabelsi@enicarthage.tn")
-                .orElseThrow(() -> new RuntimeException("Étudiant 2 non trouvé"));
+        createDemande(ahmed, DemandeDocument.TypeDocument.ATTESTATION_PRESENCE,
+                DemandeDocument.Statut.PRET, "Document prêt — à retirer au secrétariat avant vendredi.");
 
-        DemandeDocument demande3 = new DemandeDocument();
-        demande3.setTypeDocument(DemandeDocument.TypeDocument.ATTESTATION_PRESENCE);
-        demande3.setDemandeur(etudiant2);
-        demande3.setStatut(DemandeDocument.Statut.EN_COURS);
-        demandeDocumentService.createDemande(demande3);
+        createDemande(ahmed, DemandeDocument.TypeDocument.CARTE_ETUDIANT,
+                DemandeDocument.Statut.REJETE, "Pièce justificative manquante — veuillez fournir une photo d'identité.");
+
+        createDemande(ahmed, DemandeDocument.TypeDocument.AUTRE,
+                DemandeDocument.Statut.RECUPERE, "Document récupéré le 15/04/2025.");
+
+        // ── Edge case: duplicate type (same student, same type, different statuses) ──
+        // Simulates a student who re-requested a RELEVE_NOTES after a first was REJETE
+        createDemande(ahmed, DemandeDocument.TypeDocument.RELEVE_NOTES,
+                DemandeDocument.Statut.EN_ATTENTE, "Deuxième demande suite au rejet de la première.");
+
+        // ── Nour — EN_COURS + PRET (partial lifecycle) ───────────────────────
+        createDemande(nour, DemandeDocument.TypeDocument.ATTESTATION_PRESENCE,
+                DemandeDocument.Statut.EN_COURS, null);
+
+        createDemande(nour, DemandeDocument.TypeDocument.CERTIFICAT_SCOLARITE,
+                DemandeDocument.Statut.PRET, "Prêt à retirer.");
+
+        // ── Yassine — single pending request ─────────────────────────────────
+        createDemande(yassine, DemandeDocument.TypeDocument.RELEVE_NOTES,
+                DemandeDocument.Statut.EN_ATTENTE, null);
+
+        // ── Omar (multi-role) — REJETE scenario ──────────────────────────────
+        createDemande(omar, DemandeDocument.TypeDocument.CARTE_ETUDIANT,
+                DemandeDocument.Statut.REJETE, "Carte déjà émise ce semestre.");
+
+        // ── rim.ferchichi — zero demandes (clean slate for isolation tests) ──
+        // No demandes created intentionally
 
         log.info("✅ {} demandes de documents créées", demandeDocumentService.countDemandes());
+    }
+
+    private void createDemande(User demandeur, DemandeDocument.TypeDocument type,
+                               DemandeDocument.Statut statut, String commentaire) {
+        DemandeDocument d = new DemandeDocument();
+        d.setDemandeur(demandeur);
+        d.setTypeDocument(type);
+        d.setStatut(statut);
+        d.setCommentaireAdmin(commentaire);
+        demandeDocumentService.createDemande(d);
+    }
+
+    // =========================================================================
+    // CLUBS — 3 clubs covering all statuses + ClubApplications
+    // =========================================================================
+
+    private void createClubs() {
+        log.info("📝 Création des clubs et candidatures...");
+
+        User omar    = findUser("omar.jaziri@enicarthage.tn");
+        User lina    = findUser("lina.sfar@enicarthage.tn");
+        User ahmed   = findUser("ahmed.benali@enicarthage.tn");
+        User nour    = findUser("nour.trabelsi@enicarthage.tn");
+        User yassine = findUser("yassine.msaada@enicarthage.tn");
+
+        // ACTIF — main club with members
+        Club clubInfo = new Club();
+        clubInfo.setNom("Club Informatique ENI");
+        clubInfo.setDescription("Club dédié aux projets logiciels, hackathons et veille technologique.");
+        clubInfo.setCategorie("Tech");
+        clubInfo.setResponsable("Omar Jaziri");
+        clubInfo.setNombreMembres(12);
+        clubInfo.setHeadId(omar.getId());
+        clubInfo.setStatut(Club.Statut.ACTIF);
+        Club savedClubInfo = clubRepository.save(clubInfo);
+
+        // EN_ATTENTE — new club waiting for admin approval
+        Club clubRobo = new Club();
+        clubRobo.setNom("Club Robotique & IA");
+        clubRobo.setDescription("Club orienté robotique, intelligence artificielle et systèmes embarqués.");
+        clubRobo.setCategorie("Tech");
+        clubRobo.setResponsable("Lina Sfar");
+        clubRobo.setNombreMembres(0);
+        clubRobo.setHeadId(lina.getId());
+        clubRobo.setStatut(Club.Statut.EN_ATTENTE);
+        Club savedClubRobo = clubRepository.save(clubRobo);
+
+        // SUSPENDU — example of a suspended club
+        Club clubCulture = new Club();
+        clubCulture.setNom("Club Culturel & Arts");
+        clubCulture.setDescription("Club d'expression artistique — suspendu pour inactivité.");
+        clubCulture.setCategorie("Culture");
+        clubCulture.setResponsable("Non assigné");
+        clubCulture.setNombreMembres(3);
+        clubCulture.setStatut(Club.Statut.SUSPENDU);
+        Club savedClubCulture = clubRepository.save(clubCulture);
+
+        // ── ClubApplications ──────────────────────────────────────────────────
+
+        // ahmed — ACCEPTED into Club Informatique
+        saveApplication(ahmed.getId(), savedClubInfo.getId(),
+                ApplicationStatus.ACCEPTED, "Passionné de développement web et mobile.");
+
+        // nour — PENDING for Club Informatique
+        saveApplication(nour.getId(), savedClubInfo.getId(),
+                ApplicationStatus.PENDING, "Intéressée par les projets IoT et embarqué.");
+
+        // yassine — PENDING for Club Robotique (new club, not yet approved)
+        saveApplication(yassine.getId(), savedClubRobo.getId(),
+                ApplicationStatus.PENDING, "Étudiant en GI, passionné de robotique.");
+
+        // ahmed — REJECTED from Club Culture (edge case: rejection path)
+        saveApplication(ahmed.getId(), savedClubCulture.getId(),
+                ApplicationStatus.REJECTED, "Demande faite par erreur.");
+
+        log.info("✅ {} clubs créés, {} candidatures créées",
+                clubRepository.count(), clubApplicationRepository.count());
+    }
+
+    private void saveApplication(Long studentId, Long clubId,
+                                 ApplicationStatus status, String motivation) {
+        ClubApplication app = new ClubApplication();
+        app.setStudentId(studentId);
+        app.setClubId(clubId);
+        app.setStatus(status);
+        app.setMotivation(motivation);
+        clubApplicationRepository.save(app);
+    }
+
+    // =========================================================================
+    // HELPERS
+    // =========================================================================
+
+    private User findUser(String email) {
+        return userService.getUserByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Utilisateur introuvable : " + email));
+    }
+
+    private Salle findSalleByName(String batiment, String nom) {
+        return salleService.getSallesByBatiment(batiment).stream()
+                .filter(s -> s.getNom().equals(nom))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Salle introuvable : " + nom));
+    }
+
+    /** Returns a LocalDateTime N days from now, at the given hour:minute. */
+    private LocalDateTime daysFromNow(int days, int hour, int minute) {
+        return LocalDateTime.now().plusDays(days).withHour(hour).withMinute(minute).withSecond(0).withNano(0);
     }
 }

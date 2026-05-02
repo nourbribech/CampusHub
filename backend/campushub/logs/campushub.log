@@ -22,3 +22,200 @@ Action:
 
 Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
 
+2026-05-01 16:21:36 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.12 with PID 24564 (C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend\campushub\target\classes started by dell in C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend\campushub)
+2026-05-01 16:21:36 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-01 16:21:36 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-01 16:21:36 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-01 16:21:36 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-01 16:21:36 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-01 16:21:37 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 10 JPA repository interfaces.
+2026-05-01 16:21:37 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-01 16:21:37 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-01 16:21:37 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-01 16:21:37 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-01 16:21:37 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1325 ms
+2026-05-01 16:21:37 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-01 16:21:37 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-01 16:21:37 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-01 16:21:37 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-01 16:21:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-01 16:21:39 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d68144c
+2026-05-01 16:21:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-01 16:21:39 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-01 16:21:40 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-01 16:21:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists demandes_documents 
+       drop constraint if exists FKlgwr4r3qewjp47fxihkl424kw
+2026-05-01 16:21:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists evenements 
+       drop constraint if exists FKagpicvosgoiu78fpgetfxbstf
+2026-05-01 16:21:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       drop constraint if exists FK1493g8mbd97uyl4eojskpag8i
+2026-05-01 16:21:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       drop constraint if exists FK11c2598mdsm9g395pl5ubdvi3
+2026-05-01 16:21:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists salle_equipements 
+       drop constraint if exists FK16mjv18ki1mc8y6h27d40voq7
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists club_applications cascade
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists clubs cascade
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists demandes_admin cascade
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists demandes_documents cascade
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists evenements cascade
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists event_registrations cascade
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists reservations cascade
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists salle_equipements cascade
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists salles cascade
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table club_applications (
+        club_id bigint,
+        id bigserial not null,
+        student_id bigint,
+        motivation varchar(500),
+        status varchar(255) check (status in ('PENDING','ACCEPTED','REJECTED')),
+        primary key (id)
+    )
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table clubs (
+        nombre_membres integer,
+        created_at timestamp(6),
+        head_id bigint,
+        id bigserial not null,
+        description varchar(1000),
+        categorie varchar(255),
+        nom varchar(255) not null,
+        responsable varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','ACTIF','SUSPENDU')),
+        primary key (id)
+    )
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table demandes_admin (
+        created_at timestamp(6),
+        id bigserial not null,
+        student_id bigint,
+        submitted_at timestamp(6),
+        detail varchar(1000),
+        commentaire_admin varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','APPROUVE','REJETE')),
+        type varchar(255) not null check (type in ('CERTIFICAT','REMBOURSEMENT','MATERIEL','RESERVATION_SALLE','OTHER')),
+        primary key (id)
+    )
+2026-05-01 16:21:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table demandes_documents (
+        date_demande timestamp(6),
+        demandeur_id bigint not null,
+        id bigserial not null,
+        commentaire_admin TEXT,
+        statut varchar(255) check (statut in ('EN_ATTENTE','EN_COURS','PRET','REJETE','RECUPERE')),
+        type_document varchar(255) not null check (type_document in ('CERTIFICAT_SCOLARITE','RELEVE_NOTES','ATTESTATION_PRESENCE','CARTE_ETUDIANT','AUTRE')),
+        primary key (id)
+    )
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table evenements (
+        nb_participants_max integer,
+        created_at timestamp(6),
+        date_debut timestamp(6) not null,
+        date_fin timestamp(6) not null,
+        id bigserial not null,
+        organisateur_id bigint,
+        commentaire_admin varchar(1000),
+        club varchar(255),
+        description TEXT,
+        image_url varchar(255),
+        lieu varchar(255),
+        statut varchar(255) check (statut in ('EN_ATTENTE','OUVERT','PLEIN','ANNULE','TERMINE','REJETE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table event_registrations (
+        event_id bigint,
+        id bigserial not null,
+        student_id bigint,
+        primary key (id)
+    )
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table reservations (
+        nombre_participants integer,
+        created_at timestamp(6),
+        date_debut timestamp(6) not null,
+        date_fin timestamp(6) not null,
+        enseignant_id bigint not null,
+        id bigserial not null,
+        salle_id bigint not null,
+        updated_at timestamp(6),
+        motif varchar(500) not null,
+        commentaire_admin varchar(1000),
+        statut varchar(255) not null check (statut in ('EN_ATTENTE','APPROUVEE','REJETEE')),
+        primary key (id)
+    )
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table salle_equipements (
+        salle_id bigint not null,
+        equipement varchar(255)
+    )
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table salles (
+        capacite integer not null,
+        disponible boolean not null,
+        etage integer not null,
+        id bigserial not null,
+        batiment varchar(255) not null,
+        image_url varchar(255),
+        nom varchar(255) not null unique,
+        primary key (id)
+    )
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        created_at timestamp(6),
+        id bigserial not null,
+        updated_at timestamp(6),
+        avatar varchar(255),
+        departement varchar(255),
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','ADMIN','RESPONSABLE_CLUB')),
+        primary key (id)
+    )
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists demandes_documents 
+       add constraint FKlgwr4r3qewjp47fxihkl424kw 
+       foreign key (demandeur_id) 
+       references users
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists evenements 
+       add constraint FKagpicvosgoiu78fpgetfxbstf 
+       foreign key (organisateur_id) 
+       references users
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       add constraint FK1493g8mbd97uyl4eojskpag8i 
+       foreign key (enseignant_id) 
+       references users
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists reservations 
+       add constraint FK11c2598mdsm9g395pl5ubdvi3 
+       foreign key (salle_id) 
+       references salles
+2026-05-01 16:21:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists salle_equipements 
+       add constraint FK16mjv18ki1mc8y6h27d40voq7 
+       foreign key (salle_id) 
+       references salles
+2026-05-01 16:21:42 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-01 16:21:43 [restartedMain] DEBUG t.e.c.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-01 16:21:43 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.

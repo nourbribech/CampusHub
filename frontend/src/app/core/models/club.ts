@@ -1,11 +1,11 @@
 export interface Club {
   id: number;
-  name: string;
+  nom: string;
   description?: string;
-  category?: string;
-  status: 'ACTIVE' | 'INACTIVE';
-  headId: number;
-  createdAt?: string;
+  categorie?: string;
+  statut: 'EN_ATTENTE' | 'ACTIF' | 'SUSPENDU';
+  responsableClubId: number;
+  dateCreation?: string;
 }
 
 export interface ClubApplication {
@@ -13,17 +13,18 @@ export interface ClubApplication {
   studentId: number;
   clubId: number;
   motivation: string;
-  status: 'PENDING' | 'ACCEPTED' | 'REJECTED';
-  submittedAt?: string;
+  statut: 'EN_ATTENTE' | 'APPROUVE' | 'REJETE';
+  dateDemande?: string;
 }
 
 export enum ClubStatus {
-  ACTIVE = 'ACTIVE',
-  INACTIVE = 'INACTIVE'
+  PENDING = 'EN_ATTENTE',
+  ACTIVE = 'ACTIF',
+  SUSPENDED = 'SUSPENDU'
 }
 
 export enum ApplicationStatus {
-  PENDING = 'PENDING',
-  ACCEPTED = 'ACCEPTED',
-  REJECTED = 'REJECTED'
+  PENDING = 'EN_ATTENTE',
+  ACCEPTED = 'APPROUVE',
+  REJECTED = 'REJETE'
 }

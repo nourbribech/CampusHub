@@ -1,17 +1,9 @@
 export interface Demande {
   id: number;
   studentId: number;
-  type: string;                    // e.g. "CERTIFICAT", "REMBOURSEMENT", "RESERVATION"
-  message?: string;
-  status: 'PENDING' | 'APPROVED' | 'REJECTED';
+  type: 'CERTIFICAT' | 'REMBOURSEMENT' | 'MATERIEL' | 'RESERVATION_SALLE' | 'OTHER';
+  detail?: string;
+  statut: 'EN_ATTENTE' | 'APPROUVE' | 'REJETE';
   submittedAt: string;
-  // optional extra fields you might add later
-  adminComment?: string;
-  documentUrl?: string;
-}
-
-export enum RequestStatus {
-  PENDING = 'PENDING',
-  APPROVED = 'APPROVED',
-  REJECTED = 'REJECTED'
+  commentaireAdmin?: string;
 }

@@ -69,7 +69,7 @@ public class UserService {
 
     public List<User> getUsersByRole(User.Role role) {
         return userRepository.findAll().stream()
-                .filter(u -> u.getRole() == role)
+                .filter(u -> u.getRoles() != null && u.getRoles().contains(role))
                 .toList();
     }
 

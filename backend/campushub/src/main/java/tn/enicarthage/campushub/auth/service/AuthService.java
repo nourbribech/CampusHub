@@ -3,6 +3,7 @@ package tn.enicarthage.campushub.auth.service;
 
 import tn.enicarthage.campushub.auth.dto.AuthResponse;
 import tn.enicarthage.campushub.auth.dto.LoginRequest;
+import tn.enicarthage.campushub.auth.dto.UserDto;
 import tn.enicarthage.campushub.auth.security.JwtService;
 import tn.enicarthage.campushub.shared.model.User;
 import tn.enicarthage.campushub.shared.repository.UserRepository;
@@ -26,12 +27,21 @@ public class AuthService {
         );
 
         User user = (User) authentication.getPrincipal();
-
         String token = jwtService.generateToken(user);
+
+        UserDto userDto = UserDto.builder()
+                .id(user.getId())
+                .nom(user.getNom())
+                .prenom(user.getPrenom())
+                .email(user.getEmail())
+                .roles(user.getRoles().stream().map(Enum::name).toList())
+                .avatar(user.getAvatar())
+                .departement(user.getDepartement())
+                .build();
 
         return AuthResponse.builder()
                 .token(token)
-                .user(user)
+                .user(userDto)
                 .build();
     }
 }

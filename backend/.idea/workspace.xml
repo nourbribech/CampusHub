@@ -4,43 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68368dba-db97-427e-8eb0-fe0687ccde2d" name="Changes" comment="conflict-res">
-      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/StudentEvenementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/service/StudentService.java" afterDir="false" />
+    <list default="true" id="68368dba-db97-427e-8eb0-fe0687ccde2d" name="Changes" comment="sync-3-branches">
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/auth/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/records/ApplyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/records/SubmitRequestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/campushub/logs/campushub.log" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/logs/campushub.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/model/Club.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/shared/model/Club.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/model/DemandeAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/model/DemandeAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/model/Event.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/model/Reservation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/repository/AdminReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/repository/AdminReservationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/repository/ClubRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/repository/ClubRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/repository/DemandeAdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/repository/DemandeAdminRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/repository/EventRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/admin/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/enseignant/model/Evenement.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/enseignant/model/Evenement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/enseignant/repository/EvenementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/enseignant/repository/EvenementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/auth/dto/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/auth/dto/AuthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/auth/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/auth/security/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/auth/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/auth/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/config/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/config/DataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/shared/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/shared/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/shared/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/shared/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/AdminRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/AdminRequestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/ClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/ClubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/EventController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/AdminRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/Club.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/ClubStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/Event.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/EventStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/RequestStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/StudentRole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/AdminRequestRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/ClubRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/ClubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/service/ClubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/EventRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/repository/StudentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/service/AdminRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/service/AdminRequestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/service/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/service/EventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/StudentEvenementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/controller/StudentEvenementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campushub/src/main/java/tn/enicarthage/campushub/student/model/RequestType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/campushub.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/campushub.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/models/club.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/models/club.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/models/demande.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/models/demande.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/models/evenement.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/models/evenement.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/models/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/services/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/services/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/etudiant/pages/clubs/clubs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/etudiant/pages/clubs/clubs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/etudiant/pages/evenements/evenements.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/etudiant/pages/evenements/evenements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/etudiant/pages/evenements/evenements.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/etudiant/pages/evenements/evenements.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/etudiant/pages/mes-demandes/mes-demandes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/etudiant/pages/mes-demandes/mes-demandes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/etudiant/services/evenement.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/etudiant/services/evenement.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +43,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -67,6 +61,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/nourbribech/CampusHub.git&quot;,
     &quot;accountId&quot;: &quot;8e59f0fd-7eb6-4f03-a393-7b335c321ee6&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;nourbribech&quot;,
+    &quot;repository&quot;: &quot;CampusHub&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -84,21 +88,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CampushubApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Application.campushub.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.campushub [org.springframework.boot:spring-boot-maven-plugin:3.2.5:run].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;student&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dell/Documents/2eme-annee/s2/CampusHub/backend/campushub/src/main/java/tn/enicarthage/campushub&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CampushubApplication.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Application.campushub.executor": "Run",
+    "Maven.campushub [clean].executor": "Run",
+    "Maven.campushub [org.springframework.boot:spring-boot-maven-plugin:3.2.5:run].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "#6 on student",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/dell/Documents/2eme-annee/s2/CampusHub/backend/campushub/src/main/java/tn/enicarthage/campushub"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dell\Documents\2eme-annee\s2\CampusHub\backend\campushub\src\main\java\tn\enicarthage\campushub" />
@@ -112,10 +117,10 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="campushub" type="Application" factoryName="Application">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="tn.enicarthage.campushub.CampushubApplication" />
-      <module name="campushub-backend" />
+      <module name="backend" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777551702925</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sync-3-branches">
+      <option name="closed" value="true" />
+      <created>1777601427888</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777601427888</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,6 +198,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="backend-sync" />
     <MESSAGE value="conflict-res" />
-    <option name="LAST_COMMIT_MESSAGE" value="conflict-res" />
+    <MESSAGE value="sync-3-branches" />
+    <option name="LAST_COMMIT_MESSAGE" value="sync-3-branches" />
   </component>
 </project>

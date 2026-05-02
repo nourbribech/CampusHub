@@ -49,18 +49,18 @@ export class ClubsComponent implements OnInit {
 getApplicationStatusClass(clubId: number): string {
   const app = this.myApplications.find(a => a.clubId === clubId);
   const map: Record<string, string> = {
-    ACCEPTED: 'bg-green-100 text-green-700',
-    REJECTED: 'bg-red-100 text-red-700',
-    PENDING: 'bg-yellow-100 text-yellow-700'
+    APPROUVE: 'bg-green-100 text-green-700',
+    REFUSE: 'bg-red-100 text-red-700',
+    EN_ATTENTE: 'bg-yellow-100 text-yellow-700'
   };
-  return app ? map[app.status] : '';
+  return app ?( map[app.statut] ??'' ): '';
 }
 getApplicationStatusLabel(clubId: number): string {
   const app = this.myApplications.find(a => a.clubId === clubId);
   const map: Record<string, string> = { ACCEPTED: '✅ Accepté', REJECTED: '❌ Rejeté', PENDING: '⏳ En attente' };
-  return app ? map[app.status] : '';
+  return app ? ( map[app.statut] ??'' ) : '';
 }
 getAcceptedCount(): number {
-  return this.myApplications.filter(app => app.status === 'ACCEPTED').length;
+  return this.myApplications.filter(app => app.statut === 'APPROUVE').length;
 }
 }

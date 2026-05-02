@@ -33,10 +33,10 @@ export class LoginComponent {
     this.errorMsg = '';
     this.authService.login(this.loginForm.value).subscribe({
       next: (res) => {
-        const role = res.user.role;
-        if (role === 'ADMIN') this.router.navigate(['/admin/dashboard']);
-        else if (role === 'ENSEIGNANT') this.router.navigate(['/enseignant/dashboard']);
-        else this.router.navigate(['/dashboard']);
+        const roles = res.user.roles;
+        if (roles.includes('ADMIN')) this.router.navigate(['/admin/dashboard']);
+        else if (roles.includes('ENSEIGNANT')) this.router.navigate(['/enseignant/dashboard']);
+        else this.router.navigate(['/etudiant/dashboard']);
       },
       error: (err) => {
         this.errorMsg = err.error?.message || 'Email ou mot de passe incorrect.';

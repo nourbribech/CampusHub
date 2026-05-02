@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController("studentEvenementController")
-@RequestMapping("/api/events")
+@RequestMapping("/api/v1/events")
 @RequiredArgsConstructor
 public class StudentEvenementController {
 
@@ -51,5 +51,9 @@ public class StudentEvenementController {
     @GetMapping("/my-registrations")
     public ResponseEntity<List<Evenement>> myRegistrations() {
         return ResponseEntity.ok(eventService.getMyRegistrations());
+    }
+    @GetMapping("/approved")
+    public ResponseEntity<List<Evenement>> getApproved() {
+        return ResponseEntity.ok(eventService.getApprovedEvents());
     }
 }

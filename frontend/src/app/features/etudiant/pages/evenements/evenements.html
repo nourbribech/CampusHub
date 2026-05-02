@@ -55,7 +55,7 @@
           <div class="flex items-start justify-between">
             <div class="flex-1">
               <div class="flex items-center gap-3 mb-3">
-                <h3 class="text-xl font-bold text-gray-900">{{ event.title }}</h3>
+                <h3 class="text-xl font-bold text-gray-900">{{ event.titre }}</h3>
                 <span *ngIf="isRegistered(event.id)"
                   class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
                   ✅ Inscrit
@@ -65,10 +65,10 @@
               <p *ngIf="event.description" class="text-gray-600 mb-4">{{ event.description }}</p>
 
               <div class="flex flex-wrap gap-4 text-sm text-gray-500">
-                <span class="flex items-center gap-1">📅 {{ event.date | date:'dd/MM/yyyy à HH:mm' }}</span>
-                <span *ngIf="event.location" class="flex items-center gap-1">📍 {{ event.location }}</span>
+                <span class="flex items-center gap-1">📅 {{ event.dateDebut | date:'dd/MM/yyyy à HH:mm' }}</span>
+                <span *ngIf="event.lieu" class="flex items-center gap-1">📍 {{ event.lieu }}</span>
                 <span class="flex items-center gap-1">
-                  👥 {{ event.registeredCount || 0 }} / {{ event.capacity }} inscrits
+                  👥 {{ event.registeredCount || 0 }} / {{ event.nbParticipantsMax }} inscrits
                 </span>
               </div>
 
@@ -76,7 +76,7 @@
               <div class="mt-4">
                 <div class="flex justify-between text-xs text-gray-500 mb-1">
                   <span>Places disponibles</span>
-                  <span>{{ event.capacity - (event.registeredCount || 0) }} restantes</span>
+                  <span>{{ event.nbParticipantsMax - (event.registeredCount || 0) }} restantes</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                   <div class="h-2 rounded-full transition-all"

@@ -48,13 +48,15 @@ export class EvenementsComponent implements OnInit {
   return this.myRegistrations.some(e => e.id === eventId);
 }
 isFull(event: Evenement): boolean {
-  return (event.registeredCount || 0) >= event.capacity;
+  return (event.registeredCount || 0) >= event.nbParticipantsMax;
 }
 getTotalPlacesRestantes(): number {
-  return this.evenements.reduce((sum, e) => sum + (e.capacity - (e.registeredCount || 0)), 0);
+  return this.evenements.reduce(
+    (sum, e) => sum + (e.nbParticipantsMax - (e.registeredCount || 0)), 0
+  );
 }
 getCapacityPercent(event: Evenement): number {
-  return Math.round(((event.registeredCount || 0) / event.capacity) * 100);
+  return Math.round(((event.registeredCount || 0) / event.nbParticipantsMax) * 100);
 }
 getCapacityBarClass(event: Evenement): string {
   const pct = this.getCapacityPercent(event);

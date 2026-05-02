@@ -1,23 +1,36 @@
 export interface Evenement {
   id: number;
-  title: string;
+  titre: string;              // was: title ✓ fix this
   description?: string;
-  date: string;               // ISO string or LocalDateTime → string from backend
-  location?: string;
-  capacity: number;
-  status: 'PENDING' | 'APPROVED' | 'REJECTED';
-  organizerId: number;
-  registeredCount?: number;   // useful for UI
+  dateDebut: string;          // was: date — backend has dateDebut + dateFin
+  dateFin?: string;           // missing entirely
+  lieu?: string;              // was: location ✓ fix this
+  nbParticipantsMax: number;  // was: capacity ✓ fix this
+  statut: 'EN_ATTENTE' | 'OUVERT' | 'PLEIN' | 'ANNULE' | 'TERMINE' | 'REJETE'; // was wrong values
+  organisateur?: { id: number; nom: string; prenom: string; }; // was: organizerId (it's a nested object, not an ID)
+  imageUrl?: string;
+  club?: string;
+  commentaireAdmin?: string;
+  registeredCount?: number; 
 }
 
 export interface EventRegistration {
   id?: number;
-  studentId: number;
-  eventId: number;
+  etudiantId: number;
+  evenementId: number;
+}
+
+export interface EventApplication {
+  id: number;
+  evenementId: number;
+  etudiantId: number;
+  statut: 'EN_ATTENTE' | 'APPROUVE' | 'REJETE';
+  dateDemande?: string;
+  commentaireAdmin?: string;
 }
 
 export enum EventStatus {
-  PENDING = 'PENDING',
-  APPROVED = 'APPROVED',
-  REJECTED = 'REJECTED'
+  PENDING = 'EN_ATTENTE',
+  APPROVED = 'APPROUVE',
+  REJECTED = 'REJETE'
 }

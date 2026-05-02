@@ -21,22 +21,24 @@ export class MesDemandesComponent implements OnInit {
       complete: () => this.loading = false
     });
   }
-  countByStatus(status: string): number {
-  return this.demandes.filter(d => d.status === status).length;
+  countByStatus(statut: string): number {
+  return this.demandes.filter(d => d.statut === statut).length;
 }
-getStatutClass(status: string): string {
+getStatutClass(statut: string): string {
   const map: Record<string, string> = {
-    APPROVED: 'bg-green-100 text-green-700 border-green-200',
-    REJECTED: 'bg-red-100 text-red-700 border-red-200',
-    PENDING: 'bg-yellow-100 text-yellow-700 border-yellow-200'
+    'APPROUVE':   'bg-green-100 text-green-700 border-green-200',
+    'REJETE':     'bg-red-100 text-red-700 border-red-200',
+    'EN_ATTENTE': 'bg-yellow-100 text-yellow-700 border-yellow-200'
   };
-  return map[status] || '';
+  return  map[statut] ?? '';
 }
-getStatutIcon(status: string): string {
-  return { APPROVED: '✅', REJECTED: '❌', PENDING: '⏳' }[status] || '';
+getStatutIcon(statut: string): string {
+  return { 'APPROUVE': '✅', 'REJETE': '❌', 'EN_ATTENTE': '⏳' }[statut] || '';
 }
-getStatutLabel(status: string): string {
-  return { APPROVED: 'Approuvée', REJECTED: 'Rejetée', PENDING: 'En attente' }[status] || status;
+getStatutLabel(statut: string): string {
+  return { 'APPROUVE': 'Approuvée', 'REJETE': 'Rejetée', 'EN_ATTENTE': 'En attente' }[statut] || status;
 }
-ouvrirNouvelleDemandeModal(): void { /* à implémenter */ }
+ouvrirNouvelleDemandeModal(): void {
+  // à implémenter
+}
 }

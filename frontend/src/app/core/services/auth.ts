@@ -9,7 +9,7 @@ export interface User {
   nom: string;
   prenom: string;
   email: string;
-  role: 'ETUDIANT' | 'ENSEIGNANT' | 'RESPONSABLE_CLUB' | 'MODERATEUR' | 'ADMIN';
+  roles: ('ETUDIANT' | 'ENSEIGNANT' | 'RESPONSABLE_CLUB' | 'ADMIN')[];
   token: string;
 }
 
@@ -27,7 +27,7 @@ export interface LoginResponse {
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private http = inject(HttpClient);
-  private apiUrl = `${environment.apiUrl}/auth`;
+  private apiUrl = '/api/v1/auth';
   private isBrowser: boolean;
   private currentUserSubject = new BehaviorSubject<User | null>(null);
   currentUser$ = this.currentUserSubject.asObservable();
@@ -49,7 +49,7 @@ export class AuthService {
   }
 
   get isAdmin(): boolean {
-    return this.currentUser?.role === 'ADMIN';
+    return this.currentUser?.roles.includes('ADMIN') ?? false;
   }
 
   login(credentials: LoginRequest): Observable<LoginResponse> {

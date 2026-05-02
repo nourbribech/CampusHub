@@ -1,6 +1,7 @@
 package tn.enicarthage.campushub.config;
 
 
+import org.springframework.http.HttpMethod;
 import tn.enicarthage.campushub.auth.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -37,10 +38,16 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers("/api/v1/auth/**").permitAll()
                         .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/v1/enseignant/**").hasRole("ENSEIGNANT")
-                        .requestMatchers("/api/v1/student/**").hasRole("STUDENT")
+                        .requestMatchers("/api/v1/enseignant/**", "/api/v1/salles/**").hasRole("ENSEIGNANT")
+                        .requestMatchers(
+                                "/api/v1/clubs/**",
+                                "/api/v1/events/**",
+                                "/api/v1/requests/**",
+                                "/api/v1/student/**"
+                        ).hasAnyRole("ETUDIANT","RESPONSABLE_CLUB")
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
