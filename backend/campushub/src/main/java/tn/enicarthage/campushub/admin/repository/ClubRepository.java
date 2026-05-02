@@ -2,7 +2,7 @@ package tn.enicarthage.campushub.admin.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import tn.enicarthage.campushub.admin.model.Club;
+import tn.enicarthage.campushub.shared.model.Club;
 import java.util.List;
 
 @Repository

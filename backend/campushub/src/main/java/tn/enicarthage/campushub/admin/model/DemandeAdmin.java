@@ -17,28 +17,45 @@ public class DemandeAdmin {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "student_id")
+    private Long studentId;          // added — replaces String demandeur
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Type type;
 
-    @Column(nullable = false)
+    @Column(length = 1000)
     private String detail;
-
-    @Column(nullable = false)
-    private String demandeur;
 
     @Enumerated(EnumType.STRING)
     private Statut statut = Statut.EN_ATTENTE;
 
     @Column(name = "commentaire_admin")
-    private String commentaireAdmin;
+    private String commentaireAdmin; // maps to adminNote in student version
+
+    @Column(name = "submitted_at")
+    private LocalDateTime submittedAt;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
     @PrePersist
-    protected void onCreate() { createdAt = LocalDateTime.now(); }
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+        if (submittedAt == null) submittedAt = LocalDateTime.now();
+    }
 
-    public enum Type { CERTIFICAT, REMBOURSEMENT, MATERIEL }
-    public enum Statut { EN_ATTENTE, APPROUVE, REJETE }
+    public enum Type {
+        CERTIFICAT,
+        REMBOURSEMENT,
+        MATERIEL,
+        RESERVATION_SALLE,  // covers student's ROOM_BOOKING
+        OTHER
+    }
+
+    public enum Statut {
+        EN_ATTENTE,
+        APPROUVE,
+        REJETE
+    }
 }

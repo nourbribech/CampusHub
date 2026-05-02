@@ -1,9 +1,7 @@
-package tn.enicarthage.campushub.admin.model;
+package tn.enicarthage.campushub.shared.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -11,6 +9,7 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Club {
 
     @Id
@@ -18,16 +17,21 @@ public class Club {
     private Long id;
 
     @Column(nullable = false)
-    private String nom;
+    private String nom;           // used by admin
 
+    @Column(length = 1000)
     private String description;
-    private String categorie;
-    private String responsable;
+
+    private String categorie;     // used by admin ("Tech", "Sports"...)
+
+    private String responsable;   // used by admin
+
     private Integer nombreMembres = 0;
+
+    private Long headId;          // used by student (club head's user ID)
 
     @Enumerated(EnumType.STRING)
     private Statut statut = Statut.EN_ATTENTE;
-
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 

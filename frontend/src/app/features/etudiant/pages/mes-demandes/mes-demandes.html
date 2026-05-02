@@ -72,12 +72,12 @@
               <div class="flex items-center gap-3 mb-3">
                 <h3 class="text-xl font-bold text-gray-900">{{ demande.type }}</h3>
                 <span class="px-3 py-1 rounded-full text-xs font-semibold border"
-                  [ngClass]="getStatutClass(demande.status)">
-                  {{ getStatutIcon(demande.status) }} {{ getStatutLabel(demande.status) }}
+                  [ngClass]="getStatutClass(demande.statut)">
+                  {{ getStatutIcon(demande.statut) }} {{ getStatutLabel(demande.statut) }}
                 </span>
               </div>
 
-              <p *ngIf="demande.message" class="text-gray-600 mb-4">{{ demande.message }}</p>
+              <p *ngIf="demande.detail" class="text-gray-600 mb-4">{{ demande.detail }}</p>
 
               <div class="flex flex-wrap gap-4 text-sm text-gray-500">
                 <span class="flex items-center gap-1">
@@ -85,10 +85,10 @@
                 </span>
               </div>
 
-              <div *ngIf="demande.status === 'REJECTED' && demande.adminComment"
+              <div *ngIf="demande.statut === 'REJETE' && demande.commentaireAdmin"
                 class="mt-4 bg-red-50 border border-red-200 rounded-lg p-4">
                 <p class="text-sm font-semibold text-red-900 mb-1">Commentaire de l'administration :</p>
-                <p class="text-sm text-red-700">{{ demande.adminComment }}</p>
+                <p class="text-sm text-red-700">{{ demande.commentaireAdmin }}</p>
               </div>
             </div>
           </div>

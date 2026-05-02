@@ -6,7 +6,6 @@ export interface User {
     email: string;
     role: 'ETUDIANT' | 'ENSEIGNANT' | 'RESPONSABLE_CLUB' | 'MODERATEUR' | 'ADMIN';
     avatar?: string;
-    token: string;
     refreshToken?: string;
 }
 

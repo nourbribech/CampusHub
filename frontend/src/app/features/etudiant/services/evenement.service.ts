@@ -22,4 +22,11 @@ export class EvenementService {
   getMyRegistrations(): Observable<Evenement[]> {
     return this.http.get<Evenement[]>(`${this.apiUrl}/my-registrations`);
   }
+  isOpen(e: Evenement): boolean {
+  return e.statut === 'OUVERT';
+}
+
+isFull(e: Evenement): boolean {
+  return e.statut === 'PLEIN';
+}
 }

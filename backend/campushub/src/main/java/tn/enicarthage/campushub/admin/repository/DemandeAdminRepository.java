@@ -9,4 +9,5 @@ import java.util.List;
 public interface DemandeAdminRepository extends JpaRepository<DemandeAdmin, Long> {
     List<DemandeAdmin> findByStatut(DemandeAdmin.Statut statut);
     long countByStatut(DemandeAdmin.Statut statut);
+    List<DemandeAdmin> findByStudentId(Long studentId);  // added
 }

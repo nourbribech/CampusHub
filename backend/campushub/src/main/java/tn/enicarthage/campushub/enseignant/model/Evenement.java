@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDateTime;
 import tn.enicarthage.campushub.shared.model.User;
 
@@ -36,20 +35,26 @@ public class Evenement {
     private Integer nbParticipantsMax;
 
     @Enumerated(EnumType.STRING)
-    private Statut statut = Statut.OUVERT;
+    private Statut statut = Statut.EN_ATTENTE;  // default to pending
 
     @ManyToOne
     @JoinColumn(name = "organisateur_id")
     private User organisateur;
 
     private String imageUrl;
+    private String club;
+
+    @Column(name = "commentaire_admin", length = 1000)
+    private String commentaireAdmin;
 
     private LocalDateTime createdAt = LocalDateTime.now();
 
     public enum Statut {
-        OUVERT,
-        PLEIN,
+        EN_ATTENTE,  // pending approval
+        OUVERT,      // approved and open
+        PLEIN,       // full
         ANNULE,
-        TERMINE
+        TERMINE,
+        REJETE
     }
 }
