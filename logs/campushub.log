@@ -52227,3 +52227,3224 @@ Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violate
 2026-05-02 16:35:16 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-05-02 16:35:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-05-02 16:35:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-05-02 16:35:30 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 6952 (C:\Users\YASSMIN\Downloads\campushub (2)\campushub\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Downloads\campushub (2)\campushub\backend\campushub)
+2026-05-02 16:35:30 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-02 16:35:31 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-02 16:35:31 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 16:35:31 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 16:35:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 16:35:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 174 ms. Found 15 JPA repository interfaces.
+2026-05-02 16:35:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-05-02 16:35:33 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-02 16:35:33 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-02 16:35:34 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-02 16:35:34 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2924 ms
+2026-05-02 16:35:34 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02 16:35:34 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-02 16:35:34 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-02 16:35:34 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 16:35:35 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-02 16:35:36 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@33961ae9
+2026-05-02 16:35:36 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-02 16:35:36 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 16:35:38 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 16:35:38 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 16:35:38 [restartedMain] DEBUG t.e.c.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-02 16:35:38 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 16:35:40 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 16:35:41 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5cb026cd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78207955, org.springframework.security.web.context.SecurityContextHolderFilter@1e416c44, org.springframework.security.web.header.HeaderWriterFilter@7681f60d, org.springframework.web.filter.CorsFilter@57efbdde, org.springframework.security.web.authentication.logout.LogoutFilter@4a2b1ee4, tn.enicarthage.campushub.auth.security.JwtAuthenticationFilter@3a932c48, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67899727, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b95cbb1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42294f80, org.springframework.security.web.session.SessionManagementFilter@49eaeb4, org.springframework.security.web.access.ExceptionTranslationFilter@efb27f4, org.springframework.security.web.access.intercept.AuthorizationFilter@1837807e]
+2026-05-02 16:35:41 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-02 16:35:41 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2026-05-02 16:35:41 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 11.293 seconds (process running for 11.918)
+2026-05-02 16:35:41 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 🚀 Initialisation des données ENICarthage...
+2026-05-02 16:35:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-05-02 16:35:42 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ✅ Données déjà présentes, initialisation annulée
+2026-05-02 16:35:45 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 16:35:45 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-02 16:35:45 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-05-02 16:35:45 [http-nio-8082-exec-1] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 16:35:45 [http-nio-8082-exec-1] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 16:35:45 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 16:36:12 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 16:36:12 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 16:36:13 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 16:36:13 [http-nio-8082-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 16:36:13 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 16:36:13 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 16:36:13 [http-nio-8082-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 16:36:13 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.capacity,
+        e1_0.date_time,
+        e1_0.description,
+        e1_0.location,
+        e1_0.organizer_id,
+        e1_0.status,
+        e1_0.title 
+    from
+        student_event e1_0 
+    where
+        e1_0.status=?
+2026-05-02 16:36:13 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 16:36:13 [http-nio-8082-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.category,
+        c1_0.description,
+        c1_0.head_id,
+        c1_0.name,
+        c1_0.status 
+    from
+        student_club c1_0 
+    where
+        c1_0.status=?
+2026-05-02 16:36:13 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 16:36:13 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 16:36:13 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ar1_0.id,
+        ar1_0.admin_note,
+        ar1_0.description,
+        ar1_0.status,
+        ar1_0.student_id,
+        ar1_0.submitted_at,
+        ar1_0.type 
+    from
+        admin_requests ar1_0 
+    where
+        ar1_0.student_id=?
+2026-05-02 17:01:23 [http-nio-8082-exec-3] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:01:23 [http-nio-8082-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7d6cf06 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-02 17:01:23 [http-nio-8082-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5d4eaa8d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-02 17:01:25 [http-nio-8082-exec-3] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:01:25 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:01:37 [http-nio-8082-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:01:37 [http-nio-8082-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:01:38 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:01:38 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:01:38 [http-nio-8082-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:01:38 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:01:38 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:01:38 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:01:38 [http-nio-8082-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:01:38 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.capacity,
+        e1_0.date_time,
+        e1_0.description,
+        e1_0.location,
+        e1_0.organizer_id,
+        e1_0.status,
+        e1_0.title 
+    from
+        student_event e1_0 
+    where
+        e1_0.status=?
+2026-05-02 17:01:38 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:01:38 [http-nio-8082-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.category,
+        c1_0.description,
+        c1_0.head_id,
+        c1_0.name,
+        c1_0.status 
+    from
+        student_club c1_0 
+    where
+        c1_0.status=?
+2026-05-02 17:01:38 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ar1_0.id,
+        ar1_0.admin_note,
+        ar1_0.description,
+        ar1_0.status,
+        ar1_0.student_id,
+        ar1_0.submitted_at,
+        ar1_0.type 
+    from
+        admin_requests ar1_0 
+    where
+        ar1_0.student_id=?
+2026-05-02 17:01:48 [http-nio-8082-exec-8] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:01:48 [http-nio-8082-exec-8] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:01:48 [http-nio-8082-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:02:07 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:02:08 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:02:08 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:02:08 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:02:08 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:02:08 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:02:08 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:02:08 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:02:08 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.capacity,
+        e1_0.date_time,
+        e1_0.description,
+        e1_0.location,
+        e1_0.organizer_id,
+        e1_0.status,
+        e1_0.title 
+    from
+        student_event e1_0 
+    where
+        e1_0.status=?
+2026-05-02 17:02:08 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:02:08 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.category,
+        c1_0.description,
+        c1_0.head_id,
+        c1_0.name,
+        c1_0.status 
+    from
+        student_club c1_0 
+    where
+        c1_0.status=?
+2026-05-02 17:02:08 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:02:08 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ar1_0.id,
+        ar1_0.admin_note,
+        ar1_0.description,
+        ar1_0.status,
+        ar1_0.student_id,
+        ar1_0.submitted_at,
+        ar1_0.type 
+    from
+        admin_requests ar1_0 
+    where
+        ar1_0.student_id=?
+2026-05-02 17:07:21 [http-nio-8082-exec-7] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:07:21 [http-nio-8082-exec-7] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:07:21 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:09:10 [http-nio-8082-exec-8] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:09:10 [http-nio-8082-exec-8] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:09:10 [http-nio-8082-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:09:30 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:09:30 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:09:31 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:09:31 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:09:31 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:09:31 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:09:31 [http-nio-8082-exec-10] INFO  t.e.c.e.service.ReservationService - Récupération des réservations de l'enseignant ID: 12
+2026-05-02 17:09:31 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at,
+        r1_0.user_id 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-05-02 17:09:34 [http-nio-8082-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:09:34 [http-nio-8082-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:09:34 [http-nio-8082-exec-5] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:09:34 [http-nio-8082-exec-5] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:09:34 [http-nio-8082-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:09:46 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:09:46 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:09:46 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:09:47 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:09:47 [http-nio-8082-exec-3] INFO  t.e.c.e.service.ReservationService - Récupération des réservations de l'enseignant ID: 12
+2026-05-02 17:09:47 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at,
+        r1_0.user_id 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-05-02 17:09:50 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:09:50 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:09:50 [http-nio-8082-exec-6] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:09:50 [http-nio-8082-exec-6] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:09:50 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:14:26 [http-nio-8082-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:14:26 [http-nio-8082-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:14:26 [http-nio-8082-exec-4] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:14:26 [http-nio-8082-exec-4] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:14:26 [http-nio-8082-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:14:59 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:14:59 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:14:59 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:14:59 [http-nio-8082-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:14:59 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:14:59 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:14:59 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:14:59 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:14:59 [http-nio-8082-exec-2] INFO  t.e.c.e.service.ReservationService - Récupération des réservations de l'enseignant ID: 13
+2026-05-02 17:14:59 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at,
+        r1_0.user_id 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-05-02 17:15:03 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:15:03 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:15:03 [http-nio-8082-exec-10] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:15:03 [http-nio-8082-exec-10] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:15:03 [http-nio-8082-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:15:23 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:15:24 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:15:24 [http-nio-8082-exec-1] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:15:24 [http-nio-8082-exec-1] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:15:24 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:18:38 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:18:38 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:18:39 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:18:39 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:18:39 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:18:39 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:18:39 [http-nio-8082-exec-6] INFO  t.e.c.e.service.ReservationService - Récupération des réservations de l'enseignant ID: 13
+2026-05-02 17:18:39 [http-nio-8082-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at,
+        r1_0.user_id 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-05-02 17:18:44 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:18:44 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:18:44 [http-nio-8082-exec-7] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:18:44 [http-nio-8082-exec-7] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:18:44 [http-nio-8082-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:20:54 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 17:20:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-02 17:20:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-05-02 17:27:30 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 24368 (C:\Users\YASSMIN\Downloads\campushub (2)\campushub\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Downloads\campushub (2)\campushub\backend\campushub)
+2026-05-02 17:27:30 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-02 17:27:30 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-02 17:27:30 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 17:27:30 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 17:27:31 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 17:27:31 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 153 ms. Found 15 JPA repository interfaces.
+2026-05-02 17:27:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-05-02 17:27:33 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-02 17:27:33 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-02 17:27:33 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-02 17:27:33 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2903 ms
+2026-05-02 17:27:33 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02 17:27:34 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-02 17:27:34 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-02 17:27:34 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 17:27:34 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-02 17:27:35 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@620e55f0
+2026-05-02 17:27:35 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-02 17:27:36 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 17:27:37 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 17:27:37 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 17:27:38 [restartedMain] DEBUG t.e.c.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-02 17:27:38 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 17:27:39 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 17:27:40 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@be9c408, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f950c1c, org.springframework.security.web.context.SecurityContextHolderFilter@52887ad9, org.springframework.security.web.header.HeaderWriterFilter@f0808bd, org.springframework.web.filter.CorsFilter@7a93eaf2, org.springframework.security.web.authentication.logout.LogoutFilter@608c7d57, tn.enicarthage.campushub.auth.security.JwtAuthenticationFilter@3a0e574b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d2abcc1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76e446ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41c24581, org.springframework.security.web.session.SessionManagementFilter@5f266f3, org.springframework.security.web.access.ExceptionTranslationFilter@41938151, org.springframework.security.web.access.intercept.AuthorizationFilter@5c8511b8]
+2026-05-02 17:27:40 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-02 17:27:41 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2026-05-02 17:27:41 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 11.214 seconds (process running for 11.779)
+2026-05-02 17:27:41 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 🚀 Initialisation des données ENICarthage...
+2026-05-02 17:27:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-05-02 17:27:41 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ✅ Données déjà présentes, initialisation annulée
+2026-05-02 17:27:51 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 17:27:51 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-02 17:27:51 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-05-02 17:27:51 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:27:52 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:27:52 [http-nio-8082-exec-1] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:27:52 [http-nio-8082-exec-1] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:27:52 [http-nio-8082-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:27:52 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:27:52 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:27:52 [http-nio-8082-exec-2] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:27:52 [http-nio-8082-exec-2] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:27:52 [http-nio-8082-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:27:55 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:27:55 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:27:55 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:27:55 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:27:55 [http-nio-8082-exec-3] INFO  t.e.c.e.service.ReservationService - Récupération des réservations de l'enseignant ID: 13
+2026-05-02 17:27:55 [http-nio-8082-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.commentaire_admin,
+        r1_0.created_at,
+        r1_0.date_debut,
+        r1_0.date_fin,
+        r1_0.enseignant_id,
+        r1_0.motif,
+        r1_0.nombre_participants,
+        r1_0.salle_id,
+        r1_0.statut,
+        r1_0.updated_at,
+        r1_0.user_id 
+    from
+        reservations r1_0 
+    where
+        r1_0.enseignant_id=? 
+    order by
+        r1_0.date_debut desc
+2026-05-02 17:27:57 [http-nio-8082-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:27:57 [http-nio-8082-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:27:57 [http-nio-8082-exec-4] INFO  t.e.c.e.controller.SalleController - GET /api/v1/salles
+2026-05-02 17:27:57 [http-nio-8082-exec-4] INFO  t.e.c.e.service.SalleService - 📋 Récupération de toutes les salles
+2026-05-02 17:27:57 [http-nio-8082-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0
+2026-05-02 17:30:11 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 17:30:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-02 17:30:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-05-02 17:30:18 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 17004 (C:\Users\YASSMIN\Downloads\campushub (2)\campushub\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Downloads\campushub (2)\campushub\backend\campushub)
+2026-05-02 17:30:18 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-02 17:30:18 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-02 17:30:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 17:30:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 17:30:20 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 17:30:20 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 131 ms. Found 15 JPA repository interfaces.
+2026-05-02 17:30:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-05-02 17:30:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-02 17:30:21 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-02 17:30:21 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-02 17:30:21 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2631 ms
+2026-05-02 17:30:22 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02 17:30:22 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-02 17:30:22 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-02 17:30:22 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 17:30:22 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-02 17:30:23 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d6de01d
+2026-05-02 17:30:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-02 17:30:23 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 17:30:25 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 17:30:25 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 17:30:26 [restartedMain] DEBUG t.e.c.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-02 17:30:26 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 17:30:27 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 17:30:28 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1a68c418, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c8511b8, org.springframework.security.web.context.SecurityContextHolderFilter@1c8e5d95, org.springframework.security.web.header.HeaderWriterFilter@2301f7da, org.springframework.web.filter.CorsFilter@7d04a66, org.springframework.security.web.authentication.logout.LogoutFilter@4f9fecb4, tn.enicarthage.campushub.auth.security.JwtAuthenticationFilter@1416d93c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36e3f768, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c84fa29, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57fd92eb, org.springframework.security.web.session.SessionManagementFilter@59080daa, org.springframework.security.web.access.ExceptionTranslationFilter@1a2f97d2, org.springframework.security.web.access.intercept.AuthorizationFilter@7947fd90]
+2026-05-02 17:30:28 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-02 17:30:29 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2026-05-02 17:30:29 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 10.667 seconds (process running for 11.173)
+2026-05-02 17:30:29 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 🚀 Initialisation des données ENICarthage...
+2026-05-02 17:30:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-05-02 17:30:29 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 📝 Création des utilisateurs...
+2026-05-02 17:30:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-02 17:30:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-02 17:30:29 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2026-05-02 17:30:29 [restartedMain] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "role" of relation "users" violates not-null constraint
+  Detail: Failing row contains (2026-05-02 17:30:29.705242, 16, 2026-05-02 17:30:29.705242, null, Administration, admin@enicarthage.tn, Admin, $2a$10$t6OyKpgQby2sSSot3LxTKO0q3KfEHliOXctP7p6cUoILbivhhcfda, System, null).
+2026-05-02 17:30:29 [restartedMain] ERROR t.e.campushub.config.DataInitializer - ❌ Erreur lors de l'initialisation des données
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: null value in column "role" of relation "users" violates not-null constraint
+  Detail: Failing row contains (2026-05-02 17:30:29.705242, 16, 2026-05-02 17:30:29.705242, null, Administration, admin@enicarthage.tn, Admin, $2a$10$t6OyKpgQby2sSSot3LxTKO0q3KfEHliOXctP7p6cUoILbivhhcfda, System, null).] [insert into users (avatar,created_at,departement,email,nom,password,prenom,updated_at) values (?,?,?,?,?,?,?,?)]; SQL [insert into users (avatar,created_at,departement,email,nom,password,prenom,updated_at) values (?,?,?,?,?,?,?,?)]; constraint [role" of relation "users]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:290)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy130.save(Unknown Source)
+	at tn.enicarthage.campushub.shared.service.UserService.createUser(UserService.java:30)
+	at tn.enicarthage.campushub.config.DataInitializer.createUsers(DataInitializer.java:66)
+	at tn.enicarthage.campushub.config.DataInitializer.run(DataInitializer.java:45)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tn.enicarthage.campushub.CampushubApplication.main(CampushubApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "role" of relation "users" violates not-null constraint
+  Detail: Failing row contains (2026-05-02 17:30:29.705242, 16, 2026-05-02 17:30:29.705242, null, Administration, admin@enicarthage.tn, Admin, $2a$10$t6OyKpgQby2sSSot3LxTKO0q3KfEHliOXctP7p6cUoILbivhhcfda, System, null).] [insert into users (avatar,created_at,departement,email,nom,password,prenom,updated_at) values (?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:97)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performInsert(GetGeneratedKeysDelegate.java:107)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:100)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:175)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:113)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2868)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy4/jdk.proxy4.$Proxy127.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:618)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 35 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "role" of relation "users" violates not-null constraint
+  Detail: Failing row contains (2026-05-02 17:30:29.705242, 16, 2026-05-02 17:30:29.705242, null, Administration, admin@enicarthage.tn, Admin, $2a$10$t6OyKpgQby2sSSot3LxTKO0q3KfEHliOXctP7p6cUoILbivhhcfda, System, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	... 85 common frames omitted
+2026-05-02 17:31:12 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 17:31:12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-02 17:31:12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-05-02 17:31:18 [restartedMain] INFO  t.e.campushub.CampushubApplication - Starting CampushubApplication using Java 17.0.18 with PID 2092 (C:\Users\YASSMIN\Downloads\campushub (2)\campushub\backend\campushub\target\classes started by YASSMIN in C:\Users\YASSMIN\Downloads\campushub (2)\campushub\backend\campushub)
+2026-05-02 17:31:18 [restartedMain] DEBUG t.e.campushub.CampushubApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-05-02 17:31:18 [restartedMain] INFO  t.e.campushub.CampushubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-02 17:31:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 17:31:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 17:31:20 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 17:31:20 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 157 ms. Found 15 JPA repository interfaces.
+2026-05-02 17:31:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-05-02 17:31:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-02 17:31:21 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-02 17:31:21 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-02 17:31:21 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2781 ms
+2026-05-02 17:31:22 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02 17:31:22 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-02 17:31:22 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-02 17:31:22 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 17:31:22 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-02 17:31:23 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2fda59d5
+2026-05-02 17:31:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-02 17:31:23 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 17:31:25 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 17:31:25 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 17:31:26 [restartedMain] DEBUG t.e.c.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-05-02 17:31:26 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 17:31:27 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 17:31:28 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@225ebe13, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7925ff84, org.springframework.security.web.context.SecurityContextHolderFilter@40cdf0d4, org.springframework.security.web.header.HeaderWriterFilter@54970b5, org.springframework.web.filter.CorsFilter@1c75adf4, org.springframework.security.web.authentication.logout.LogoutFilter@6d57b552, tn.enicarthage.campushub.auth.security.JwtAuthenticationFilter@1d3f4b78, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f8e7f8d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11490a00, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5668f27e, org.springframework.security.web.session.SessionManagementFilter@41c6bb18, org.springframework.security.web.access.ExceptionTranslationFilter@3ed6250e, org.springframework.security.web.access.intercept.AuthorizationFilter@364dadb9]
+2026-05-02 17:31:29 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-02 17:31:29 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2026-05-02 17:31:29 [restartedMain] INFO  t.e.campushub.CampushubApplication - Started CampushubApplication in 10.803 seconds (process running for 11.366)
+2026-05-02 17:31:29 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 🚀 Initialisation des données ENICarthage...
+2026-05-02 17:31:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-05-02 17:31:29 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 📝 Création des utilisateurs...
+2026-05-02 17:31:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-02 17:31:29 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        user_roles
+        (user_id, role) 
+    values
+        (?, ?)
+2026-05-02 17:31:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-02 17:31:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        user_roles
+        (user_id, role) 
+    values
+        (?, ?)
+2026-05-02 17:31:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-02 17:31:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-02 17:31:30 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-02 17:31:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-02 17:31:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        user_roles
+        (user_id, role) 
+    values
+        (?, ?)
+2026-05-02 17:31:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-05-02 17:31:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (avatar, created_at, departement, email, nom, password, prenom, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        user_roles
+        (user_id, role) 
+    values
+        (?, ?)
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-05-02 17:31:32 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ✅ 7 utilisateurs créés
+2026-05-02 17:31:32 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 📝 Création des salles ENICarthage...
+2026-05-02 17:31:32 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle MAC
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:32 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : LABO Informatique
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:32 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:33 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle Polyvalente
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:33 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 20
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:33 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 21
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:34 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 22
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:34 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 23
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:34 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 24
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:34 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:35 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 25
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:35 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 26
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:35 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 27
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:35 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:36 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 30
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:36 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 31
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:36 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 32
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:36 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:37 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 33
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:37 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 34
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:37 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 35
+2026-05-02 17:31:37 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:38 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 36
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:38 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle 37
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:38 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Amphithéâtre Principal
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P20
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P21
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:39 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P22
+2026-05-02 17:31:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:40 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P23
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:40 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P24
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:40 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P25
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:41 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P26
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:41 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P27
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:41 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P30
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:41 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:42 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P31
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:42 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P32
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:42 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P33
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:42 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:43 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P34
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:43 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P35
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:43 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P36
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:44 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P37
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:44 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P40
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:44 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P41
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:45 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P42
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:45 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P43
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:45 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P44
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:46 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P45
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:46 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P46
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:46 [restartedMain] INFO  t.e.c.e.service.SalleService - 📝 Création d'une nouvelle salle : Salle P47
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salles
+        (batiment, capacite, disponible, etage, image_url, nom) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        salle_equipements
+        (salle_id, equipement) 
+    values
+        (?, ?)
+2026-05-02 17:31:47 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        salles s1_0
+2026-05-02 17:31:47 [restartedMain] INFO  t.e.campushub.config.DataInitializer - ✅ 44 salles créées
+2026-05-02 17:31:47 [restartedMain] INFO  t.e.campushub.config.DataInitializer - 📝 Création des réservations exemple...
+2026-05-02 17:31:47 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.avatar,
+        u1_0.created_at,
+        u1_0.departement,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-05-02 17:31:47 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-05-02 17:31:47 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.batiment,
+        s1_0.capacite,
+        s1_0.disponible,
+        s1_0.etage,
+        s1_0.image_url,
+        s1_0.nom 
+    from
+        salles s1_0 
+    where
+        s1_0.batiment=?
+2026-05-02 17:31:47 [restartedMain] INFO  t.e.c.e.service.ReservationService - Création d'une nouvelle réservation pour la salle ID: 46
+2026-05-02 17:31:47 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (commentaire_admin, created_at, date_debut, date_fin, enseignant_id, motif, nombre_participants, salle_id, statut, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-05-02 17:31:47 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2026-05-02 17:31:47 [restartedMain] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: null value in column "demandeur" of relation "reservations" violates not-null constraint
+  Detail: Failing row contains (2026-05-02 17:31:47.642017, 2026-05-05 10:00:47.64101, 2026-05-05 12:00:47.64101, 1, null, null, TP Programmation Web — Groupe GL3, null, APPROUVEE, 18, 46, 28, 2026-05-02 17:31:47.642017, null).
+2026-05-02 17:31:47 [restartedMain] ERROR t.e.campushub.config.DataInitializer - ❌ Erreur lors de l'initialisation des données
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: null value in column "demandeur" of relation "reservations" violates not-null constraint
+  Detail: Failing row contains (2026-05-02 17:31:47.642017, 2026-05-05 10:00:47.64101, 2026-05-05 12:00:47.64101, 1, null, null, TP Programmation Web — Groupe GL3, null, APPROUVEE, 18, 46, 28, 2026-05-02 17:31:47.642017, null).] [insert into reservations (commentaire_admin,created_at,date_debut,date_fin,enseignant_id,motif,nombre_participants,salle_id,statut,updated_at,user_id) values (?,?,?,?,?,?,?,?,?,?,?)]; SQL [insert into reservations (commentaire_admin,created_at,date_debut,date_fin,enseignant_id,motif,nombre_participants,salle_id,statut,updated_at,user_id) values (?,?,?,?,?,?,?,?,?,?,?)]; constraint [demandeur" of relation "reservations]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:290)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy141.save(Unknown Source)
+	at tn.enicarthage.campushub.enseignant.service.ReservationService.createReservation(ReservationService.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at tn.enicarthage.campushub.enseignant.service.ReservationService$$SpringCGLIB$$0.createReservation(<generated>)
+	at tn.enicarthage.campushub.config.DataInitializer.createReservations(DataInitializer.java:266)
+	at tn.enicarthage.campushub.config.DataInitializer.run(DataInitializer.java:47)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tn.enicarthage.campushub.CampushubApplication.main(CampushubApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "demandeur" of relation "reservations" violates not-null constraint
+  Detail: Failing row contains (2026-05-02 17:31:47.642017, 2026-05-05 10:00:47.64101, 2026-05-05 12:00:47.64101, 1, null, null, TP Programmation Web — Groupe GL3, null, APPROUVEE, 18, 46, 28, 2026-05-02 17:31:47.642017, null).] [insert into reservations (commentaire_admin,created_at,date_debut,date_fin,enseignant_id,motif,nombre_participants,salle_id,statut,updated_at,user_id) values (?,?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:97)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performInsert(GetGeneratedKeysDelegate.java:107)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:100)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:175)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:113)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2868)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738)
+	at jdk.internal.reflect.GeneratedMethodAccessor36.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy4/jdk.proxy4.$Proxy127.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:618)
+	at jdk.internal.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 50 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "demandeur" of relation "reservations" violates not-null constraint
+  Detail: Failing row contains (2026-05-02 17:31:47.642017, 2026-05-05 10:00:47.64101, 2026-05-05 12:00:47.64101, 1, null, null, TP Programmation Web — Groupe GL3, null, APPROUVEE, 18, 46, 28, 2026-05-02 17:31:47.642017, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	... 98 common frames omitted
+2026-05-02 17:32:16 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 17:32:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-02 17:32:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

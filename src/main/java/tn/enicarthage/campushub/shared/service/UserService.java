@@ -1,7 +1,6 @@
 package tn.enicarthage.campushub.shared.service;
 
 
-import tn.enicarthage.campushub.shared.dto.UserDto;           // adapte si le package est différent
 import tn.enicarthage.campushub.shared.model.User;
 
 import tn.enicarthage.campushub.shared.repository.UserRepository;
