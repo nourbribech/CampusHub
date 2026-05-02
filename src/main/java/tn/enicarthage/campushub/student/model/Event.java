@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Entity(name = "StudentEvent")
-@Table(name = "StudentEvent")
+@Table(name = "student_event")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -36,7 +36,10 @@ public class Event {
     private int capacity;
 
     @Enumerated(EnumType.STRING)
-    private EventStatus status; // PENDING, APPROVED, CANCELLED
+    private EventStatus status;
 
-    private Long organizerId; // the club head who created it
+    private Long organizerId;
+
+    @Transient
+    private Integer registeredCount;
 }

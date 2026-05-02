@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tn.enicarthage.campushub.student.model.Event;
+import tn.enicarthage.campushub.student.repository.EventRegistrationRepository;
 import tn.enicarthage.campushub.student.service.EventService;
 
 import java.util.List;
@@ -14,10 +15,15 @@ import java.util.List;
 public class EventController {
 
     private final EventService eventService;
-
+    private final EventRegistrationRepository registrationRepository;
     @GetMapping
     public ResponseEntity<List<Event>> getAllEvents() {
-        return ResponseEntity.ok(eventService.getApprovedEvents());
+        List<Event> events = eventService.getApprovedEvents();
+        events.forEach(event -> {
+            long count = registrationRepository.findByEventId(event.getId()).size();
+            event.setRegisteredCount((int) count);
+        });
+        return ResponseEntity.ok(events);
     }
 
     @GetMapping("/{id}")

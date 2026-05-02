@@ -2,8 +2,8 @@ package tn.enicarthage.campushub.student.service;
 
 import tn.enicarthage.campushub.student.repository.EventRegistrationRepository;
 import tn.enicarthage.campushub.student.repository.EventRepository;
-import tn.enicarthage.campushub.student.model.Student;
-import tn.enicarthage.campushub.student.repository.StudentRepository;
+import tn.enicarthage.campushub.shared.model.User;
+import tn.enicarthage.campushub.shared.repository.UserRepository;
 import tn.enicarthage.campushub.student.model.EventStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,82 +19,74 @@ public class EventService {
 
     private final EventRepository eventRepository;
     private final EventRegistrationRepository registrationRepository;
-    private final StudentRepository studentRepository;
+    private final UserRepository userRepository;  // ← remplace StudentRepository
 
-    // Get current logged in student
-    private Student getCurrentStudent() {
+    private User getCurrentUser() {
         String email = SecurityContextHolder.getContext()
                 .getAuthentication().getName();
-        return studentRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Student not found"));
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
     }
 
-    // Browse all approved events
     public List<Event> getApprovedEvents() {
         return eventRepository.findByStatus(EventStatus.APPROVED);
     }
 
-    // Get single event
     public Event getEvent(Long id) {
         return eventRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Event not found"));
     }
 
-    // Register for an event
     public String registerForEvent(Long eventId) {
-        Student student = getCurrentStudent();
+        User user = getCurrentUser();
         Event event = getEvent(eventId);
 
         if (event.getStatus() != EventStatus.APPROVED) {
             throw new RuntimeException("Event is not available");
         }
 
-        if (registrationRepository.existsByStudentIdAndEventId(
-                student.getId(), eventId)) {
+        if (registrationRepository.existsByStudentIdAndEventId(user.getId(), eventId)) {
             throw new RuntimeException("Already registered");
         }
 
-        long registered = registrationRepository
-                .findByEventId(eventId).size();
+        long registered = registrationRepository.findByEventId(eventId).size();
         if (registered >= event.getCapacity()) {
             throw new RuntimeException("Event is full");
         }
 
         registrationRepository.save(EventRegistration.builder()
-                .studentId(student.getId())
+                .studentId(user.getId())
                 .eventId(eventId)
                 .build());
 
         return "Successfully registered for " + event.getTitle();
     }
 
-    // Cancel registration
     public String cancelRegistration(Long eventId) {
-        Student student = getCurrentStudent();
-
+        User user = getCurrentUser();
         EventRegistration registration = registrationRepository
-                .findByStudentIdAndEventId(student.getId(), eventId)
+                .findByStudentIdAndEventId(user.getId(), eventId)
                 .orElseThrow(() -> new RuntimeException("Registration not found"));
-
         registrationRepository.delete(registration);
         return "Registration cancelled";
     }
 
-    // Club head — submit event for approval
     public Event submitEvent(Event event) {
-        Student student = getCurrentStudent();
-        event.setOrganizerId(student.getId());
+        User user = getCurrentUser();
+        event.setOrganizerId(user.getId());
         event.setStatus(EventStatus.PENDING);
         return eventRepository.save(event);
     }
 
-    // Get my registrations
     public List<Event> getMyRegistrations() {
-        Student student = getCurrentStudent();
+        User user = getCurrentUser();
         return registrationRepository
-                .findByStudentId(student.getId())
+                .findByStudentId(user.getId())
                 .stream()
                 .map(r -> getEvent(r.getEventId()))
                 .toList();
+    }
+    public long getRegistrationCount(Long eventId) {
+        return registrationRepository.findByEventId(eventId).size();
     }
 }

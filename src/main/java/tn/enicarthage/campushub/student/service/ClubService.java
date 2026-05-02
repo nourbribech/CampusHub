@@ -1,6 +1,7 @@
-package tn.enicarthage.campushub.student.repository;
+package tn.enicarthage.campushub.student.service;
 
-import tn.enicarthage.campushub.student.model.Student;
+import tn.enicarthage.campushub.shared.model.User;
+import tn.enicarthage.campushub.shared.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -8,6 +9,8 @@ import tn.enicarthage.campushub.student.model.ApplicationStatus;
 import tn.enicarthage.campushub.student.model.ClubStatus;
 import tn.enicarthage.campushub.student.model.Club;
 import tn.enicarthage.campushub.student.model.ClubApplication;
+import tn.enicarthage.campushub.student.repository.ClubApplicationRepository;
+import tn.enicarthage.campushub.student.repository.ClubRepository;
 
 import java.util.List;
 
@@ -17,45 +20,38 @@ public class ClubService {
 
     private final ClubRepository clubRepository;
     private final ClubApplicationRepository applicationRepository;
-    private final StudentRepository studentRepository;
+    private final UserRepository userRepository;
 
-    // Get current logged in student
-    private Student getCurrentStudent() {
+    private User getCurrentUser() {
         String email = SecurityContextHolder.getContext()
                 .getAuthentication().getName();
-        return studentRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Student not found"));
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
     }
 
-    // ─── REGULAR STUDENT ───────────────────────────────────────
-
-    // Browse all active clubs
     public List<Club> getActiveClubs() {
         return clubRepository.findByStatus(ClubStatus.ACTIVE);
     }
 
-    // Get single club
     public Club getClub(Long id) {
         return clubRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Club not found"));
     }
 
-    // Apply to a club
     public String applyToClub(Long clubId, String motivation) {
-        Student student = getCurrentStudent();
-
+        User user = getCurrentUser();
         Club club = getClub(clubId);
+
         if (club.getStatus() != ClubStatus.ACTIVE) {
             throw new RuntimeException("Club is not accepting applications");
         }
 
-        if (applicationRepository.existsByStudentIdAndClubId(
-                student.getId(), clubId)) {
+        if (applicationRepository.existsByStudentIdAndClubId(user.getId(), clubId)) {
             throw new RuntimeException("You have already applied to this club");
         }
 
         applicationRepository.save(ClubApplication.builder()
-                .studentId(student.getId())
+                .studentId(user.getId())
                 .clubId(clubId)
                 .motivation(motivation)
                 .status(ApplicationStatus.PENDING)
@@ -64,60 +60,45 @@ public class ClubService {
         return "Application submitted to " + club.getName();
     }
 
-    // View my applications and their status
     public List<ClubApplication> getMyApplications() {
-        Student student = getCurrentStudent();
-        return applicationRepository.findByStudentId(student.getId());
+        User user = getCurrentUser();
+        return applicationRepository.findByStudentId(user.getId());
     }
 
-    // ─── CLUB HEAD ─────────────────────────────────────────────
-
-    // Get applications for clubs I manage
     public List<ClubApplication> getApplicationsForMyClub(Long clubId) {
-        Student student = getCurrentStudent();
+        User user = getCurrentUser();
         Club club = getClub(clubId);
-
-        if (!club.getHeadId().equals(student.getId())) {
+        if (!club.getHeadId().equals(user.getId())) {
             throw new RuntimeException("You are not the head of this club");
         }
-
         return applicationRepository.findByClubId(clubId);
     }
 
-    // Accept or reject an application
     public ClubApplication reviewApplication(Long applicationId, String decision) {
-        Student student = getCurrentStudent();
-
+        User user = getCurrentUser();
         ClubApplication application = applicationRepository.findById(applicationId)
                 .orElseThrow(() -> new RuntimeException("Application not found"));
-
         Club club = getClub(application.getClubId());
-        if (!club.getHeadId().equals(student.getId())) {
+        if (!club.getHeadId().equals(user.getId())) {
             throw new RuntimeException("You are not the head of this club");
         }
-
         application.setStatus(
                 decision.equalsIgnoreCase("accept")
                         ? ApplicationStatus.ACCEPTED
                         : ApplicationStatus.REJECTED
         );
-
         return applicationRepository.save(application);
     }
 
-    // Update club profile (club head only)
     public Club updateClub(Long clubId, Club updated) {
-        Student student = getCurrentStudent();
+        User user = getCurrentUser();
         Club club = getClub(clubId);
-
-        if (!club.getHeadId().equals(student.getId())) {
+        if (!club.getHeadId().equals(user.getId())) {
             throw new RuntimeException("You are not the head of this club");
         }
-
         club.setName(updated.getName());
         club.setDescription(updated.getDescription());
         club.setCategory(updated.getCategory());
-
         return clubRepository.save(club);
     }
 }
