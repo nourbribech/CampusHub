@@ -1,0 +1,252 @@
+<div class="min-h-screen bg-gray-50">
+    <app-header titre="Réserver une Salle 📅" sousTitre="Suivez les étapes pour créer votre réservation"
+        [retourRoute]="'/enseignant/dashboard'">
+    </app-header>
+
+    <!-- Progression -->
+        <div class="bg-white border-b border-gray-200 px-8 py-4">
+            <div class="flex items-center justify-center gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition"
+                        [ngClass]="etapeActuelle >= 1 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-500'">
+                        1
+                    </div>
+                    <span class="font-semibold" [ngClass]="etapeActuelle >= 1 ? 'text-primary' : 'text-gray-500'">
+                        Salle
+                    </span>
+                </div>
+
+                <div class="w-16 h-1 rounded" [ngClass]="etapeActuelle >= 2 ? 'bg-primary' : 'bg-gray-200'"></div>
+
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition"
+                        [ngClass]="etapeActuelle >= 2 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-500'">
+                        2
+                    </div>
+                    <span class="font-semibold" [ngClass]="etapeActuelle >= 2 ? 'text-primary' : 'text-gray-500'">
+                        Date & Heure
+                    </span>
+                </div>
+
+                <div class="w-16 h-1 rounded" [ngClass]="etapeActuelle >= 3 ? 'bg-primary' : 'bg-gray-200'"></div>
+
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition"
+                        [ngClass]="etapeActuelle >= 3 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-500'">
+                        3
+                    </div>
+                    <span class="font-semibold" [ngClass]="etapeActuelle >= 3 ? 'text-primary' : 'text-gray-500'">
+                        Détails
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenu -->
+        <div class="p-8 max-w-6xl mx-auto">
+            <!-- Message d'erreur -->
+            <div *ngIf="error" class="mb-6 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                ⚠️ {{ error }}
+            </div>
+
+            <!-- Étape 1 : Sélection de la salle -->
+            <div *ngIf="etapeActuelle === 1">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Choisissez une salle</h2>
+
+                <!-- NOUVEAU : Filtre par bâtiment et étage -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <!-- Filtre par Bâtiment -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-700 mb-2">Bâtiment</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <button (click)="filtrerParBatiment('TOUS')" class="px-4 py-2 text-sm rounded-lg font-semibold transition"
+                                [ngClass]="filtreBatiment === 'TOUS' ? 'bg-primary text-white' : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-primary'">
+                                🏫 Tous
+                            </button>
+                            <button (click)="filtrerParBatiment('Bâtiment Annexe')"
+                                class="px-4 py-2 text-sm rounded-lg font-semibold transition"
+                                [ngClass]="filtreBatiment === 'Bâtiment Annexe' ? 'bg-primary text-white' : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-primary'">
+                                💻 Bâtiment Annexe
+                            </button>
+                            <button (click)="filtrerParBatiment('Bâtiment Principal')"
+                                class="px-4 py-2 text-sm rounded-lg font-semibold transition"
+                                [ngClass]="filtreBatiment === 'Bâtiment Principal' ? 'bg-primary text-white' : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-primary'">
+                                🏭 Bâtiment Principal
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Filtre par Étage -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-700 mb-2">Étage</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <button (click)="filtrerParEtage('TOUS')"
+                                class="px-4 py-2 text-sm rounded-lg font-semibold transition"
+                                [ngClass]="filtreEtage === 'TOUS' ? 'bg-primary text-white' : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-primary'">
+                                Tous
+                            </button>
+                            <button *ngFor="let etage of etagesDisponibles" (click)="filtrerParEtage(etage)"
+                                class="px-4 py-2 text-sm rounded-lg font-semibold transition"
+                                [ngClass]="filtreEtage === etage ? 'bg-primary text-white' : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-primary'">
+                                {{ etage === 0 ? 'RDC' : 'Étage ' + etage }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loader... -->
+                <div *ngIf="loadingSalles" class="flex justify-center items-center h-64">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+                </div>
+
+                <div *ngIf="!loadingSalles" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div *ngFor="let salle of sallesFiltrees" (click)="selectionnerSalle(salle)"
+                        class="bg-white rounded-xl border-2 border-gray-200 p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all transform hover:scale-105"
+                        [ngClass]="{'opacity-50 cursor-not-allowed': !salle.disponible}">
+
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <!-- Icône bâtiment -->
+                                <span class="text-2xl">
+                                    {{ salle.batiment === 'Bâtiment Annexe' ? '💻' : '🏭' }}
+                                </span>
+                                <h3 class="text-xl font-bold text-gray-900">{{ salle.nom }}</h3>
+                            </div>
+                            <span class="px-2 py-1 rounded text-xs font-semibold"
+                                [ngClass]="salle.disponible ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'">
+                                {{ salle.disponible ? 'Disponible' : 'Indisponible' }}
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 text-sm text-gray-600 mb-4">
+                            <p class="flex items-center gap-2">
+                                <span>🏢</span>
+                                {{ salle.batiment }} - Étage {{ salle.etage }}
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <span>👥</span>
+                                Capacité : {{ salle.capacite }} personnes
+                            </p>
+                        </div>
+
+                        <div *ngIf="salle.equipements.length > 0" class="flex flex-wrap gap-2">
+                            <span *ngFor="let equipement of salle.equipements"
+                                class="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs">
+                                {{ equipement }}
+                            </span>
+                        </div>
+
+                        <div *ngIf="salle.disponible" class="mt-4 text-center">
+                            <span class="text-primary font-semibold text-sm">Cliquer pour sélectionner →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Étape 2 : Date et Heure -->
+            <div *ngIf="etapeActuelle === 2">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Date et Heure</h2>
+                <p class="text-gray-600 mb-6">Pour la salle : <strong>{{ salleSelectionnee?.nom }}</strong></p>
+
+                <div class="bg-white rounded-xl border border-gray-200 p-8 max-w-2xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Date de début -->
+                        <div>
+                            <label class="block font-semibold text-gray-900 mb-2">Date de début *</label>
+                            <input type="date" [(ngModel)]="dateDebut" [min]="dateMin"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+
+                        <!-- Heure de début -->
+                        <div>
+                            <label class="block font-semibold text-gray-900 mb-2">Heure de début *</label>
+                            <input type="time" [(ngModel)]="heureDebut"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+
+                        <!-- Date de fin -->
+                        <div>
+                            <label class="block font-semibold text-gray-900 mb-2">Date de fin *</label>
+                            <input type="date" [(ngModel)]="dateFin" [min]="dateDebut || dateMin"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+
+                        <!-- Heure de fin -->
+                        <div>
+                            <label class="block font-semibold text-gray-900 mb-2">Heure de fin *</label>
+                            <input type="time" [(ngModel)]="heureFin"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-500 mt-4">
+                        * Durée maximale : 8 heures
+                    </p>
+                </div>
+
+                <div class="flex justify-between mt-8 max-w-2xl mx-auto">
+                    <button (click)="retourEtape(1)"
+                        class="px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition">
+                        ← Retour
+                    </button>
+                    <button (click)="validerEtape2()"
+                        class="px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-opacity-90 transition">
+                        Suivant →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Étape 3 : Détails -->
+            <div *ngIf="etapeActuelle === 3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Détails de la réservation</h2>
+
+                <div class="bg-white rounded-xl border border-gray-200 p-8 max-w-2xl mx-auto">
+                    <!-- Résumé -->
+                    <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                        <h3 class="font-semibold text-gray-900 mb-3">Résumé</h3>
+                        <div class="space-y-2 text-sm">
+                            <p><strong>Salle :</strong> {{ salleSelectionnee?.nom }}</p>
+                            <p><strong>Date :</strong> {{ dateDebut | date:'dd/MM/yyyy' }} de {{ heureDebut }} à
+                                {{
+                                heureFin
+                                }}</p>
+                            <p><strong>Capacité :</strong> {{ salleSelectionnee?.capacite }} personnes</p>
+                        </div>
+                    </div>
+
+                    <!-- Motif -->
+                    <div class="mb-6">
+                        <label class="block font-semibold text-gray-900 mb-2">Motif de la réservation *</label>
+                        <textarea [(ngModel)]="motif" rows="4"
+                            placeholder="Ex: Cours de Programmation Avancée, Atelier Design Thinking..."
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                            maxlength="500"></textarea>
+                        <p class="text-sm text-gray-500 mt-1">{{ motif.length }}/500 caractères</p>
+                    </div>
+
+                    <!-- Nombre de participants -->
+                    <div>
+                        <label class="block font-semibold text-gray-900 mb-2">Nombre de participants
+                            (optionnel)</label>
+                        <input type="number" [(ngModel)]="nombreParticipants" [max]="salleSelectionnee?.capacite ?? 999"
+                            min="1" placeholder="Ex: 30"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        <p class="text-sm text-gray-500 mt-1">Maximum : {{ salleSelectionnee?.capacite }}
+                            personnes</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8 max-w-2xl mx-auto">
+                    <button (click)="retourEtape(2)"
+                        class="px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition">
+                        ← Retour
+                    </button>
+                    <button (click)="soumettre()" [disabled]="loading"
+                        class="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold hover:shadow-lg transition disabled:opacity-50">
+                        <span *ngIf="!loading">✅ Confirmer la réservation</span>
+                        <span *ngIf="loading">⏳ En cours...</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

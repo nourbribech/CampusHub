@@ -1,0 +1,69 @@
+<div class="space-y-6">
+  <div>
+    <h2 class="text-2xl font-bold text-primary">Notifications</h2>
+    <p class="text-gray-400 text-sm mt-1">Envoyez des annonces aux utilisateurs</p>
+  </div>
+
+  <!-- Send notification form -->
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+    <h3 class="text-lg font-bold text-primary mb-5">Nouvelle notification</h3>
+
+    <div *ngIf="sent" class="mb-4 bg-green-50 border border-green-200 text-green-700 rounded-xl px-4 py-3 text-sm">
+      ✅ Notification envoyée avec succès !
+    </div>
+
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Titre</label>
+        <input [(ngModel)]="titre" type="text" placeholder="Titre de la notification"
+          class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+        <textarea [(ngModel)]="message" rows="4" placeholder="Contenu de la notification..."
+          class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none">
+        </textarea>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Destinataires</label>
+        <select [(ngModel)]="cible"
+          class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary bg-white">
+          <option value="TOUS">Tous les utilisateurs</option>
+          <option value="ETUDIANTS">Étudiants uniquement</option>
+          <option value="ENSEIGNANTS">Enseignants uniquement</option>
+          <option value="CLUBS">Responsables clubs</option>
+        </select>
+      </div>
+
+      <button (click)="envoyer()" [disabled]="!titre || !message || loading"
+        class="w-full bg-primary text-white font-semibold py-3 rounded-xl hover:bg-blue-800 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm">
+        <span *ngIf="loading" class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+        {{ loading ? 'Envoi...' : '🔔 Envoyer la notification' }}
+      </button>
+    </div>
+  </div>
+
+  <!-- History -->
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+    <h3 class="text-lg font-bold text-primary mb-5">Historique des notifications</h3>
+    <div class="space-y-3">
+      <div *ngFor="let notif of historique"
+        class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+        <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0">🔔</div>
+        <div class="flex-1">
+          <div class="flex items-center justify-between">
+            <h4 class="font-semibold text-gray-800 text-sm">{{ notif.titre }}</h4>
+            <span class="text-xs text-gray-400">{{ notif.date }}</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-0.5">{{ notif.message }}</p>
+          <div class="flex items-center gap-3 mt-2">
+            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-0.5 rounded-full">{{ notif.cible }}</span>
+            <span class="text-xs text-gray-400">👁️ {{ notif.lu }} lectures</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

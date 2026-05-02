@@ -28,15 +28,15 @@ public class ReservationService {
         log.info("Création d'une nouvelle réservation pour la salle ID: {}", reservation.getSalle().getId());
 
         // Vérifier les conflits
-        List<Reservation> conflits = reservationRepository.findConflictingReservations(
-                reservation.getSalle().getId(),
-                reservation.getDateDebut(),
-                reservation.getDateFin());
+      //  List<Reservation> conflits = reservationRepository.findConflictingReservations(
+        //        reservation.getSalle().getId(),
+          //      reservation.getDateDebut(),
+            //    reservation.getDateFin());
 
-        if (!conflits.isEmpty()) {
-            log.error("Conflit détecté pour la réservation");
-            throw new RuntimeException("La salle est déjà réservée pour ce créneau");
-        }
+      //  if (!conflits.isEmpty()) {
+        //    log.error("Conflit détecté pour la réservation");
+        //  throw new RuntimeException("La salle est déjà réservée pour ce créneau");
+        //}
 
         // Vérifier la capacité
         if (reservation.getNombreParticipants() != null &&

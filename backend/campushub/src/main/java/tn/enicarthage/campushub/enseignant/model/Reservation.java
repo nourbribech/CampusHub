@@ -19,6 +19,10 @@ public class Reservation {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;  // ← pour les étudiants aussi
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "salle_id", nullable = false)
     private Salle salle;
 

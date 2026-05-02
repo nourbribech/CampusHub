@@ -6,8 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "events")
+@Entity(name = "AdminEvent")
+@Table(name = "AdminEvent")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

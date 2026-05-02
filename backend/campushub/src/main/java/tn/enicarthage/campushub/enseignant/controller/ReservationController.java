@@ -18,6 +18,8 @@ import tn.enicarthage.campushub.shared.model.User;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 @RestController
 @RequestMapping("/api/v1/reservations")
@@ -32,14 +34,16 @@ public class ReservationController {
 
     @GetMapping("/me")
     public ResponseEntity<List<ReservationDto>> getMesReservations() {
-        log.info("GET /api/v1/reservations/me");
-        User enseignant = userService.getUsersByRole(User.Role.ENSEIGNANT)
-                .stream().findFirst()
-                .orElseThrow(() -> new RuntimeException("Aucun enseignant trouvé"));
-        List<Reservation> reservations = reservationService.getReservationsByEnseignant(enseignant.getId());
-        return ResponseEntity.ok(reservations.stream().map(this::convertToDto).collect(Collectors.toList()));
+        String email = SecurityContextHolder.getContext()
+                .getAuthentication().getName();
+        User enseignant = userService.getUserByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Utilisateur non trouvé"));
+        List<Reservation> reservations = reservationService
+                .getReservationsByEnseignant(enseignant.getId());
+        return ResponseEntity.ok(reservations.stream()
+                .map(this::convertToDto)
+                .collect(Collectors.toList()));
     }
-
     @GetMapping("/{id}")
     public ResponseEntity<ReservationDto> getReservationById(@PathVariable Long id) {
         log.info("GET /api/v1/reservations/{}", id);
@@ -50,12 +54,14 @@ public class ReservationController {
 
     @PostMapping
     public ResponseEntity<ReservationDto> creerReservation(@RequestBody CreateReservationDto dto) {
-        log.info("POST /api/v1/reservations");
-        User enseignant = userService.getUsersByRole(User.Role.ENSEIGNANT)
-                .stream().findFirst()
+        String email = SecurityContextHolder.getContext()
+                .getAuthentication().getName();
+        User enseignant = userService.getUserByEmail(email)
                 .orElseThrow(() -> new RuntimeException("Enseignant non trouvé"));
+
         Salle salle = salleService.getSalleById(Long.parseLong(dto.getSalleId()))
                 .orElseThrow(() -> new RuntimeException("Salle non trouvée"));
+
         Reservation reservation = new Reservation();
         reservation.setEnseignant(enseignant);
         reservation.setSalle(salle);
@@ -64,10 +70,10 @@ public class ReservationController {
         reservation.setMotif(dto.getMotif());
         reservation.setNombreParticipants(dto.getNombreParticipants());
         reservation.setStatut(Reservation.Statut.EN_ATTENTE);
+
         Reservation saved = reservationService.createReservation(reservation);
         return ResponseEntity.status(HttpStatus.CREATED).body(convertToDto(saved));
     }
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> annulerReservation(@PathVariable Long id) {
         log.info("DELETE /api/v1/reservations/{}", id);

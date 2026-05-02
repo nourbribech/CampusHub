@@ -19,6 +19,10 @@ public class Reservation {
 
     @Column(nullable = false)
     private String salle;
+    @Column
+    private String batiment;
+    @Column(name = "salle_nom")
+    private String salleNom;
 
     @Column(nullable = false)
     private String demandeur;

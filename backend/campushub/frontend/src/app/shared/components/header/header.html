@@ -1,0 +1,42 @@
+<div class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="px-8 py-4">
+        <!-- Logo et nom de l'école -->
+        <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-4">
+                <!-- Logo ENICarthage -->
+                <img src="/assets/images/logo-enicarthage.png?v=3" alt="ENICarthage" class="h-16 w-auto"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+
+                <!-- Fallback si pas de logo -->
+                <div class="hidden">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl">EN</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">CampusHub</h1>
+                    <p class="text-sm text-gray-600">École Nationale d'Ingénieurs de Carthage</p>
+                </div>
+            </div>
+
+            <!-- Navigation rapide -->
+            <div class="flex items-center gap-3">
+                <button *ngIf="showRetour" [routerLink]="retourRoute"
+                    class="px-4 py-2 text-gray-600 hover:text-gray-900 font-semibold transition">
+                    ← Retour
+                </button>
+            </div>
+        </div>
+
+        <!-- Titre de la page -->
+        <div class="flex items-center justify-between">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">{{ titre }}</h2>
+                <p class="text-gray-600">{{ sousTitre }}</p>
+            </div>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

@@ -34,10 +34,12 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) {
         log.info("🚀 Initialisation des données ENICarthage...");
 
-        if (userService.countUsers() > 0) {
-            log.info("✅ Données déjà présentes, initialisation annulée");
-            return;
-        }
+       if (userService.countUsers() > 0) {
+          log.info("✅ Données déjà présentes, initialisation annulée");
+
+        return;
+
+    }
 
         try {
             createUsers();
@@ -59,7 +61,7 @@ public class DataInitializer implements CommandLineRunner {
         admin.setPrenom("System");
         admin.setEmail("admin@enicarthage.tn");
         admin.setPassword("admin123");
-        admin.setRole(User.Role.ADMIN);
+        admin.setRoles(List.of(User.Role.ADMIN));
         admin.setDepartement("Administration");
         userService.createUser(admin);
 
@@ -69,7 +71,7 @@ public class DataInitializer implements CommandLineRunner {
         enseignant1.setPrenom("Jean");
         enseignant1.setEmail("jean.dupont@enicarthage.tn");
         enseignant1.setPassword("enseignant123");
-        enseignant1.setRole(User.Role.ENSEIGNANT);
+        enseignant1.setRoles(List.of(User.Role.ENSEIGNANT));
         enseignant1.setDepartement("Informatique");
         userService.createUser(enseignant1);
 
@@ -78,7 +80,7 @@ public class DataInitializer implements CommandLineRunner {
         enseignant2.setPrenom("Sarra");
         enseignant2.setEmail("sarra.bensalah@enicarthage.tn");
         enseignant2.setPassword("enseignant123");
-        enseignant2.setRole(User.Role.ENSEIGNANT);
+        enseignant1.setRoles(List.of(User.Role.ENSEIGNANT));
         enseignant2.setDepartement("Informatique");
         userService.createUser(enseignant2);
 
@@ -88,7 +90,7 @@ public class DataInitializer implements CommandLineRunner {
         enseignant3.setPrenom("Sophie");
         enseignant3.setEmail("sophie.martin@enicarthage.tn");
         enseignant3.setPassword("enseignant123");
-        enseignant3.setRole(User.Role.ENSEIGNANT);
+        enseignant1.setRoles(List.of(User.Role.ENSEIGNANT));
         enseignant3.setDepartement("Mécatronique");
         userService.createUser(enseignant3);
 
@@ -97,7 +99,7 @@ public class DataInitializer implements CommandLineRunner {
         enseignant4.setPrenom("Karim");
         enseignant4.setEmail("karim.gharbi@enicarthage.tn");
         enseignant4.setPassword("enseignant123");
-        enseignant4.setRole(User.Role.ENSEIGNANT);
+        enseignant1.setRoles(List.of(User.Role.ENSEIGNANT));
         enseignant4.setDepartement("Génie Industriel");
         userService.createUser(enseignant4);
 
@@ -107,7 +109,7 @@ public class DataInitializer implements CommandLineRunner {
         etudiant1.setPrenom("Ahmed");
         etudiant1.setEmail("ahmed.benali@enicarthage.tn");
         etudiant1.setPassword("etudiant123");
-        etudiant1.setRole(User.Role.ETUDIANT);
+        etudiant1.setRoles(List.of(User.Role.ETUDIANT));
         etudiant1.setDepartement("Informatique");
         userService.createUser(etudiant1);
 
@@ -116,7 +118,7 @@ public class DataInitializer implements CommandLineRunner {
         etudiant2.setPrenom("Nour");
         etudiant2.setEmail("nour.trabelsi@enicarthage.tn");
         etudiant2.setPassword("etudiant123");
-        etudiant2.setRole(User.Role.ETUDIANT);
+        etudiant2.setRoles(List.of(User.Role.ETUDIANT));
         etudiant2.setDepartement("Mécatronique");
         userService.createUser(etudiant2);
 

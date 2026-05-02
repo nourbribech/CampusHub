@@ -3,6 +3,7 @@ package tn.enicarthage.campushub.admin.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import tn.enicarthage.campushub.admin.dto.AdminStatsDto;
 import tn.enicarthage.campushub.admin.dto.RejectRequest;
@@ -112,5 +113,9 @@ public class AdminController {
             @PathVariable Long id,
             @RequestBody RejectRequest request) {
         return ResponseEntity.ok(adminService.rejeterDemande(id, request.getCommentaire()));
+    }
+    @PostMapping("/fix-passwords")
+    public ResponseEntity<String> fixPasswords() {
+        return ResponseEntity.ok(adminService.fixPasswords());
     }
 }
