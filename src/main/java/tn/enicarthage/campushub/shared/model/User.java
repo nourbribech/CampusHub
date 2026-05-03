@@ -61,6 +61,8 @@ public class User implements UserDetails{
         updatedAt = LocalDateTime.now();
     }
 
+    @Column(name = "telephone")
+    private String telephone;
     @PreUpdate
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();

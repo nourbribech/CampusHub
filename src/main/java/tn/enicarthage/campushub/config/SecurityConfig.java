@@ -51,6 +51,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/events/**").permitAll()
                         .requestMatchers("/api/requests/**").permitAll()
                         .requestMatchers("/api/v1/admin/fix-passwords").permitAll()
+                        .requestMatchers("/api/v1/profile/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session

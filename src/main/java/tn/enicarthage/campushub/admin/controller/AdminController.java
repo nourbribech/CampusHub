@@ -118,4 +118,5 @@ public class AdminController {
     public ResponseEntity<String> fixPasswords() {
         return ResponseEntity.ok(adminService.fixPasswords());
     }
+
 }
